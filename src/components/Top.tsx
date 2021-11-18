@@ -1,14 +1,19 @@
 import type { NextPage } from 'next';
 import { Header, Icon } from 'semantic-ui-react';
+import Gnb from './Gnb';
 
-const countries = [{ name: 'South Korea', countryCode: 'kr' }];
 const Head: NextPage = () => {
   return (
-    <div>
-      <Header as='h1' textAlign='left' color='blue'>
+    <div style={{ padding: 20 }}>
+      <Header
+        as='h1'
+        textAlign='left'
+        style={{ display: 'flex', alignItems: 'flex-end' }}
+      >
         <img alt='logo' src='/images/web_logo.png' />
-        web template
+        Web template
       </Header>
+      <Gnb />
     </div>
   );
 };

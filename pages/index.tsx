@@ -8,6 +8,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>web template</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content='Web template by create next app' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

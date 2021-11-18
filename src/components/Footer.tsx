@@ -5,7 +5,14 @@ const countries = [{ name: 'South Korea', countryCode: 'kr' }];
 
 const Footer: NextPage = () => {
   return (
-    <footer>
+    <footer
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+      }}
+    >
       <p>
         Copyrightⓒ 2021. <Flag name='kr' />
         Yr. All rights reserved.
