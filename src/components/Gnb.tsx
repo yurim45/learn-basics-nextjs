@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Menu } from 'semantic-ui-react';
 
 const Gnb: NextPage = () => {
-  const [activeItem, setActiveItem] = useState();
+  const [activeItem, setActiveItem] = useState<String>();
 
   return (
     <Menu inverted>
