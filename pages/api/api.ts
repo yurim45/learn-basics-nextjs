@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL: string =
   'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
 
-export type Product = [
+export type ProductType = [
   {
     id: number;
     brand: string;
@@ -28,7 +28,7 @@ export type Product = [
 ];
 
 export const getData = async () => {
-  const { data } = await axios.get<Product[]>(API_URL);
+  const { data } = await axios.get<ProductType[]>(API_URL);
   return data;
 };
 

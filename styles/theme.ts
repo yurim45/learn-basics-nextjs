@@ -13,10 +13,12 @@ const size: { [key: string]: number } = {
 const colors = {
   white: '#fff',
   black: '#000',
-  grey: '#eaeaea',
+  grey: 'grey',
+  lightgrey: '#eaeaea',
+  blue: '#3178C6',
 };
 
-const theme = {
+export const theme = {
   colors,
   // 반응형
   mobile: `(max-width: ${size.mobile})`,
@@ -24,6 +26,5 @@ const theme = {
   desktop: `(min-width: ${size.desktop})`,
 };
 
-export type Theme = typeof theme;
-export const styled = baseStyled as ThemedStyledInterface<Theme>;
-export default theme;
+export type ThemeType = typeof theme;
+export const styled = baseStyled as ThemedStyledInterface<ThemeType>;

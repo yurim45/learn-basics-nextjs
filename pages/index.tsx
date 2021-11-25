@@ -2,16 +2,15 @@ import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { getData, Product } from './api/api';
+import Product from './product/index';
+import { getData, ProductType } from './api/api';
 
 const Home: NextPage = () => {
-  const [list, setList] = useState<Product>();
+  const [list, setList] = useState<ProductType>([]);
 
   useEffect(() => {
     getData().then((res) => setList(res));
   }, []);
-
-  console.log(list);
 
   return (
     <div style={{ padding: '2rem' }}>
@@ -22,7 +21,10 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main></main>
+      <main>
+        <Product list={list.slice(0, 9)} title={'잘 나가요!'} />
+        <Product list={list.slice(9)} title={'새로 나왔어요!'} />
+      </main>
     </div>
   );
 };

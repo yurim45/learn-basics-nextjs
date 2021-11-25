@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { Flag } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { flexSet } from '../../styles/Variable';
-import { Theme } from '../../styles/theme';
 
 const countries = [{ name: 'South Korea', countryCode: 'kr' }];
 
@@ -23,8 +22,8 @@ const FooterDiv = styled.footer`
   ${flexSet('center', 'center')}
   margin: 20;
   padding: 20;
-  color: grey;
-  border-top: 1px solid ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
+  border-top: 1px solid ${({ theme }) => theme.colors.lightgrey};
 
   p {
     padding: 1rem 0;
