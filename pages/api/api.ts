@@ -1,37 +1,39 @@
 import axios from 'axios';
 
-const API_URL: string =
-  'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+const API_URL: string = 'http://makeup-api.herokuapp.com/api/v1/';
 
-export type ProductType = [
-  {
-    id: number;
-    brand: string;
-    name: string;
-    price: number;
-    price_sign: number | null;
-    currency: string | null;
-    image_link: string;
-    product_link: string;
-    website_link: string;
-    description: string;
-    rating: number;
-    category: string | null;
-    product_type: string;
-    tag_list: string[];
-    created_at: any;
-    updated_at: any;
-    product_api_url: string;
-    api_featured_image: string;
-    product_colors: string[];
-  }
-];
+export type ProductType = {
+  id: number;
+  brand: string;
+  name: string;
+  price: number;
+  price_sign: number | null;
+  currency: string | null;
+  image_link: string;
+  product_link: string;
+  website_link: string;
+  description: string;
+  rating: number;
+  category: string | null;
+  product_type: string;
+  tag_list: string[];
+  created_at: any;
+  updated_at: any;
+  product_api_url: string;
+  api_featured_image: string;
+  product_colors: string[];
+};
 
-export const getData = async () => {
-  const { data } = await axios.get<ProductType[]>(API_URL);
+export const getProducts = async () => {
+  const { data } = await axios.get<ProductType[]>(
+    `${API_URL}products.json?brand=maybelline`
+  );
   return data;
 };
 
-export default {
-  getData,
+export const getProduct = async (id: number) => {
+  const { data } = await axios.get<ProductType>(
+    `${API_URL}products/${id}.json`
+  );
+  return data;
 };

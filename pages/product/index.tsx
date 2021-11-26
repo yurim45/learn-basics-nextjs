@@ -1,13 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
-import type { AppProps } from 'next/app';
+import type { NextPage } from 'next';
+import { ProductType } from '../api/api';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Divider, Grid, Header } from 'semantic-ui-react';
 
-const Product = (props: any) => {
-  const { list, title } = props;
-  console.log(list);
+export type ProductComponent = {
+  list: ProductType[];
+  title: string;
+};
 
+const Product: React.FunctionComponent<ProductComponent> = ({
+  list,
+  title,
+}) => {
   return (
     <>
       <Header as='h3' style={{ paddingTop: 40 }}>
@@ -20,12 +27,16 @@ const Product = (props: any) => {
             {list?.map((item) => {
               return (
                 <Grid.Column style={{ padding: '20px' }} key={item.id}>
-                  <img alt={item.name} src={item.image_link} />
-                  <strong className='title'>{item.name}</strong>
-                  <div className='info'>
-                    {item.category} {item.product_type}
-                  </div>
-                  <strong className='price'>${item.price}</strong>
+                  <Link href={`/product/${item.id}`}>
+                    <a>
+                      <img alt={item.name} src={item.image_link} />
+                      <strong className='title'>{item.name}</strong>
+                      <div className='info'>
+                        {item.category} {item.product_type}
+                      </div>
+                      <strong className='price'>${item.price}</strong>
+                    </a>
+                  </Link>
                 </Grid.Column>
               );
             })}
@@ -41,7 +52,6 @@ export default Product;
 const ProductsWrap = styled.div`
     padding-bottom: 20px;
     text-align: center;
-
 
   img {
     display: block;

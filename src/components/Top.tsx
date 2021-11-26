@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Header, Icon } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 import Gnb from './Gnb';
 
 const Head: NextPage = () => {
