@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { Menu } from 'semantic-ui-react';
 
 const Gnb: NextPage = () => {
   const [activeItem, setActiveItem] = useState<String>();
+  const router = useRouter();
 
   return (
     <Menu inverted>
@@ -12,6 +14,7 @@ const Gnb: NextPage = () => {
         active={activeItem === 'home'}
         onClick={() => {
           setActiveItem('home');
+          router.push('/');
         }}
       />
       <Menu.Item
@@ -19,13 +22,7 @@ const Gnb: NextPage = () => {
         active={activeItem === 'product'}
         onClick={() => {
           setActiveItem('product');
-        }}
-      />
-      <Menu.Item
-        name='myPage'
-        active={activeItem === 'myPage'}
-        onClick={() => {
-          setActiveItem('myPage');
+          router.push('/product');
         }}
       />
     </Menu>
