@@ -24,7 +24,7 @@ const Product: React.FunctionComponent<ProductComponent> = ({
       <ProductsWrap>
         <Grid columns={3}>
           <Grid.Row>
-            {list?.map((item) => {
+            {list?.map((item: any) => {
               return (
                 <Grid.Column style={{ padding: '20px' }} key={item.id}>
                   <Link href={`/product/${item.id}`}>
@@ -50,8 +50,8 @@ const Product: React.FunctionComponent<ProductComponent> = ({
 export default Product;
 
 const ProductsWrap = styled.div`
-    padding-bottom: 20px;
-    text-align: center;
+  padding-bottom: 20px;
+  text-align: center;
 
   img {
     display: block;
@@ -79,4 +79,5 @@ const ProductsWrap = styled.div`
     font-size: 18px;
     color: ${({ theme }) => theme.colors.blue};
     font-weight: 800;
+  }
 `;

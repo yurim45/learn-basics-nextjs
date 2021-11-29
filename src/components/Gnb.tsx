@@ -15,17 +15,17 @@ const Gnb: NextPage = () => {
         }}
       />
       <Menu.Item
-        name='messages'
-        active={activeItem === 'messages'}
+        name='product'
+        active={activeItem === 'product'}
         onClick={() => {
-          setActiveItem('messages');
+          setActiveItem('product');
         }}
       />
       <Menu.Item
-        name='friends'
-        active={activeItem === 'friends'}
+        name='myPage'
+        active={activeItem === 'myPage'}
         onClick={() => {
-          setActiveItem('friends');
+          setActiveItem('myPage');
         }}
       />
     </Menu>

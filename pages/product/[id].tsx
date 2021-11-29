@@ -1,50 +1,56 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { getProduct, ProductType } from '../api/api';
+import Head from 'next/head';
+import { getProduct } from '../api/api';
 import { Header, Divider, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { flexSet } from '../../styles/Variable';
 
-const ProductItem: NextPage = () => {
-  const route = useRouter();
-  const { id } = route.query;
-  const [item, setItem] = useState<ProductType>();
-
-  useEffect(() => {
-    if (id) {
-      getProduct(Number(id)).then((res) => setItem(res));
-    }
-  }, [id]);
-
-  console.log(item);
-
+const ProductItem: NextPage = ({ item }: any) => {
   return (
-    <Item>
-      <Header as='h2'>어머나! 너무 선택했어요!</Header>
-      <Divider />
-
-      <article>
-        <div className='content'>
-          <img alt={item?.name} src={item?.image_link} />
-          <div>
-            <strong className='title'>{item?.name}</strong>
-            <div className='price'>${item?.price}</div>
-            <strong className='type'>{item?.product_type}</strong>
-            <Button color='blue'>구매하기</Button>
-          </div>
-        </div>
-        <div className='description'>
-          <Header as='h3'>Description</Header>
-          <p>{item?.description}</p>
-        </div>
-      </article>
-    </Item>
+    item && (
+      <>
+        <Head>
+          <title>{item.name}</title>
+          <meta name='descriprion' content={item?.description} />
+        </Head>
+        <Item>
+          <Header as='h2'>어머나! 너무 잘 선택했어요!</Header>
+          <Divider />
+          <article>
+            <div className='content'>
+              <img alt={item?.name} src={item?.image_link} />
+              <div>
+                <strong className='title'>{item?.name}</strong>
+                <div className='price'>${item?.price}</div>
+                <strong className='type'>{item?.product_type}</strong>
+                <Button color='blue'>구매하기</Button>
+              </div>
+            </div>
+            <div className='description'>
+              <Header as='h3'>Description</Header>
+              <p>{item?.description}</p>
+            </div>
+          </article>
+        </Item>
+      </>
+    )
   );
 };
 
 export default ProductItem;
+
+export async function getServerSideProps(context: any) {
+  const id = context?.params.id;
+  const data = await getProduct(Number(id));
+
+  return {
+    props: {
+      item: data,
+    },
+  };
+}
 
 const Item = styled.div`
   padding: 20px;
