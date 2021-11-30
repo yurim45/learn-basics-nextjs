@@ -25,6 +25,14 @@ const Gnb: NextPage = () => {
           router.push('/product');
         }}
       />
+      <Menu.Item
+        name='mypage'
+        active={activeItem === 'mypage'}
+        onClick={() => {
+          setActiveItem('mypage');
+          router.push('/mypage');
+        }}
+      />
     </Menu>
   );
 };
