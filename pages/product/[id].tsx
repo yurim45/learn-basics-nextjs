@@ -7,7 +7,7 @@ import { Header, Divider, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { flexSet } from '../../styles/Variable';
 
-const ProductItem: NextPage = ({ item }: any) => {
+const ProductItem: NextPage = ({ item, name }: any) => {
   return (
     item && (
       <>
@@ -16,6 +16,7 @@ const ProductItem: NextPage = ({ item }: any) => {
           <meta name='descriprion' content={item?.description} />
         </Head>
         <Item>
+          <div>{name} 환경입니다</div>
           <Header as='h2'>어머나! 너무 잘 선택했어요!</Header>
           <Divider />
           <article>
@@ -48,6 +49,7 @@ export async function getServerSideProps(context: any) {
   return {
     props: {
       item: data,
+      name: process.env.name
     },
   };
 }
