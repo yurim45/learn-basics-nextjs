@@ -7,9 +7,8 @@ import { Header, Divider, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { flexSet } from '../../styles/Variable';
 
-const ProductItem: NextPage = ({ item, name }: any) => {
-  console.log(item)
-
+const DetialItem: NextPage = (title, { item }: any) => {
+  console.log(title)
   return (
     item && (
       <>
@@ -18,8 +17,7 @@ const ProductItem: NextPage = ({ item, name }: any) => {
           <meta name='descriprion' content={item?.description} />
         </Head>
         <Item>
-          <div>{name} 환경입니다</div>
-          <Header as='h2'>어머나! 너무 잘 선택했어요!</Header>
+          <Header as='h2'>{title}</Header>
           <Divider />
           <article>
             <div className='content'>
@@ -42,7 +40,17 @@ const ProductItem: NextPage = ({ item, name }: any) => {
   );
 };
 
-export default ProductItem;
+export default DetialItem;
+
+export async function getStaticPaths() {
+  return {
+    paths: [{
+      params: { id: 414 }
+    }, {
+      params: { id: 273 }
+    }]
+  };
+}
 
 export async function getServerSideProps(context: any) {
   const id = context?.params.id;
@@ -55,6 +63,8 @@ export async function getServerSideProps(context: any) {
     },
   };
 }
+
+
 
 const Item = styled.div`
   padding: 20px;
