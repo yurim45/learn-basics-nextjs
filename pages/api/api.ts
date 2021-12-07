@@ -28,7 +28,9 @@ export type ProductType = {
 };
 
 export const getProducts = async () => {
-  const url: string = process.env.NEXT_PUBLIC_API_URL;
+  const url: string =
+    process.env.NEXT_PUBLIC_API_URL ??
+    'http://makeup-api.herokuapp.com/api/v1/products.json?brand=dior';
   const { data } = await axios.get<ProductType[]>(url);
   return data;
 };
