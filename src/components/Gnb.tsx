@@ -33,6 +33,14 @@ const Gnb: NextPage = () => {
           router.push('/mypage');
         }}
       />
+      <Menu.Item
+        name='admin'
+        active={activeItem === 'admin'}
+        onClick={() => {
+          setActiveItem('admin');
+          router.push('/admin');
+        }}
+      />
     </Menu>
   );
 };

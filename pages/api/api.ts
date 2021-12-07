@@ -27,6 +27,17 @@ export type ProductType = {
   product_colors: string[];
 };
 
+export type LoginType = {
+  config: any;
+  data: {
+    name: string | null;
+  };
+  headers: any;
+  request: any;
+  status: number;
+  statusText: string;
+};
+
 export const getProducts = async () => {
   const url: string =
     process.env.NEXT_PUBLIC_API_URL ??
