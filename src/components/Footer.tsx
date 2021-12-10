@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Flag } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { flexSet } from '../../styles/Variable';
+import { flexSet } from '../common/styles/Variable';
 
 const Footer: NextPage = () => {
   return (

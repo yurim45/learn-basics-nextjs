@@ -1,19 +1,24 @@
 import type { AppProps } from 'next/app';
-import Footer from '../src/components/Footer';
-import Top from '../src/components/Top';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../styles/theme';
-import GlobalStyle from '../styles/reset';
+import { theme } from '../src/common/styles/theme';
+import GlobalStyle from '../src/common/styles/reset';
 import 'semantic-ui-css/semantic.min.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div style={{ width: 1000, margin: '0 auto' }}>
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        backgroundImage: `url('/images/cool-background.png')`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Top />
         <Component {...pageProps} />
-        <Footer />
       </ThemeProvider>
     </div>
   );

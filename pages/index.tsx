@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Product from './product/index';
-import Detail from './detail/[id]';
-import { getProducts } from './api/api';
-import { Header } from 'semantic-ui-react';
+import SideMenu from 'components/SideMenu';
+import Main from './Main';
+import Aside from 'components/Aside';
+import { getProducts } from '../src/common/api/api';
+import styled from 'styled-components';
+import { flexSet } from '../src/common/styles/Variable';
 
 const Home: NextPage = ({ list }: any) => {
   return (
@@ -14,13 +17,20 @@ const Home: NextPage = ({ list }: any) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content='Web template by create next app' />
         <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap'
+        />
+        <script
+          src='https://kit.fontawesome.com/cc61c7cf90.js'
+          // crossorigin='anonymous'
+        ></script>
       </Head>
-      <main>
-        <Header as='h1'>상품을 둘러보세요!</Header>
-        {/* <Detail /> */}
-        <Product list={list?.slice(0, 9)} title={'잘 나가요!'} />
-        <Product list={list?.slice(9)} title={'새로 나왔어요!'} />
-      </main>
+      <Index>
+        <SideMenu />
+        <Main />
+        <Aside />
+      </Index>
     </div>
   );
 };
@@ -36,3 +46,17 @@ export async function getStaticProps() {
     },
   };
 }
+
+const Index = styled.div`
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  /* ${flexSet('space-between', '', 'row')} */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 2% 2% 0 0;
+  color: ${({ theme }) => theme.colors.textColor};
+
+  @media ${({ theme }) => theme.mobile} {
+  }
+`;

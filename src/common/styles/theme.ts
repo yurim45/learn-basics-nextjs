@@ -13,6 +13,7 @@ const size: { [key: string]: number } = {
 const colors = {
   white: '#fff',
   black: '#000',
+  textColor: '#5d5d5d',
   grey: 'grey',
   lightgrey: '#eaeaea',
   blue: '#3178C6',

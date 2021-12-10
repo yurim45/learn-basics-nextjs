@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
-import { ProductType } from '../api/api';
+import { ProductType } from '../../src/common/api/api';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Divider, Grid, Header } from 'semantic-ui-react';

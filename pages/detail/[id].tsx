@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { getProduct, ProductType } from '../api/api';
+import { getProduct, ProductType } from '../../src/common/api/api';
 import Product from '../product/index';
 import { Loader } from 'semantic-ui-react';
 

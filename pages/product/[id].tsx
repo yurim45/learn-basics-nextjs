@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { getProduct } from '../api/api';
+import { getProduct } from '../../src/common/api/api';
 import { Header, Divider, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { flexSet } from '../../styles/Variable';
+import { flexSet } from '../../src/common/styles/Variable';
 
 const ProductItem: NextPage = ({ item, name }: any) => {
   console.log(item);
