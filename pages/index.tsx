@@ -2,7 +2,7 @@
 import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import SideMenu from 'components/SideMenu';
+import TabMenu from 'components/TabMenu';
 import Main from './Main';
 import Aside from 'components/Aside';
 import { getProducts } from '../src/common/api/api';
@@ -17,17 +17,17 @@ const Home: NextPage = ({ list }: any) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content='Web template by create next app' />
         <link rel='icon' href='/favicon.ico' />
-        <link
+        {/* <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap'
-        />
+        /> */}
         <script
           src='https://kit.fontawesome.com/cc61c7cf90.js'
           // crossorigin='anonymous'
         ></script>
       </Head>
       <Index>
-        <SideMenu />
+        <TabMenu />
         <Main />
         <Aside />
       </Index>
