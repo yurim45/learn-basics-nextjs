@@ -1,13 +1,14 @@
-import type { NextPage } from 'next';
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { flexSet } from '../common/styles/Variable';
+import type { NextPage } from "next";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { flexSet } from "../common/styles/Variable";
 
 const TabMenu: NextPage = () => {
   return (
     <Index>
       <div className='logo'>
-        <img alt='logo' src='/images/icon-cake.png' />
+        <img alt='logo' src='/images/tent.png' />
+        <span>별보러 가자</span>
       </div>
       <ul className='manu'>
         <li>
@@ -45,27 +46,44 @@ const TabMenu: NextPage = () => {
 export default TabMenu;
 
 const Index = styled.div`
-  ${flexSet('space-between', '', 'column')}
-  box-shadow: 0 2px 32px 0 rgba(0, 0, 0, 0.2);
+  ${flexSet("space-between", "", "column")};
+  border-radius: 10% 10% 0 0;
+  /* background:  rgba(255, 255, 255, 0.8); */
+  /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
 
   .logo {
     display: flexbox;
     align-items: center;
+
     img {
-      width: 50px;
-      height: 50px;
-      margin: 10px;
+      width: 40px;
+      height: 40px;
+      margin: 10px 10px 10px 30px;
+    }
+
+    span {
+      font-size: 22px;
     }
   }
 
   ul {
     padding: 5px;
-    ${flexSet('flex-start', '', 'column')} li {
+    ${flexSet("flex-start", "", "column")};
+
+    li {
       padding: 20px;
 
       span {
         padding: 0 5px;
       }
+    }
+  }
+
+  .myMenu {
+    padding-right: 20px;
+
+    i {
+      font-size: 18px;
     }
   }
 

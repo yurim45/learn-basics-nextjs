@@ -2,7 +2,7 @@ import baseStyled, {
   css,
   CSSProp,
   ThemedStyledInterface,
-} from 'styled-components';
+} from "styled-components";
 
 const size: { [key: string]: number } = {
   mobile: 600,
@@ -11,12 +11,12 @@ const size: { [key: string]: number } = {
 };
 
 const colors = {
-  white: '#fff',
-  black: '#000',
-  textColor: '#5d5d5d',
-  grey: 'grey',
-  lightgrey: '#eaeaea',
-  blue: '#3178C6',
+  white: "#fff",
+  black: "#000",
+  textColor: "#5d5d5d",
+  gray: "#D3D3D3",
+  lightgray: "#eaeaea",
+  blue: "#3178C6",
 };
 
 export const theme = {
