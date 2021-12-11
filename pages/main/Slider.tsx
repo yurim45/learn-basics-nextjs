@@ -109,8 +109,4 @@ const SliderWarp = styled.div`
   .next {
     right: 310px;
   }
-
-  .block {
-    display: none;
-  }
 `;
