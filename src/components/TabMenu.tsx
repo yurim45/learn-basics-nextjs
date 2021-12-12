@@ -45,7 +45,7 @@ const TabMenu: NextPage = () => {
 
 export default TabMenu;
 
-const Index = styled.div`
+const Index = styled.header`
   ${flexSet("space-between", "", "column")};
   border-radius: 10% 10% 0 0;
   /* background:  rgba(255, 255, 255, 0.8); */

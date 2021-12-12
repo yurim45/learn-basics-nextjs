@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 // http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
 // http://makeup-api.herokuapp.com/api/v1/products.json?brand=dior
 
-const API_URL: string = 'http://makeup-api.herokuapp.com/api/v1/';
+const API_URL: string = "http://makeup-api.herokuapp.com/api/v1/";
 
 export type ProductType = {
   id: number;
@@ -41,7 +41,7 @@ export type LoginType = {
 export const getProducts = async () => {
   const url: string =
     process.env.NEXT_PUBLIC_API_URL ??
-    'http://makeup-api.herokuapp.com/api/v1/products.json?brand=dior';
+    "http://makeup-api.herokuapp.com/api/v1/products.json?brand=dior";
   const { data } = await axios.get<ProductType[]>(url);
   return data;
 };
