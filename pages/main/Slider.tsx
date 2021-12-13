@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState, useRef } from "react";
-import styled from "styled-components";
-import { flexSet } from "common/styles/Variable";
+import type { NextPage } from 'next';
+import React, { useEffect, useState, useRef } from 'react';
+import styled from 'styled-components';
+import { flexSet } from 'common/styles/Variable';
 
 type dataType = {
   id: number;
@@ -13,20 +13,20 @@ const IMG_DATA: dataType[] = [
   {
     id: 0,
     imgUrl:
-      "https://images.unsplash.com/photo-1525811902-f2342640856e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    imgAlt: "camping",
+      'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    imgAlt: 'camping',
   },
   {
     id: 1,
     imgUrl:
-      "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    imgAlt: "camping",
+      'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    imgAlt: 'camping',
   },
   {
     id: 2,
     imgUrl:
-      "https://images.unsplash.com/photo-1537565266759-34bbc16be345?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    imgAlt: "camping",
+      'https://images.unsplash.com/photo-1537565266759-34bbc16be345?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    imgAlt: 'camping',
   },
 ];
 
@@ -59,17 +59,21 @@ const Slider: NextPage = () => {
     <SliderWarp>
       {currentSlide > 0 && (
         <button className='prev' onClick={handlePrevBtn}>
-          {"<"}
+          {'<'}
         </button>
       )}
       {currentSlide < IMG_DATA.length - 1 && (
-        <button className='next' onClick={handleNextBtn}>
-          {">"}
+        <button
+          className='next'
+          onClick={handleNextBtn}
+          style={{ right: currentSlide > 0 ? '-530px' : '-563px' }}
+        >
+          {'>'}
         </button>
       )}
       <div className='container' ref={slideRef}>
         {IMG_DATA.map((img) => {
-          return <img alt={img.imgAlt} src={img.imgUrl} />;
+          return <img key={img.id} alt={img.imgAlt} src={img.imgUrl} />;
         })}
       </div>
     </SliderWarp>
@@ -83,19 +87,15 @@ const SliderWarp = styled.div`
   margin: auto;
   overflow: hidden;
 
-  .container {
-    ${flexSet("flex-start", "center", "column")};
-  }
-
   .prev,
   .next {
-    position: absolute;
-    top: 29%;
+    position: relative;
+    top: 225px;
     padding: 10px 12px 6px;
     color: ${({ theme }) => theme.colors.gray};
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 100;
 
     &:hover {
       transition: all 0.3s ease-in-out;
@@ -104,9 +104,13 @@ const SliderWarp = styled.div`
     }
   }
   .prev {
-    left: 310px;
+    left: 5px;
   }
   .next {
-    right: 310px;
+  }
+
+  .container {
+    ${flexSet('flex-start', 'center', 'column')};
+    width: 600px;
   }
 `;

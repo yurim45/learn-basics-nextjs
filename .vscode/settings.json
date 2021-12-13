@@ -1,5 +1,3 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.quoteStyle": "single"
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
