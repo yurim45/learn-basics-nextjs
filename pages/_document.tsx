@@ -38,7 +38,17 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='kr'>
-        <Head />
+        <Head>
+          <title>web template</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <meta name='description' content='Web template by create next app' />
+          <link rel='icon' href='/favicon.ico' />
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap'
+          />
+          <script src='https://kit.fontawesome.com/cc61c7cf90.js'></script>
+        </Head>
         <body>
           <Main />
           <NextScript />

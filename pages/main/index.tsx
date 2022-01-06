@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import Slider from "./Slider";
+import type { NextPage } from 'next';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import Slider from './Slider';
 
 const Main: NextPage = () => {
   return (

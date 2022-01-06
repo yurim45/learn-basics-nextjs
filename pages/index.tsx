@@ -1,31 +1,17 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
-import TabMenu from "components/TabMenu";
-import Main from "./main/index";
-import Aside from "components/Aside";
-import { getProducts } from "../src/common/api/api";
-import styled from "styled-components";
-import Footer from "components/Footer";
+import type { NextPage } from 'next';
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import TabMenu from 'components/TabMenu';
+import Main from './main/index';
+import Aside from 'components/Aside';
+import { getProducts } from '../src/common/api/api';
+import styled from 'styled-components';
+import Footer from 'components/Footer';
 
 const Home: NextPage = ({ list }: any) => {
   return (
-    <div style={{ padding: "2rem", maxWidth: "1200px", margin: "auto" }}>
-      <Head>
-        <title>web template</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='description' content='Web template by create next app' />
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap'
-        />
-        <script
-          src='https://kit.fontawesome.com/cc61c7cf90.js'
-          crossorigin='anonymous'
-        ></script>
-      </Head>
+    <div style={{ padding: '2rem', maxWidth: '1200px', margin: 'auto' }}>
       <Index>
         <TabMenu />
         <Main />
