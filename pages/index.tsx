@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 import TabMenu from 'components/TabMenu';
 import Main from './main/index';
-import Aside from 'components/Aside';
 import { getProducts } from '../src/common/api/api';
 import styled from 'styled-components';
 import Footer from 'components/Footer';
