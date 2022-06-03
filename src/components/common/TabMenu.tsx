@@ -1,9 +1,8 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { flexSet } from "../common/styles/Variable";
+import React from 'react';
+import styled from 'styled-components';
+import { flexSet } from '../../shared/styles/Variable';
 
-const TabMenu: NextPage = () => {
+const TabMenu = () => {
   return (
     <Index>
       <div className='logo'>
@@ -46,7 +45,7 @@ const TabMenu: NextPage = () => {
 export default TabMenu;
 
 const Index = styled.header`
-  ${flexSet("space-between", "", "column")};
+  ${flexSet('space-between', '', 'column')};
   border-radius: 10% 10% 0 0;
   /* background:  rgba(255, 255, 255, 0.8); */
   /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
@@ -68,7 +67,7 @@ const Index = styled.header`
 
   ul {
     padding: 5px;
-    ${flexSet("flex-start", "", "column")};
+    ${flexSet('flex-start', '', 'column')};
 
     li {
       padding: 20px;
@@ -87,6 +86,6 @@ const Index = styled.header`
     }
   }
 
-  @media ${({ theme }) => theme.mobile} {
-  }
+  /* @media ${({ theme }) => theme.mobile} {
+  } */
 `;

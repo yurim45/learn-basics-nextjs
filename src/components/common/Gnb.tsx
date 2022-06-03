@@ -1,47 +1,38 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { Menu } from 'semantic-ui-react';
 
-const Gnb: NextPage = () => {
-  const [activeItem, setActiveItem] = useState<String>();
+const Gnb = () => {
+  const [activeItem, setActiveItem] = useState<String>('');
   const router = useRouter();
 
   return (
-    <Menu inverted>
-      <Menu.Item
-        name='home'
-        active={activeItem === 'home'}
+    <ul>
+      <li
         onClick={() => {
           setActiveItem('home');
           router.push('/');
         }}
       />
-      <Menu.Item
-        name='product'
-        active={activeItem === 'product'}
+      <li
         onClick={() => {
           setActiveItem('product');
           router.push('/product');
         }}
       />
-      <Menu.Item
-        name='mypage'
-        active={activeItem === 'mypage'}
+      <li
         onClick={() => {
           setActiveItem('mypage');
           router.push('/mypage');
         }}
       />
-      <Menu.Item
-        name='admin'
-        active={activeItem === 'admin'}
+      <li
         onClick={() => {
           setActiveItem('admin');
           router.push('/admin');
         }}
       />
-    </Menu>
+    </ul>
   );
 };
 

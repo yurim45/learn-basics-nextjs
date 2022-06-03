@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import React, { useEffect, useState, useRef } from 'react';
+import { flexSet } from 'shared/styles/Variable';
 import styled from 'styled-components';
-import { flexSet } from 'common/styles/Variable';
 
 type dataType = {
   id: number;
@@ -30,7 +30,7 @@ const IMG_DATA: dataType[] = [
   },
 ];
 
-const Slider: NextPage = () => {
+const Slider = () => {
   const slideRef: any = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 

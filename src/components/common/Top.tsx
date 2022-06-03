@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from 'semantic-ui-react';
 import Gnb from './Gnb';
 
-const Head: NextPage = () => {
+const Head = () => {
   return (
     <div style={{ padding: 20 }}>
       <Link href='/'>
