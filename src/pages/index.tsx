@@ -7,10 +7,9 @@ import Footer from 'components/common/Footer';
 
 const Home: NextPage = () => {
   return (
-    <Index>
-      <TabMenu />
-      <Footer />
-    </Index>
+    <>
+      <div>main page</div>
+    </>
   );
 };
 
