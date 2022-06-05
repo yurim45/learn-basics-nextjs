@@ -35,6 +35,10 @@ const StSction = styled.section`
   h2 {
     font-size: 60px;
     font-weight: 600;
+
+    @media ${({ theme }) => theme.mobile} {
+      font-size: 48px;
+    }
   }
 `;
 
@@ -48,6 +52,12 @@ const StContent = styled.div`
   ${flex};
   padding: 20px 0;
 
+  @media ${({ theme }) => theme.mobile} {
+    ${flex({
+      direction: 'col',
+    })};
+  }
+
   img {
     border-radius: 50%;
   }
@@ -55,6 +65,12 @@ const StContent = styled.div`
 
 const StText = styled.div`
   padding-left: 200px;
+
+  @media ${({ theme }) => theme.mobile} {
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+  }
 
   strong {
     font-size: 32px;
@@ -64,11 +80,20 @@ const StText = styled.div`
 
   span {
     font-size: 18px;
+
+    @media ${({ theme }) => theme.mobile} {
+      display: block;
+      font-size: 16px;
+    }
   }
 
   p {
     margin: 20px 0;
     font-size: 18px;
     line-height: 1.2;
+
+    @media ${({ theme }) => theme.mobile} {
+      font-size: 14px;
+    }
   }
 `;

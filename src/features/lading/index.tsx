@@ -27,8 +27,7 @@ const Lading = () => {
           <Image
             alt="flower"
             src="/images/landing-right-bottom.png"
-            width={297}
-            height={598}
+            layout="fill"
           />
         </StRightBottom>
         <StLeftBottom>
@@ -68,6 +67,10 @@ const StText = styled.div`
   h1 {
     margin-bottom: 100px;
     font-size: 80px;
+
+    @media ${({ theme }) => theme.mobile} {
+      font-size: 60px;
+    }
   }
 
   strong {
@@ -109,6 +112,14 @@ const StRightBottom = styled.div`
   position: absolute;
   right: 0;
   bottom: 400px;
+  width: 300px;
+  height: 600px;
+
+  @media ${({ theme }) => theme.mobile} {
+    bottom: 200px;
+    width: 100px;
+    height: 200px;
+  }
 `;
 
 const StLeftBottom = styled.div`
@@ -117,4 +128,10 @@ const StLeftBottom = styled.div`
   bottom: -250px;
   width: 100vw;
   height: 60vh;
+
+  @media ${({ theme }) => theme.mobile} {
+    bottom: -50px;
+    width: 100vw;
+    height: 20vh;
+  }
 `;

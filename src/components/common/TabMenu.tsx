@@ -82,7 +82,4 @@ const Index = styled.header`
       font-size: 18px;
     }
   }
-
-  /* @media ${({ theme }) => theme.mobile} {
-  } */
 `;

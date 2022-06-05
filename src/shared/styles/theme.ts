@@ -8,9 +8,9 @@ const size: { [key: string]: number } = {
 
 export const theme = {
   // 반응형
-  mobile: `(max-width: ${size.mobile})`,
-  tablet: `(max-width: ${size.tablet})`,
-  desktop: `(min-width: ${size.desktop})`,
+  mobile: `(max-width: ${size.mobile}px)`,
+  tablet: `(max-width: ${size.tablet}px)`,
+  desktop: `(min-width: ${size.desktop}px)`,
 };
 
 export type ThemeType = typeof theme;
