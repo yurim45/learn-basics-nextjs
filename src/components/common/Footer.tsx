@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexSet } from '../../shared/styles/Variable';
+import { flexSet } from '../../shared/styles/variable';
 
 const Footer = () => {
   return (

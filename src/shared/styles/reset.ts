@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: Pretendard;
     font-size: 12px;
+    letter-spacing: -0.2px;
   }
 
   a {

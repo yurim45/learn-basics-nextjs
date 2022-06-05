@@ -1,41 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexSet } from '../../shared/styles/Variable';
+import { flexSet } from '../../shared/styles/variable';
 
 const TabMenu = () => {
   return (
     <Index>
-      <div className='logo'>
-        <img alt='logo' src='/images/tent.png' />
+      <div className="logo">
+        <img alt="logo" src="/images/tent.png" />
         <span>별보러 가자</span>
       </div>
-      <ul className='manu'>
+      <ul className="manu">
         <li>
-          <i className='fas fa-quote-left' />
+          <i className="fas fa-quote-left" />
           <span>메뉴</span>
         </li>
         <li>
-          <i className='fas fa-quote-left' />
+          <i className="fas fa-quote-left" />
           <span>메뉴</span>
         </li>
         <li>
-          <i className='fas fa-quote-left' />
+          <i className="fas fa-quote-left" />
           <span>메뉴</span>
         </li>
         <li>
-          <i className='fas fa-quote-left' />
+          <i className="fas fa-quote-left" />
           <span>메뉴</span>
         </li>
       </ul>
-      <ul className='myMenu'>
+      <ul className="myMenu">
         <li>
-          <i className='fas fa-home' />
+          <i className="fas fa-home" />
         </li>
         <li>
-          <i className='far fa-bell' />
+          <i className="far fa-bell" />
         </li>
         <li>
-          <i className='far fa-user-circle' />
+          <i className="far fa-user-circle" />
         </li>
       </ul>
     </Index>
