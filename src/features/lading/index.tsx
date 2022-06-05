@@ -9,7 +9,7 @@ const Lading = () => {
       <div>
         <StLeftTop>
           <Image
-            alt=""
+            alt="flower"
             src="/images/landing-left-top.png"
             width={939}
             height={872}
@@ -17,7 +17,7 @@ const Lading = () => {
         </StLeftTop>
         <StRightTop>
           <Image
-            alt=""
+            alt="flower"
             src="/images/landing-right-top.png"
             width={805}
             height={322}
@@ -25,25 +25,20 @@ const Lading = () => {
         </StRightTop>
         <StRightBottom>
           <Image
-            alt=""
+            alt="flower"
             src="/images/landing-right-bottom.png"
             width={297}
             height={598}
           />
         </StRightBottom>
         <StLeftBottom>
-          <Image
-            alt=""
-            src="/images/landing-bottom.png"
-            layout="fill"
-            objectFit="fill"
-            className={'image'}
-          />
+          <Image alt="flower" src="/images/landing-bottom.png" layout="fill" />
         </StLeftBottom>
       </div>
       <StText>
         <h1>Imagination becomes reality</h1>
         <strong>April's home</strong>
+        <button>▼</button>
       </StText>
     </Main>
   );
@@ -78,35 +73,48 @@ const StText = styled.div`
   strong {
     font-size: 24px;
   }
+
+  button {
+    position: absolute;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    animation: blink-effect 2s infinite ease-in-out;
+  }
+
+  @keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
 `;
 
 const StLeftTop = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 `;
 
 const StRightTop = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
 `;
 
 const StRightBottom = styled.div`
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 400px;
 `;
 
 const StLeftBottom = styled.div`
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: -250px;
   width: 100vw;
-  height: 50vh;
-
-  .image {
-    width: 100%;
-    height: 100%;
-  }
+  height: 60vh;
 `;

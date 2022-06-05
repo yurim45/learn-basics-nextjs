@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import React, { useEffect, useState, useRef } from 'react';
-import { flexSet } from 'shared/styles/Variable';
 import styled from 'styled-components';
 
 type dataType = {
@@ -58,20 +57,20 @@ const Slider = () => {
   return (
     <SliderWarp>
       {currentSlide > 0 && (
-        <button className='prev' onClick={handlePrevBtn}>
+        <button className="prev" onClick={handlePrevBtn}>
           {'<'}
         </button>
       )}
       {currentSlide < IMG_DATA.length - 1 && (
         <button
-          className='next'
+          className="next"
           onClick={handleNextBtn}
           style={{ right: currentSlide > 0 ? '-530px' : '-563px' }}
         >
           {'>'}
         </button>
       )}
-      <div className='container' ref={slideRef}>
+      <div className="container" ref={slideRef}>
         {IMG_DATA.map((img) => {
           return <img key={img.id} alt={img.imgAlt} src={img.imgUrl} />;
         })}
@@ -110,7 +109,6 @@ const SliderWarp = styled.div`
   }
 
   .container {
-    ${flexSet('flex-start', 'center', 'column')};
     width: 600px;
   }
 `;
