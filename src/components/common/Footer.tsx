@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexSet } from '../../shared/styles/variable';
 
 const Footer = () => {
   return (
@@ -14,7 +13,6 @@ export default Footer;
 
 const FooterWrap = styled.footer`
   padding: 20px;
-  ${flexSet('center', 'center')}
   color: var(--gray);
   border-top: 1px solid var(--lightGray);
 

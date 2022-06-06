@@ -7,14 +7,14 @@ const Lading = () => {
   return (
     <Main>
       <div>
-        <StLeftTop>
+        <StLeft>
           <Image
             alt="flower"
             src="/images/landing-left-top.png"
             width={939}
             height={872}
           />
-        </StLeftTop>
+        </StLeft>
         <StRightTop>
           <Image
             alt="flower"
@@ -45,7 +45,7 @@ const Lading = () => {
 
 export default Lading;
 
-const Main = styled.main`
+const Main = styled.section`
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
@@ -97,7 +97,7 @@ const StText = styled.div`
   }
 `;
 
-const StLeftTop = styled.div`
+const StLeft = styled.div`
   position: absolute;
   top: 0;
   left: 0;
