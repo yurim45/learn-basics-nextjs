@@ -36,7 +36,7 @@ const Lading = () => {
       </div>
       <StText>
         <h1>Imagination becomes reality</h1>
-        <strong>April's home</strong>
+        <strong>{"April's world"}</strong>
         <button>▼</button>
       </StText>
     </Main>

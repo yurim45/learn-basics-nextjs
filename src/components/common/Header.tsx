@@ -19,7 +19,14 @@ const Header = () => {
 
   return (
     <StHeader hasScroll={hasScroll}>
-      <div>Header</div>
+      <Logo>{"April's world"}</Logo>
+      <Gnb>
+        <li>About Me</li>
+        <li>Archiving</li>
+        <li>Skills</li>
+        <li>Projects</li>
+        <li>Career</li>
+      </Gnb>
     </StHeader>
   );
 };
@@ -35,3 +42,7 @@ const StHeader = styled.header<{ hasScroll: boolean }>`
   opacity: ${({ hasScroll }) => (hasScroll ? '100%' : 0)};
   z-index: 200;
 `;
+
+const Logo = styled.div``;
+
+const Gnb = styled.ul``;
