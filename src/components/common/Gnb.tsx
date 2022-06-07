@@ -1,39 +1,31 @@
-import React, { useState } from 'react';
-import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
+import React from 'react';
+import styled from 'styled-components';
+import flex from '@shared/styles/flex';
 
 const Gnb = () => {
-  // const [activeItem, setActiveItem] = useState<String>('');
-  const router = useRouter();
-
   return (
-    <ul>
-      <li
-        onClick={() => {
-          // setActiveItem('home');
-          router.push('/');
-        }}
-      />
-      <li
-        onClick={() => {
-          // setActiveItem('product');
-          router.push('/product');
-        }}
-      />
-      <li
-        onClick={() => {
-          // setActiveItem('mypage');
-          router.push('/mypage');
-        }}
-      />
-      <li
-        onClick={() => {
-          // setActiveItem('admin');
-          router.push('/admin');
-        }}
-      />
-    </ul>
+    <StGnb>
+      <li>About Me</li>
+      <li>Archiving</li>
+      <li>Skills</li>
+      <li>Projects</li>
+      <li>Career</li>
+    </StGnb>
   );
 };
 
 export default Gnb;
+
+const StGnb = styled.ul`
+  color: var(--text-555);
+  font-size: 18px;
+  font-weight: 600;
+  ${flex({
+    justify: 'between',
+  })};
+
+  li {
+    margin: 0 20px;
+    cursor: pointer;
+  }
+`;

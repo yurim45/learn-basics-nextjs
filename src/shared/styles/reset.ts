@@ -74,6 +74,7 @@ const GlobalStyles = createGlobalStyle`
     --compo-dim:#d5d5d5;
     --compo-red :#F85151; 
     --compo-blue : #0085FF;
+    --bg-yellow: #fcfae8;
 
     // text
     --text-333 : #333333;
@@ -94,6 +95,7 @@ const GlobalStyles = createGlobalStyle`
     --deepGray : #7C8986;
     --lightGray:#EEF1F1;
     --green :#00C092;
+    --yellow: #F9C51D;
   }
 `;
 export default GlobalStyles;

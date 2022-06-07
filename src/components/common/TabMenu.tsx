@@ -5,7 +5,7 @@ const TabMenu = () => {
   return (
     <Index>
       <div className="logo">
-        <img alt="logo" src="/images/tent.png" />
+        {/* <img alt="logo" src="/images/tent.png" /> */}
         <span>별보러 가자</span>
       </div>
       <ul className="manu">

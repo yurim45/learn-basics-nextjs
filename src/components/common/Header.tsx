@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import flex from '@shared/styles/flex';
 import styled from 'styled-components';
+import Gnb from './Gnb';
 
 const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false);
 
   const updateScroll = () => {
-    if (window?.scrollY >= 1063) {
+    if (window?.scrollY >= 1273) {
       setHasScroll(true);
     } else {
       setHasScroll(false);
@@ -19,14 +21,10 @@ const Header = () => {
 
   return (
     <StHeader hasScroll={hasScroll}>
-      <Logo>{"April's world"}</Logo>
-      <Gnb>
-        <li>About Me</li>
-        <li>Archiving</li>
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Career</li>
-      </Gnb>
+      <Inner>
+        <Logo>{"April's world"}</Logo>
+        <Gnb />
+      </Inner>
     </StHeader>
   );
 };
@@ -37,12 +35,23 @@ const StHeader = styled.header<{ hasScroll: boolean }>`
   position: fixed;
   width: 100vw;
   height: 60px;
+  padding: 18px 0;
   background: var(--white);
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
   opacity: ${({ hasScroll }) => (hasScroll ? '100%' : 0)};
   z-index: 200;
 `;
 
-const Logo = styled.div``;
+const Inner = styled.div`
+  max-width: 1140px;
+  margin: 0 auto;
+  ${flex({
+    justify: 'between',
+  })};
+`;
 
-const Gnb = styled.ul``;
+const Logo = styled.div`
+  color: var(--text-333);
+  font-size: 24px;
+  font-weight: 600;
+`;

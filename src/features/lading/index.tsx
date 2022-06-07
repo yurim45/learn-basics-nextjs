@@ -31,7 +31,12 @@ const Lading = () => {
           />
         </StRightBottom>
         <StLeftBottom>
-          <Image alt="flower" src="/images/landing-bottom.png" layout="fill" />
+          <Image
+            alt="flower"
+            src="/images/landing-bottom.png"
+            layout="fill"
+            priority={true}
+          />
         </StLeftBottom>
       </div>
       <StText>
