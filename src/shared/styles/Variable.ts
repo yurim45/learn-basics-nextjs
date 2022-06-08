@@ -5,6 +5,11 @@ export const formSet = () => css`
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  transition: all 0.1s ease-in-out;
+
+  :hover {
+    transform: translate(0, -20px);
+  }
 `;
 
 export const sectionTitle = () => css`

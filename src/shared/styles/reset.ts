@@ -85,6 +85,7 @@ const GlobalStyles = createGlobalStyle`
     --text-green : #00B98D;
     --text-red :#F85151; 
     --text-blue : #0085FF;
+    --text-yellow : #f7b409;
     --text-dim: #d5d5d5;
 
     // 공통

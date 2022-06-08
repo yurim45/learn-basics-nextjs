@@ -30,16 +30,14 @@ const Layout = ({
 export default Layout;
 
 const StSction = styled.section<{ bgColor: string }>`
-  ${flex({
-    direction: 'col',
-  })};
   width: 100vw;
-  height: 80vh;
+  padding: 150px 0;
   background: ${({ bgColor }) => `var(--${bgColor})`};
 `;
 
 const Inner = styled.div`
   max-width: 1140px;
+  margin: auto;
 
   h2 {
     ${sectionTitle()};
@@ -60,46 +58,5 @@ const StContent = styled.div`
     ${flex({
       direction: 'col',
     })};
-  }
-
-  img {
-    border-radius: 50%;
-  }
-`;
-
-const StText = styled.div`
-  color: var(--text-333);
-  padding-left: 200px;
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: 20px 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  strong {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 10px;
-  }
-
-  span {
-    color: var(--text-777);
-    font-size: 18px;
-
-    @media ${({ theme }) => theme.mobile} {
-      display: block;
-      font-size: 16px;
-    }
-  }
-
-  p {
-    margin: 20px 0;
-    font-size: 18px;
-    line-height: 1.2;
-
-    @media ${({ theme }) => theme.mobile} {
-      font-size: 14px;
-    }
   }
 `;

@@ -13,6 +13,7 @@ const Landing = () => {
             src="/images/landing/landing-left-top.png"
             width={939}
             height={872}
+            priority={true}
           />
         </StLeft>
         <StRightTop>
@@ -21,6 +22,7 @@ const Landing = () => {
             src="/images/landing/landing-right-top.png"
             width={805}
             height={322}
+            priority={true}
           />
         </StRightTop>
         <StRightBottom>
@@ -28,6 +30,7 @@ const Landing = () => {
             alt="flower"
             src="/images/landing/landing-right-bottom.png"
             layout="fill"
+            priority={true}
           />
         </StRightBottom>
         <StLeftBottom>

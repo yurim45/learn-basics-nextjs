@@ -1,12 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import Layout from '@components/common/Layout';
+import { Layout } from '@components/index';
 
 const Introduce = () => {
   return (
     <Layout pageTitle="Introduce">
-      <Image alt="me" src="/images/april.png" width={300} height={300} />
+      <StImg>
+        <Image alt="me" src="/images/april.png" width={300} height={300} />
+      </StImg>
       <StText>
         <strong>김유림</strong>
         <span>Frontend Developer</span>
@@ -55,5 +57,11 @@ const StText = styled.div`
     @media ${({ theme }) => theme.mobile} {
       font-size: 14px;
     }
+  }
+`;
+
+const StImg = styled.div`
+  img {
+    border-radius: 50%;
   }
 `;
