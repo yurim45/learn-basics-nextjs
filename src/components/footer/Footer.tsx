@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <FooterWrap>
-      <p>Copyrightⓒ 2021. Yr.Kim All rights reserved.</p>
+      <p>Copyright ⓒ 2022. Yr.Kim All rights reserved.</p>
     </FooterWrap>
   );
 };
@@ -12,11 +12,13 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrap = styled.footer`
-  padding: 20px;
-  color: var(--gray);
-  border-top: 1px solid var(--lightGray);
+  padding: 50px 0;
+  color: var(--white);
+  background: var(--compo-primary);
 
   p {
-    padding: 50px 0;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    text-align: center;
   }
 `;

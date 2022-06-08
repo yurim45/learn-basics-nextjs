@@ -67,13 +67,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    --compo-primary: #00C092;
+    --compo-primary: #fbb0a3;
     --compo-primary-press : #0AA882;
     --compo-secondary: #F7F9F8;
     --compo-line: #e5e5e5;
     --compo-dim:#d5d5d5;
+    --compo-lightgray:##F5F5F5;
     --compo-red :#F85151; 
     --compo-blue : #0085FF;
+    --compo-green : #00C092;
+    --compo-lilac : #DFDFF2;
     --bg-yellow: #fcfae8;
 
     // text

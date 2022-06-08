@@ -6,6 +6,7 @@ import { sectionTitle } from '@shared/styles/variable';
 type LayoutProps = {
   pageTitle: string;
   children: ReactNode;
+  color?: string;
   bgColor?: string;
   lineColor?: string;
 };
@@ -14,11 +15,12 @@ const Layout = ({
   pageTitle,
   children,
   bgColor = 'white',
+  color = 'text-333',
   lineColor = 'blue',
 }: LayoutProps) => {
   return (
     <StSction bgColor={bgColor}>
-      <Inner>
+      <Inner color={color}>
         <h2>{pageTitle}</h2>
         <StLine lineColor={lineColor} />
         <StContent>{children}</StContent>
@@ -35,12 +37,13 @@ const StSction = styled.section<{ bgColor: string }>`
   background: ${({ bgColor }) => `var(--${bgColor})`};
 `;
 
-const Inner = styled.div`
+const Inner = styled.div<{ color: string }>`
   max-width: 1140px;
   margin: auto;
 
   h2 {
     ${sectionTitle()};
+    color: ${({ color }) => `var(--${color})`};
   }
 `;
 

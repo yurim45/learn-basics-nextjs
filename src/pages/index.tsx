@@ -1,9 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
 import type { NextPage } from 'next';
-import { Header } from '@components/index';
+import { Footer, Header } from '@components/index';
 import Landing from '@features/landing';
 import Introduce from '@features/introduce';
+import Archiving from '@features/archiving';
 import Skills from '@features/skills';
+import Projects from '@features/projects';
+import Career from '@features/career';
 
 const Home: NextPage = () => {
   const checkDeltaPower = useCallback(() => {
@@ -15,7 +18,11 @@ const Home: NextPage = () => {
       <Header />
       <Landing />
       <Introduce />
+      <Archiving />
       <Skills />
+      <Projects />
+      <Career />
+      <Footer />
     </>
   );
 };

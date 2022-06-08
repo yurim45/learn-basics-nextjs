@@ -58,7 +58,7 @@ const Main = styled.section`
   height: 100vh;
   margin: 0 auto;
   color: var(--text-555);
-  background: #fbb0a3;
+  background: var(--compo-primary);
 `;
 
 const StText = styled.div`

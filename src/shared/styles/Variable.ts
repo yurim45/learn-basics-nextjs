@@ -4,7 +4,7 @@ export const formSet = () => css`
   padding: 40px;
   background-color: var(--white);
   border-radius: 12px;
-  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  box-shadow: 1.95px 1.95px 2.6px rgb(0 0 0 / 15%);
   transition: all 0.1s ease-in-out;
 
   :hover {
