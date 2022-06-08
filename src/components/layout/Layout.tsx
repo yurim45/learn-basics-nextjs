@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { styled } from '@shared/styles/theme';
 import flex from '@shared/styles/flex';
-import { sectionTitle } from '@shared/styles/variable';
+import { sectionTitle } from '@shared/styles/variables';
 
 type LayoutProps = {
   pageTitle: string;
