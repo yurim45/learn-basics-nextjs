@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import type { NextPage } from 'next';
-import { Header } from '@components/common/index';
-import Lading from '@features/lading';
+import { Header } from '@components/index';
+import Landing from '@features/landing';
 import Introduce from '@features/introduce';
 import Skills from '@features/skills';
 
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <Lading />
+      <Landing />
       <Introduce />
       <Skills />
     </>

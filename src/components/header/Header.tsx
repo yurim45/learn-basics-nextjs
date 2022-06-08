@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import flex from '@shared/styles/flex';
 import styled from 'styled-components';
-import Gnb from './Gnb';
+import Gnb from './gnb/Gnb';
 
 const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false);

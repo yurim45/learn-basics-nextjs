@@ -3,14 +3,14 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 
-const Lading = () => {
+const Landing = () => {
   return (
     <Main>
       <div>
         <StLeft>
           <Image
             alt="flower"
-            src="/images/landing-left-top.png"
+            src="/images/landing/landing-left-top.png"
             width={939}
             height={872}
           />
@@ -18,7 +18,7 @@ const Lading = () => {
         <StRightTop>
           <Image
             alt="flower"
-            src="/images/landing-right-top.png"
+            src="/images/landing/landing-right-top.png"
             width={805}
             height={322}
           />
@@ -26,14 +26,14 @@ const Lading = () => {
         <StRightBottom>
           <Image
             alt="flower"
-            src="/images/landing-right-bottom.png"
+            src="/images/landing/landing-right-bottom.png"
             layout="fill"
           />
         </StRightBottom>
         <StLeftBottom>
           <Image
             alt="flower"
-            src="/images/landing-bottom.png"
+            src="/images/landing/landing-bottom.png"
             layout="fill"
             priority={true}
           />
@@ -48,7 +48,7 @@ const Lading = () => {
   );
 };
 
-export default Lading;
+export default Landing;
 
 const Main = styled.section`
   width: 100vw;
