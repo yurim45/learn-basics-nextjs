@@ -6,7 +6,7 @@ const Gnb = () => {
   return (
     <StGnb>
       <li>About Me</li>
-      <li>Archiving</li>
+      <li>Archive</li>
       <li>Skills</li>
       <li>Projects</li>
       <li>Career</li>

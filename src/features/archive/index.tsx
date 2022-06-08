@@ -3,16 +3,16 @@ import { Layout } from '@components/index';
 import styled from 'styled-components';
 import { formSet } from '@shared/styles/variable';
 
-const Archiving = () => {
+const Archive = () => {
   return (
-    <Layout pageTitle="Archiving" lineColor="white" bgColor="compo-lilac">
+    <Layout pageTitle="Archive" lineColor="white" bgColor="compo-lilac">
       <StContainer></StContainer>
       <StContainer></StContainer>
     </Layout>
   );
 };
 
-export default Archiving;
+export default Archive;
 
 const StContainer = styled.div`
   ${formSet()};

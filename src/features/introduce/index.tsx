@@ -5,7 +5,7 @@ import { Layout } from '@components/index';
 
 const Introduce = () => {
   return (
-    <Layout pageTitle="Introduce">
+    <Layout pageTitle="About Me">
       <StImg>
         <Image alt="me" src="/images/april.png" width={300} height={300} />
       </StImg>
@@ -16,6 +16,8 @@ const Introduce = () => {
           함께 일 하고 싶은 개발자, <br />
           사용자 관점에서 개발하는 프론트엔드 개발자
         </p>
+        <h3>Contact.</h3>
+        <p>Email. icho0405@gmail.com</p>
       </StText>
     </Layout>
   );
@@ -57,6 +59,12 @@ const StText = styled.div`
     @media ${({ theme }) => theme.mobile} {
       font-size: 14px;
     }
+  }
+
+  h3 {
+    margin: 50px 0 0;
+    font-size: 24px;
+    font-weight: 600;
   }
 `;
 

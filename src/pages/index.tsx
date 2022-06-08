@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Footer, Header } from '@components/index';
 import Landing from '@features/landing';
 import Introduce from '@features/introduce';
-import Archiving from '@features/archiving';
+import Archive from '@features/archive';
 import Skills from '@features/skills';
 import Projects from '@features/projects';
 import Career from '@features/career';
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Header />
       <Landing />
       <Introduce />
-      <Archiving />
+      <Archive />
       <Skills />
       <Projects />
       <Career />
