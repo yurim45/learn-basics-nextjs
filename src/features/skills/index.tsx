@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
-import { formSet } from '@shared/styles/variable';
+import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 
 const Skills = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from '@components/index';
 import styled from 'styled-components';
-import { formSet } from '@shared/styles/variable';
+import { formSet } from '@shared/styles/variables';
 
 const Projects = () => {
   return (
