@@ -45,12 +45,25 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="프론트 엔드 개발자 김유림의 포트폴리오입니다."
+          />
+          <meta
+            property="og:title"
+            content="김유림 포트폴리오 April's Portfolio"
+          />
+          <meta
+            property="og:description"
+            content="프론트 엔드 개발자 김유림의 포트폴리오입니다."
+          />
           <link
             rel="stylesheet"
             type="text/css"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
           />
-          {/* <link rel="icon" href="/favicon.ico" /> */}
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
