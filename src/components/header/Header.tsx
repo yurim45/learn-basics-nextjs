@@ -7,7 +7,7 @@ const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false);
 
   const updateScroll = () => {
-    if (window?.scrollY >= 1273) {
+    if (window?.scrollY >= 1200) {
       setHasScroll(true);
     } else {
       setHasScroll(false);

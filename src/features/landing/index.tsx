@@ -30,7 +30,6 @@ const Landing = () => {
             alt="flower"
             src="/images/landing/landing-right-bottom.png"
             layout="fill"
-            priority={true}
           />
         </StRightBottom>
         <StLeftBottom>
@@ -59,6 +58,10 @@ const Main = styled.section`
   margin: 0 auto;
   color: var(--text-555);
   background: var(--compo-primary);
+
+  img {
+    box-shadow: 100px 100px 100px #000;
+  }
 `;
 
 const StText = styled.div`
