@@ -60,7 +60,7 @@ const Main = styled.section`
   background: var(--compo-primary);
 
   img {
-    box-shadow: 100px 100px 100px #000;
+    filter: drop-shadow(-5px 10px 2px rgba(0, 0, 0, 0.5));
   }
 `;
 

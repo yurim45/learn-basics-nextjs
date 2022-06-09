@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Introduce = () => {
   return (
@@ -17,7 +18,9 @@ const Introduce = () => {
           사용자 관점에서 개발하는 프론트엔드 개발자
         </p>
         <h3>Contact.</h3>
-        <p>Email. icho0405@gmail.com</p>
+        <p>
+          <FontAwesomeIcon icon="fa-solid fa-envelope" />. icho0405@gmail.com
+        </p>
       </StText>
     </Layout>
   );
@@ -72,4 +75,8 @@ const StImg = styled.div`
   img {
     border-radius: 50%;
   }
+`;
+
+const StMail = styled.span`
+  width: 100px;
 `;

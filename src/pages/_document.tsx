@@ -45,11 +45,15 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <link
+          <script
+            src="https://kit.fontawesome.com/cc61c7cf90.js"
+            crossOrigin="anonymous"
+          ></script>
+          <link
             rel="stylesheet"
             type="text/css"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-          /> */}
+          />
           {/* <link rel="icon" href="/favicon.ico" /> */}
         </Head>
         <body>
