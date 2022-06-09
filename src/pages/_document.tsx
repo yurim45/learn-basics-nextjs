@@ -45,10 +45,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script
-            src="https://kit.fontawesome.com/cc61c7cf90.js"
-            crossOrigin="anonymous"
-          ></script>
           <link
             rel="stylesheet"
             type="text/css"

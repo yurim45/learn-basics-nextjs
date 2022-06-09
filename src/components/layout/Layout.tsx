@@ -35,6 +35,10 @@ const StSction = styled.section<{ bgColor: string }>`
   width: 100vw;
   padding: 150px 0;
   background: ${({ bgColor }) => `var(--${bgColor})`};
+
+  @media ${({ theme }) => theme.mobile} {
+    padding: 100px 0;
+  }
 `;
 
 const Inner = styled.div<{ color: string }>`

@@ -22,16 +22,16 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  ol, ul, li {
+  /* ol, ul, li {
     list-style: none;
-  }
+  } */
   
   a {
     &:link,
     &:visited,
     &:hover,
     &:active {
-      color: inherit;
+      color: var(--text-blue);
       text-decoration: inherit;
     }
   }
