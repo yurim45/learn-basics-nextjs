@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { Layout } from '@components/index';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
-import Link from 'next/link';
 
 const Archive = () => {
   return (
@@ -54,7 +53,7 @@ const Archive = () => {
             </a>
             <ul>
               <li>공부한 것을 정리할 목적의 블로그입니다.</li>
-              <li>개발하며 겪은 이야기를 정리합니다.</li>
+              <li>개발하며 겪은 이야기를 공유합니다.</li>
               <li>지식 공유를 위해 작성하기도 합니다.</li>
             </ul>
           </StContent>
@@ -105,7 +104,7 @@ const StContent = styled.div`
     margin: 20px 0;
     padding-left: 20px;
     list-style-type: square;
-
+    color: var(--text-555);
     font-size: 16px;
     letter-spacing: -0.5px;
 
