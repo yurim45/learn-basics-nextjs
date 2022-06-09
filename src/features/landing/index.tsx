@@ -78,6 +78,8 @@ const StText = styled.div`
   h1 {
     margin-bottom: 100px;
     font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
     z-index: 100;
 
     @media ${({ theme }) => theme.mobile} {
