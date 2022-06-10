@@ -22,9 +22,9 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  /* ol, ul, li {
-    list-style: none;
-  } */
+  ol, ul, li {
+    /* list-style: none; */
+  }
   
   a {
     &:link,

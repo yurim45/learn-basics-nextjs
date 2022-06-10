@@ -5,18 +5,21 @@ import MenuList from './MenuList';
 
 const Gnb = () => {
   return (
-    <StGnb>
-      <MenuList />
-    </StGnb>
+    <nav>
+      <StGnb>
+        <MenuList />
+      </StGnb>
+    </nav>
   );
 };
 
 export default Gnb;
 
-const StGnb = styled.ul`
+const StGnb = styled.nav`
   color: var(--text-555);
   font-size: 18px;
   font-weight: 600;
+  list-style: none;
   ${flex({
     justify: 'between',
   })};
