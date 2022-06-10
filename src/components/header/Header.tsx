@@ -23,16 +23,18 @@ const Header = () => {
   }, []);
 
   return (
-    <StHeader hasScroll={hasScroll}>
-      <Inner>
-        <Logo>{"April's world"}</Logo>
-        <Gnb />
-        <button type="button" onClick={() => setIsOpen(!isOpen)}>
-          <IconHamberger />
-        </button>
-        {isOpen && <DropBarMenu />}
-      </Inner>
-    </StHeader>
+    <>
+      <StHeader hasScroll={hasScroll}>
+        <Inner>
+          <Logo>{"April's world"}</Logo>
+          <Gnb />
+          <button type="button" onClick={() => setIsOpen(!isOpen)}>
+            <IconHamberger />
+          </button>
+        </Inner>
+      </StHeader>
+      {isOpen && hasScroll && <DropBarMenu />}
+    </>
   );
 };
 

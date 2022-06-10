@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
+import MenuList from './MenuList';
 
 const Gnb = () => {
   return (
     <StGnb>
-      <li>About Me</li>
-      <li>Archive</li>
-      <li>Skills</li>
-      <li>Projects</li>
-      <li>Career</li>
+      <MenuList />
     </StGnb>
   );
 };
