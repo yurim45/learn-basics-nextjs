@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import flex from '@shared/styles/flex';
 import styled from 'styled-components';
 import Gnb from './gnb/Gnb';
+import DropBarMenu from './dropBarMenu/DropBarMenu';
+import IconHamberger from '@components/icons/IconHamberger';
 
 const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const updateScroll = () => {
     if (window?.scrollY >= 1200) {
@@ -24,6 +27,10 @@ const Header = () => {
       <Inner>
         <Logo>{"April's world"}</Logo>
         <Gnb />
+        <button type="button" onClick={() => setIsOpen(!isOpen)}>
+          <IconHamberger />
+        </button>
+        {isOpen && <DropBarMenu />}
       </Inner>
     </StHeader>
   );
@@ -48,10 +55,26 @@ const Inner = styled.div`
   ${flex({
     justify: 'between',
   })};
+
+  @media ${({ theme }) => theme.mobile} {
+    padding: 0 20px;
+  }
+
+  button {
+    display: none;
+
+    @media ${({ theme }) => theme.mobile} {
+      display: block;
+    }
+  }
 `;
 
 const Logo = styled.div`
   color: var(--text-333);
   font-size: 24px;
   font-weight: 600;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 20px;
+  }
 `;

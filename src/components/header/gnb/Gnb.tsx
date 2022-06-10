@@ -24,6 +24,10 @@ const StGnb = styled.ul`
     justify: 'between',
   })};
 
+  @media ${({ theme }) => theme.mobile} {
+    display: none;
+  }
+
   li {
     margin: 0 20px;
     cursor: pointer;

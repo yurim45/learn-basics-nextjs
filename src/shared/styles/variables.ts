@@ -10,6 +10,10 @@ export const formSet = () => css`
   :hover {
     transform: translate(0, -20px);
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    padding: 30px;
+  }
 `;
 
 export const sectionTitle = () => css`
