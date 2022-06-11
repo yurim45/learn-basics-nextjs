@@ -66,6 +66,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+
+
   :root {
     --compo-primary: #fbb0a3;
     --compo-primary-press : #0AA882;

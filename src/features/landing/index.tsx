@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 
 const Landing = () => {
+  //[willFix]
+  const handleSrollEvent = useCallback((e: any) => {
+    // if (e.deltaY > 0) {
+    //   console.log('==', e.deltaY > 0);
+    //   window.scrollTo({
+    //     top: window.outerHeight - 60,
+    //     left: 0,
+    //     behavior: 'smooth',
+    //   });
+    // }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('wheel', (e) => handleSrollEvent(e));
+
+    return () => {
+      window.removeEventListener('wheel', handleSrollEvent);
+    };
+  }, []);
+
   return (
     <Main>
       <div>
@@ -80,7 +100,22 @@ const StText = styled.div`
     font-size: 80px;
     font-weight: 900;
     letter-spacing: -0.5px;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s
+      both;
     z-index: 100;
+
+    @keyframes tracking-in-expand {
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
     @media ${({ theme }) => theme.mobile} {
       font-size: 60px;
@@ -112,22 +147,90 @@ const StText = styled.div`
 
 const StLeft = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
+  animation: vibrateLeft 2s linear infinite normal both;
+
+  @keyframes vibrateLeft {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
 `;
 
 const StRightTop = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2px;
+  right: -2px;
+
+  animation: vibrateRight 2s linear infinite normal both;
+
+  @keyframes vibrateRight {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    60% {
+      transform: translate(-2px, -2px);
+    }
+    80% {
+      transform: translate(-2px, 2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
 `;
 
 const StRightBottom = styled.div`
   position: absolute;
-  right: 0;
+  right: -2px;
   bottom: 400px;
   width: 300px;
   height: 600px;
+
+  animation: vibrateBottom 2s linear infinite normal both;
+
+  @keyframes vibrateBottom {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    60% {
+      transform: translate(-2px, -2px);
+    }
+    80% {
+      transform: translate(-2px, 2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
 
   @media ${({ theme }) => theme.mobile} {
     bottom: 200px;
@@ -138,10 +241,33 @@ const StRightBottom = styled.div`
 
 const StLeftBottom = styled.div`
   position: absolute;
-  left: 0;
+  left: -2px;
   bottom: -250px;
-  width: 100vw;
-  height: 60vh;
+  width: 101vw;
+  height: 50vh;
+
+  animation: vibrateLeftBottom 2s linear infinite normal both;
+
+  @keyframes vibrateLeftBottom {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    60% {
+      transform: translate(-2px, -2px);
+    }
+    80% {
+      transform: translate(-2px, 2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
 
   @media ${({ theme }) => theme.mobile} {
     bottom: -50px;
