@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>April's Portfolio</title>
+        <title>{"April's Portfolio"}</title>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
