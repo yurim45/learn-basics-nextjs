@@ -16,13 +16,13 @@ const Landing = () => {
     // }
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('wheel', (e) => handleSrollEvent(e));
+  // useEffect(() => {
+  //   window.addEventListener('wheel', (e) => handleSrollEvent(e));
 
-    return () => {
-      window.removeEventListener('wheel', handleSrollEvent);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('wheel', handleSrollEvent);
+  //   };
+  // }, []);
 
   return (
     <Main>
@@ -118,7 +118,8 @@ const StText = styled.div`
     }
 
     @media ${({ theme }) => theme.mobile} {
-      font-size: 60px;
+      font-size: 48px;
+      animation: none;
     }
   }
 
@@ -171,6 +172,10 @@ const StLeft = styled.div`
       transform: translate(0);
     }
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    animation: none;
+  }
 `;
 
 const StRightTop = styled.div`
@@ -200,6 +205,12 @@ const StRightTop = styled.div`
       transform: translate(0);
     }
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    top: 0;
+    right: 0;
+    animation: none;
+  }
 `;
 
 const StRightBottom = styled.div`
@@ -216,16 +227,16 @@ const StRightBottom = styled.div`
       transform: translate(0);
     }
     20% {
-      transform: translate(2px, -2px);
+      transform: translate(2px, 2px);
     }
     40% {
-      transform: translate(2px, 2px);
+      transform: translate(-2px, 2px);
     }
     60% {
       transform: translate(-2px, -2px);
     }
     80% {
-      transform: translate(-2px, 2px);
+      transform: translate(2px, -2px);
     }
     100% {
       transform: translate(0);
@@ -233,9 +244,11 @@ const StRightBottom = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
+    right: 0;
     bottom: 200px;
     width: 100px;
     height: 200px;
+    animation: none;
   }
 `;
 
@@ -270,8 +283,10 @@ const StLeftBottom = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
+    left: 0;
     bottom: -50px;
     width: 100vw;
     height: 20vh;
+    animation: none;
   }
 `;
