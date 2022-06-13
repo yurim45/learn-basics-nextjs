@@ -67,6 +67,14 @@ const Skills = () => {
           </li>
           <li>
             <Image
+              alt="Storybook-Logo"
+              src="/images/skills/logo-sb.webp"
+              width={100}
+              height={90}
+            />
+          </li>
+          <li>
+            <Image
               alt="Recoil-Logo"
               src="/images/skills/logo-recoil.png"
               width={100}

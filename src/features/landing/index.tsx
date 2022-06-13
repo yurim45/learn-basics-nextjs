@@ -7,6 +7,7 @@ const Landing = () => {
   //[willFix]
   const handleSrollEvent = useCallback((e: any) => {
     // if (e.deltaY > 0) {
+    //   console.log('==');
     //   window.scrollTo({
     //     top: window.outerHeight - 60,
     //     left: 0,
@@ -15,11 +16,11 @@ const Landing = () => {
     // }
   }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener('wheel', (e) => handleSrollEvent(e));
+  useEffect(() => {
+    window.addEventListener('wheel', (e) => handleSrollEvent(e));
 
-  //   return () => window.removeEventListener('wheel', handleSrollEvent);
-  // }, [handleSrollEvent]);
+    return () => window.removeEventListener('wheel', handleSrollEvent);
+  }, [handleSrollEvent]);
 
   return (
     <Main>
@@ -253,7 +254,7 @@ const StLeftBottom = styled.div`
   position: absolute;
   left: -2px;
   bottom: -250px;
-  width: 101vw;
+  width: 100vw;
   height: 50vh;
 
   animation: vibrateLeftBottom 2s linear infinite normal both;
