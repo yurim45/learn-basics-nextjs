@@ -7,11 +7,10 @@ const Landing = () => {
   //[willFix]
   const handleSrollEvent = useCallback((e: any) => {
     // if (e.deltaY > 0) {
-    //   console.log('==', e.deltaY > 0);
     //   window.scrollTo({
     //     top: window.outerHeight - 60,
     //     left: 0,
-    //     behavior: 'smooth',
+    //     // behavior: 'smooth',
     //   });
     // }
   }, []);
@@ -19,10 +18,8 @@ const Landing = () => {
   // useEffect(() => {
   //   window.addEventListener('wheel', (e) => handleSrollEvent(e));
 
-  //   return () => {
-  //     window.removeEventListener('wheel', handleSrollEvent);
-  //   };
-  // }, []);
+  //   return () => window.removeEventListener('wheel', handleSrollEvent);
+  // }, [handleSrollEvent]);
 
   return (
     <Main>
