@@ -55,7 +55,7 @@ const SliderWarp = styled.div<{ currentSlide: number; length: number }>`
 
   .prev,
   .next {
-    position: absolute;
+    position: relative;
     top: 225px;
     padding: 10px 12px 6px;
     color: var(--yellow);
