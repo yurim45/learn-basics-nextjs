@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@images/*": ["./public/images/*"],
       "@pages/*": ["./src/pages/*"],
       "@features/*": ["./src/features/*"],
       "@shared/*": ["./src/shared/*"],

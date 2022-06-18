@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
+import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index';
 
 const Landing = () => {
   //[willFix]
@@ -28,7 +29,7 @@ const Landing = () => {
         <StLeft>
           <Image
             alt="flower"
-            src="/images/landing/landing-left-top.png"
+            src={leftTop}
             width={939}
             height={872}
             priority={true}
@@ -37,26 +38,17 @@ const Landing = () => {
         <StRightTop>
           <Image
             alt="flower"
-            src="/images/landing/landing-right-top.png"
+            src={rightTop}
             width={805}
             height={322}
             priority={true}
           />
         </StRightTop>
         <StRightBottom>
-          <Image
-            alt="flower"
-            src="/images/landing/landing-right-bottom.png"
-            layout="fill"
-          />
+          <Image alt="flower" src={rightBottom} layout="fill" />
         </StRightBottom>
         <StLeftBottom>
-          <Image
-            alt="flower"
-            src="/images/landing/landing-bottom.png"
-            layout="fill"
-            priority={true}
-          />
+          <Image alt="flower" src={bottom} layout="fill" priority={true} />
         </StLeftBottom>
       </div>
       <StText>

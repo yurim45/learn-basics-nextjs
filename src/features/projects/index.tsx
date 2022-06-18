@@ -10,14 +10,14 @@ const Projects = () => {
       <Layout
         pageTitle="Projects"
         color="white"
-        lineColor="white"
+        lineColor="compo-blue"
         bgColor="black"
       >
         <Slider>
-          <StContainer>프로젝ㅌ1</StContainer>
-          <StContainer>프로젝ㅌ2</StContainer>
-          <StContainer>프로젝ㅌ3</StContainer>
-          <StContainer>프로젝ㅌ4</StContainer>
+          <StContainer>프로젝트1</StContainer>
+          <StContainer>프로젝트2</StContainer>
+          <StContainer>프로젝트3</StContainer>
+          <StContainer>프로젝트4</StContainer>
         </Slider>
       </Layout>
     </>
@@ -28,7 +28,11 @@ export default Projects;
 
 const StContainer = styled.div`
   ${formSet()};
-  margin: 40px;
-  width: 800px;
+  margin: 0 40px;
+  width: 1060px;
   height: 800px;
+
+  :hover {
+    transform: none;
+  }
 `;

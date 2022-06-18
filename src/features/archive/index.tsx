@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Layout } from '@components/index';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
+import { github, velog } from '@images/archive/index';
 
 const Archive = () => {
   return (
@@ -11,12 +12,7 @@ const Archive = () => {
       <StAlign>
         <StContainer>
           <StTitle>
-            <Image
-              alt=""
-              src="/images/archive/github.jpeg"
-              width={50}
-              height={50}
-            />
+            <Image alt="" src={github} width={50} height={50} />
             <strong>GitHub</strong>
           </StTitle>
           <StContent>
@@ -35,12 +31,7 @@ const Archive = () => {
         </StContainer>
         <StContainer>
           <StTitle>
-            <Image
-              alt=""
-              src="/images/archive/velog.jpg"
-              width={50}
-              height={50}
-            />
+            <Image alt="" src={velog} width={50} height={50} />
             <strong>Velog</strong>
           </StTitle>
           <StContent>

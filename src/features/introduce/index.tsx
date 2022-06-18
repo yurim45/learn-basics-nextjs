@@ -2,12 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
+import april from '@images/april.png';
 
 const Introduce = () => {
   return (
     <Layout pageTitle="About Me">
       <StImg>
-        <Image alt="me" src="/images/april.png" width={300} height={300} />
+        <Image alt="me" src={april} width={300} height={300} />
       </StImg>
       <StText>
         <strong>김유림</strong>

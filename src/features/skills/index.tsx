@@ -1,20 +1,42 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Layout, GridLayout } from '@components/index';
+import { GridLayout } from '@components/index';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
+import {
+  logoCss,
+  logoFigma,
+  logoGit,
+  logoGithub,
+  logoGitlab,
+  logoHtml,
+  logoJs,
+  logoMonday,
+  logoNCP,
+  logoNextjs,
+  logoNotion,
+  logoRQ,
+  logoReact,
+  logoRecoil,
+  logoRN,
+  logoSB,
+  logoSC,
+  logoTS,
+  logoVercel,
+  logoZeplin,
+} from '@images/skills/index';
 
 const Skills = () => {
   return (
     <GridLayout pageTitle="Skills" bgColor="bg-yellow" lineColor="yellow">
-      <StContainer className="item1">
+      <StContainer className="frontend">
         <h3>Frontend</h3>
         <ul>
           <li>
             <Image
               alt="HTML-Logo"
-              src="/images/skills/logo-html.png"
+              src={logoHtml}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -23,7 +45,7 @@ const Skills = () => {
           <li>
             <Image
               alt="CSS-Logo"
-              src="/images/skills/logo-css.png"
+              src={logoCss}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -32,7 +54,7 @@ const Skills = () => {
           <li>
             <Image
               alt="Styled-components-Logo"
-              src="/images/skills/logo-sc.png"
+              src={logoSC}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -41,7 +63,7 @@ const Skills = () => {
           <li>
             <Image
               alt="JS-Logo"
-              src="/images/skills/logo-js.png"
+              src={logoJs}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -50,7 +72,7 @@ const Skills = () => {
           <li>
             <Image
               alt="TS-Logo"
-              src="/images/skills/logo-ts.png"
+              src={logoTS}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -59,32 +81,22 @@ const Skills = () => {
           <li>
             <Image
               alt="React-Logo"
-              src="/images/skills/logo-react.png"
+              src={logoReact}
               width="100%"
               height="100%"
               objectFit="contain"
             />
           </li>
           <li>
-            <Image
-              alt="Storybook-Logo"
-              src="/images/skills/logo-sb.png"
-              width={100}
-              height={90}
-            />
+            <Image alt="Storybook-Logo" src={logoSB} width={100} height={90} />
           </li>
           <li>
-            <Image
-              alt="Recoil-Logo"
-              src="/images/skills/logo-recoil.png"
-              width={100}
-              height={40}
-            />
+            <Image alt="Recoil-Logo" src={logoRecoil} width={100} height={40} />
           </li>
           <li>
             <Image
               alt="React-Query-Logo"
-              src="/images/skills/logo-react-query.jpeg"
+              src={logoRQ}
               width={100}
               height={70}
             />
@@ -92,7 +104,7 @@ const Skills = () => {
           <li>
             <Image
               alt="Nextjs-Logo"
-              src="/images/skills/logo-nextjs.png"
+              src={logoNextjs}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -101,12 +113,12 @@ const Skills = () => {
         </ul>
       </StContainer>
       <StContainer>
-        <h3>Version Control</h3>
+        <h3>Communication</h3>
         <ul>
           <li>
             <Image
-              alt="Git-Logo"
-              src="/images/skills/logo-git.png"
+              alt="Notion-Logo"
+              src={logoNotion}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -114,8 +126,8 @@ const Skills = () => {
           </li>
           <li>
             <Image
-              alt="GitHub-Logo"
-              src="/images/skills/logo-github.png"
+              alt="Figma-Logo"
+              src={logoFigma}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -123,8 +135,17 @@ const Skills = () => {
           </li>
           <li>
             <Image
-              alt="GitLab-Logo"
-              src="/images/skills/logo-gitlab.png"
+              alt="Jeplin-Logo"
+              src={logoZeplin}
+              width="100%"
+              height="100%"
+              objectFit="contain"
+            />
+          </li>
+          <li>
+            <Image
+              alt="Monday-Logo"
+              src={logoMonday}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -132,13 +153,14 @@ const Skills = () => {
           </li>
         </ul>
       </StContainer>
+
       <StContainer>
         <h3>Mobile App</h3>
         <ul>
           <li>
             <Image
               alt="React-Native-Logo"
-              src="/images/skills/logo-rn.png"
+              src={logoRN}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -152,7 +174,7 @@ const Skills = () => {
           <li>
             <Image
               alt="Vercel-Logo"
-              src="/images/skills/logo-vercel.png"
+              src={logoVercel}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -161,7 +183,7 @@ const Skills = () => {
           <li>
             <Image
               alt="NCP-Logo"
-              src="/images/skills/logo-ncp.jpeg"
+              src={logoNCP}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -170,12 +192,12 @@ const Skills = () => {
         </ul>
       </StContainer>
       <StContainer>
-        <h3>Communication</h3>
+        <h3>Version Control</h3>
         <ul>
           <li>
             <Image
-              alt="Jeplin-Logo"
-              src="/images/skills/logo-zeplin.png"
+              alt="Git-Logo"
+              src={logoGit}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -183,8 +205,8 @@ const Skills = () => {
           </li>
           <li>
             <Image
-              alt="Figma-Logo"
-              src="/images/skills/logo-figma.png"
+              alt="GitHub-Logo"
+              src={logoGithub}
               width="100%"
               height="100%"
               objectFit="contain"
@@ -192,8 +214,8 @@ const Skills = () => {
           </li>
           <li>
             <Image
-              alt="Monday-Logo"
-              src="/images/skills/logo-monday.jpeg"
+              alt="GitLab-Logo"
+              src={logoGitlab}
               width="100%"
               height="100%"
               objectFit="contain"

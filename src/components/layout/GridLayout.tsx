@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { styled } from '@shared/styles/theme';
-import flex from '@shared/styles/flex';
 import { sectionTitle } from '@shared/styles/variables';
 
 type GridLayoutProps = {
@@ -63,7 +62,7 @@ const StContent = styled.div`
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   grid-auto-flow: column;
 
-  .item1 {
+  .frontend {
     grid-row: 1 / 4;
   }
 
