@@ -6,7 +6,7 @@ import april from '@images/april.png';
 
 const Introduce = () => {
   return (
-    <Layout pageTitle="About Me">
+    <Layout pageTitle="About Me" id="aboutMe">
       <StImg>
         <Image alt="me" src={april} width={300} height={300} />
       </StImg>

@@ -12,6 +12,7 @@ const Projects = () => {
         color="white"
         lineColor="compo-blue"
         bgColor="black"
+        id="projects"
       >
         <Slider>
           <StContainer>프로젝트1</StContainer>

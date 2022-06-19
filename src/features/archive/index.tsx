@@ -8,7 +8,12 @@ import { github, velog } from '@images/archive/index';
 
 const Archive = () => {
   return (
-    <Layout pageTitle="Archive" lineColor="white" bgColor="compo-lilac">
+    <Layout
+      pageTitle="Archive"
+      lineColor="white"
+      bgColor="compo-lilac"
+      id="archive"
+    >
       <StAlign>
         <StContainer>
           <StTitle>

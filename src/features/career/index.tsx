@@ -5,7 +5,7 @@ import { formSet } from '@shared/styles/variables';
 
 const Career = () => {
   return (
-    <Layout pageTitle="Career" lineColor="compo-green">
+    <Layout pageTitle="Career" lineColor="compo-green" id="career">
       <div></div>
     </Layout>
   );

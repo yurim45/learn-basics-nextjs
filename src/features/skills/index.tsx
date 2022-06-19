@@ -29,7 +29,12 @@ import {
 
 const Skills = () => {
   return (
-    <GridLayout pageTitle="Skills" bgColor="bg-yellow" lineColor="yellow">
+    <GridLayout
+      pageTitle="Skills"
+      bgColor="bg-yellow"
+      lineColor="yellow"
+      id="skills"
+    >
       <StContainer className="frontend">
         <h3>Frontend</h3>
         <ul>

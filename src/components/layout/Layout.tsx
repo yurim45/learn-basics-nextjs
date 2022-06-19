@@ -9,6 +9,7 @@ type LayoutProps = {
   color?: string;
   bgColor?: string;
   lineColor?: string;
+  id?: string;
 };
 
 const Layout = ({
@@ -17,9 +18,10 @@ const Layout = ({
   bgColor = 'white',
   color = 'text-333',
   lineColor = 'blue',
+  id,
 }: LayoutProps) => {
   return (
-    <StSction bgColor={bgColor}>
+    <StSction bgColor={bgColor} id={id}>
       <Inner color={color}>
         <h2>{pageTitle}</h2>
         <StLine lineColor={lineColor} />

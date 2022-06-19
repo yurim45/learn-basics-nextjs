@@ -8,6 +8,7 @@ type GridLayoutProps = {
   color?: string;
   bgColor?: string;
   lineColor?: string;
+  id?: string;
 };
 
 const GridLayout = ({
@@ -16,9 +17,10 @@ const GridLayout = ({
   bgColor = 'white',
   color = 'text-333',
   lineColor = 'blue',
+  id,
 }: GridLayoutProps) => {
   return (
-    <StSction bgColor={bgColor}>
+    <StSction bgColor={bgColor} id={id}>
       <Inner color={color}>
         <h2>{pageTitle}</h2>
         <StLine lineColor={lineColor} />

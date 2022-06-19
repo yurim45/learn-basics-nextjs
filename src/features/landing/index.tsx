@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index';
+import { Link } from 'react-scroll';
 
 const Landing = () => {
   //[willFix]
@@ -54,7 +55,9 @@ const Landing = () => {
       <StText>
         <h1>Imagination becomes reality</h1>
         <strong>{"April's world"}</strong>
-        <button>▼</button>
+        <Link to="aboutMe" smooth={true}>
+          <button>▼</button>
+        </Link>
       </StText>
     </Main>
   );
