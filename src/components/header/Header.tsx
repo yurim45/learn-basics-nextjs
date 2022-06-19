@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Gnb from './gnb/Gnb';
 import DropBarMenu from './dropBarMenu/DropBarMenu';
 import IconHamberger from '@components/icons/IconHamberger';
+import GotoTop from '@components/footer/GotoTop';
 
 const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false);
@@ -35,6 +36,7 @@ const Header = () => {
         </Inner>
       </StHeader>
       {isOpen && hasScroll && <DropBarMenu />}
+      {hasScroll && <GotoTop />}
     </>
   );
 };

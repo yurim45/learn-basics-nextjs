@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="프론트 엔드 개발자 김유림의 포트폴리오입니다."
+            content="프론트엔드 개발자 김유림의 포트폴리오입니다."
           />
           <meta
             property="og:title"
@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="프론트 엔드 개발자 김유림의 포트폴리오입니다."
+            content="프론트엔드 개발자 김유림의 포트폴리오입니다."
           />
           <link
             rel="stylesheet"
