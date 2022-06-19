@@ -1,14 +1,10 @@
-import React, { useEffect, useState, useRef, ReactNode } from 'react';
-import styled from 'styled-components';
-import flex from '@shared/styles/flex';
+import React, { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
 
 type SliderProps = {
@@ -19,7 +15,8 @@ const Slider = ({ children }: SliderProps) => {
   return (
     <>
       <Swiper
-        spaceBetween={30}
+        slidesPerView={'auto'} //초기값 설정 모바일값이 먼저!!
+        spaceBetween={10}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
@@ -27,6 +24,19 @@ const Slider = ({ children }: SliderProps) => {
         }}
         pagination={{
           clickable: true,
+          // renderBullet: function (index, className) {
+          //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+          // },
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1000: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}

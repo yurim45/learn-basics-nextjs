@@ -35,6 +35,7 @@ const StSction = styled.section<{ bgColor: string }>`
   width: 100vw;
   padding: 150px 0;
   background: ${({ bgColor }) => `var(--${bgColor})`};
+  overflow: hidden;
 
   @media ${({ theme }) => theme.mobile} {
     padding: 100px 0;

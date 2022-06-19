@@ -35,4 +35,8 @@ const StContainer = styled.div`
   :hover {
     transform: none;
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    width: 300px;
+  }
 `;
