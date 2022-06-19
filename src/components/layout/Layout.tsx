@@ -22,8 +22,8 @@ const Layout = ({
 }: LayoutProps) => {
   return (
     <StSction bgColor={bgColor} id={id}>
-      <Inner color={color}>
-        <h2>{pageTitle}</h2>
+      <Inner>
+        <StTitle color={color}>{pageTitle}</StTitle>
         <StLine lineColor={lineColor} />
         <StContent>{children}</StContent>
       </Inner>
@@ -44,14 +44,14 @@ const StSction = styled.section<{ bgColor: string }>`
   }
 `;
 
-const Inner = styled.div<{ color: string }>`
+const Inner = styled.div`
   max-width: 1140px;
   margin: auto;
+`;
 
-  h2 {
-    ${sectionTitle()};
-    color: ${({ color }) => `var(--${color})`};
-  }
+const StTitle = styled.h2<{ color: string }>`
+  ${sectionTitle()};
+  color: ${({ color }) => `var(--${color})`};
 `;
 
 const StLine = styled.div<{ lineColor: string }>`

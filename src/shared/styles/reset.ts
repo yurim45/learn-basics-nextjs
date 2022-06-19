@@ -80,6 +80,7 @@ const GlobalStyles = createGlobalStyle`
     --compo-green : #00C092;
     --compo-lilac : #DFDFF2;
     --bg-yellow: #fcfae8;
+    --bg-black: #222222;
 
     // text
     --text-333 : #333333;

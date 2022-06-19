@@ -3,6 +3,7 @@ import { Layout } from '@components/index';
 import styled from 'styled-components';
 import { formSet } from '@shared/styles/variables';
 import Slider from '@components/Slider';
+import PjLayout from './common/PjLayout';
 
 const Projects = () => {
   return (
@@ -11,14 +12,21 @@ const Projects = () => {
         pageTitle="Projects"
         color="white"
         lineColor="compo-blue"
-        bgColor="black"
+        bgColor="bg-black"
         id="projects"
       >
         <Slider>
           <StContainer>프로젝트1</StContainer>
           <StContainer>프로젝트2</StContainer>
           <StContainer>프로젝트3</StContainer>
-          <StContainer>프로젝트4</StContainer>
+          <StContainer>
+            <PjLayout
+              title="근태관리 프로그램"
+              subTitle="21.06 ~ 21.06 / FE: 2명, BE: 1명"
+            >
+              내용
+            </PjLayout>
+          </StContainer>
         </Slider>
       </Layout>
     </>

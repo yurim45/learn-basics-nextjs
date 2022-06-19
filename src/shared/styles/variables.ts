@@ -19,10 +19,34 @@ export const formSet = () => css`
 export const sectionTitle = () => css`
   color: var(--text-333);
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 
   @media ${({ theme }) => theme.mobile} {
     font-size: 48px;
+  }
+`;
+
+export const pjTitle = () => css`
+  color: var(--text-333);
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  text-align: center;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 36px;
+  }
+`;
+
+export const pjDesc = () => css`
+  margin: 20px;
+  color: var(--text-777);
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  text-align: center;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 12px;
   }
 `;
