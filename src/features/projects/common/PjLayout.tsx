@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination } from 'swiper';
+import Link from 'next/link';
 
 type PjLayoutProps = {
   title: string;
@@ -50,7 +51,11 @@ const PjLayout = ({
             <li>
               <strong>GitHub</strong>
               <p>
-                <a href={GitHubAdd} target="_blank" rel="noreferrer">
+                <a
+                  href={`https://${GitHubAdd}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {GitHubAdd}
                 </a>
               </p>
