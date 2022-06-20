@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
@@ -6,24 +6,6 @@ import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index';
 import { Link } from 'react-scroll';
 
 const Landing = () => {
-  //[willFix]
-  const handleSrollEvent = useCallback((e: any) => {
-    // if (e.deltaY > 0) {
-    //   console.log('==');
-    //   window.scrollTo({
-    //     top: window.outerHeight - 60,
-    //     left: 0,
-    //     // behavior: 'smooth',
-    //   });
-    // }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('wheel', (e) => handleSrollEvent(e));
-
-    return () => window.removeEventListener('wheel', handleSrollEvent);
-  }, [handleSrollEvent]);
-
   return (
     <Main>
       <div>
