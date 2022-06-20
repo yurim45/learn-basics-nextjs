@@ -141,6 +141,10 @@ const StContent = styled.div`
   .mySwiper {
     width: 550px;
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    ${flex({ direction: 'col' })};
+  }
 `;
 
 const StLeftContent = styled.div`
