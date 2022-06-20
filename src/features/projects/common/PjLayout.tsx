@@ -64,7 +64,7 @@ const PjLayout = ({
               <li>
                 <strong>URL</strong>
                 <p>
-                  <a href={url} target="_blank" rel="noreferrer">
+                  <a href={`https://${url}`} target="_blank" rel="noreferrer">
                     {url}
                   </a>
                 </p>
