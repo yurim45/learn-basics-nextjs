@@ -57,6 +57,10 @@ export default class MyDocument extends Document {
             content="프론트엔드 개발자 김유림의 포트폴리오입니다."
           />
           <link
+            href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+            rel="stylesheet"
+          />
+          <link
             rel="stylesheet"
             type="text/css"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"

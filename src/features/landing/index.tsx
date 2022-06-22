@@ -72,6 +72,7 @@ const StText = styled.div`
 
   h1 {
     margin-bottom: 100px;
+    font-family: 'Black Han Sans', sans-serif;
     font-size: 80px;
     font-weight: 900;
     letter-spacing: -0.5px;

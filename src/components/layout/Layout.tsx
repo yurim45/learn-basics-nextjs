@@ -52,6 +52,7 @@ const Inner = styled.div`
 const StTitle = styled.h2<{ color: string }>`
   ${sectionTitle()};
   color: ${({ color }) => `var(--${color})`};
+  font-family: 'Black Han Sans', sans-serif;
 `;
 
 const StLine = styled.div<{ lineColor: string }>`
