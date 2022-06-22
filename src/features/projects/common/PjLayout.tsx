@@ -127,7 +127,7 @@ const StContainer = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    width: 300px;
+    width: 80vw;
   }
 `;
 
@@ -177,4 +177,10 @@ const StLeftContent = styled.div`
 
 const StContentDesc = styled.p`
   font-size: 18px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 12px;
+    width: 80vw;
+    margin: auto;
+  }
 `;

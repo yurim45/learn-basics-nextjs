@@ -35,7 +35,7 @@ export const pjTitle = () => css`
   text-align: center;
 
   @media ${({ theme }) => theme.mobile} {
-    font-size: 36px;
+    font-size: 28px;
   }
 `;
 
@@ -47,6 +47,12 @@ export const pjDesc = () => css`
   text-align: center;
 
   @media ${({ theme }) => theme.mobile} {
+    margin: 10px 0;
     font-size: 12px;
   }
+`;
+
+export const pointText = () => css`
+  color: var(--text-blue);
+  text-decoration: underline;
 `;
