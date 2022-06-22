@@ -18,6 +18,7 @@ type PjLayoutProps = {
   feat: string;
   GitHubAdd: string;
   tech: string[];
+  readMore: string;
   url?: string;
   deployment?: string;
 };
@@ -29,6 +30,7 @@ const PjLayout = ({
   feat,
   GitHubAdd,
   tech,
+  readMore,
   url,
   deployment,
 }: PjLayoutProps) => {
@@ -39,6 +41,9 @@ const PjLayout = ({
       <StContent>
         <StLeftContent>
           <StContentDesc>{desc}</StContentDesc>
+          <StReadMore type="button" onClick={() => window.open(readMore)}>
+            자세히 보기
+          </StReadMore>
           <ul>
             <li>
               <strong>주요 기능</strong>
@@ -159,6 +164,15 @@ const StLeftContent = styled.div`
   font-size: 18px;
   line-height: 1.5;
 
+  ul {
+    margin-top: 20px;
+    border-top: 1px solid var(--text-blue);
+  }
+
+  li:first-child {
+    margin-top: 20px;
+  }
+
   li {
     margin: 10px 0;
   }
@@ -183,4 +197,14 @@ const StContentDesc = styled.p`
     width: 80vw;
     margin: auto;
   }
+`;
+
+const StReadMore = styled.button`
+  width: 120px;
+  height: 40px;
+  margin: 10px 0;
+  background: var(--compo-blue);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 10px;
 `;

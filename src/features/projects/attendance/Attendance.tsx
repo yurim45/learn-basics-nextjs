@@ -17,6 +17,7 @@ const Attendance = () => {
             ㅤ● 출•퇴근 기록 조회 및 검색 기능"
       GitHubAdd="github.com/yurim45/b2tech-intern-20-front"
       tech={['HTML', 'Styled component', 'Javascript', 'React']}
+      readMore="https://brainy-talk-263.notion.site/React-Internship_-Project-b92f7d90024d4b20883e6dacf9e8f151"
     />
   );
 };
