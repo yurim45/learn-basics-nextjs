@@ -12,7 +12,7 @@ export const formSet = () => css`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    padding: 30px;
+    padding: 20px;
   }
 `;
 
@@ -55,4 +55,14 @@ export const pjDesc = () => css`
 export const pointText = () => css`
   color: var(--text-blue);
   text-decoration: underline;
+`;
+
+export const tagText = () => css`
+  margin: 0 5px;
+  padding: 5px 10px;
+  background: var(--gray);
+  color: var(--text-blue);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
 `;

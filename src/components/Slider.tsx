@@ -18,10 +18,10 @@ const Slider = ({ children }: SliderProps) => {
         slidesPerView={'auto'} //초기값 설정 모바일값이 먼저!!
         spaceBetween={10}
         centeredSlides={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
           // renderBullet: function (index, className) {
@@ -39,11 +39,7 @@ const Slider = ({ children }: SliderProps) => {
           },
         }}
         navigation={true}
-        modules={[
-          // Autoplay,
-          Pagination,
-          Navigation,
-        ]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         {children?.map((item, i) => {

@@ -62,12 +62,5 @@ const StLine = styled.div<{ lineColor: string }>`
 `;
 
 const StContent = styled.div`
-  ${flex};
   padding: 20px 0;
-
-  @media ${({ theme }) => theme.mobile} {
-    ${flex({
-      direction: 'col',
-    })};
-  }
 `;

@@ -3,28 +3,42 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
 import april from '@images/april.png';
+import flex from '@shared/styles/flex';
 
 const Introduce = () => {
   return (
     <Layout pageTitle="About Me" id="aboutMe">
-      <StImg>
-        <Image alt="me" src={april} width={300} height={300} />
-      </StImg>
-      <StText>
-        <strong>김유림</strong>
-        <span>Frontend Developer</span>
-        <p>
-          함께 일 하고 싶은 개발자, <br />
-          사용자 관점에서 개발하는 프론트엔드 개발자
-        </p>
-        <h3>Contact.</h3>
-        <p>Email. icho0405@gmail.com</p>
-      </StText>
+      <StContent>
+        <StImg>
+          <Image alt="me" src={april} width={300} height={300} />
+        </StImg>
+        <StText>
+          <strong>김유림</strong>
+          <span>Frontend Developer</span>
+          <p>
+            함께 일 하고 싶은 개발자, <br />
+            사용자 관점에서 개발하는 프론트엔드 개발자
+          </p>
+          <h3>Contact.</h3>
+          <p>Email. icho0405@gmail.com</p>
+        </StText>
+      </StContent>
     </Layout>
   );
 };
 
 export default Introduce;
+
+const StContent = styled.div`
+  ${flex({})};
+  padding: 20px 0;
+
+  @media ${({ theme }) => theme.mobile} {
+    ${flex({
+      direction: 'col',
+    })};
+  }
+`;
 
 const StText = styled.div`
   color: var(--text-333);
