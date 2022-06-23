@@ -1,9 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import { atnp } from '@images/career/index';
 import CareerLayout from '../common/CareerLayout';
 import { styled } from '@shared/styles/theme';
-import flex from '@shared/styles/flex';
 import { tagText } from '@shared/styles/variables';
 
 const Atnp = () => {
@@ -26,19 +24,22 @@ const Atnp = () => {
               'Typescript',
               'React-Query',
               'Recoil',
+              'StoryBook',
               'Styled-Components',
             ].map((item, i) => (
               <StTag key={i}>{item}</StTag>
             ))}
           </StContent>
           <StContent>
-            <strong>✔️ 담당 역할</strong>: MVP 개발 중
-            {/* <ul>
+            <strong>✔️ 담당 역할</strong>
+            <ul>
               <li>
-                ■ <strong> </strong>
+                ■ <strong>MVP 개발</strong>
               </li>
-              <li>ㅤ- </li>
-            </ul> */}
+              <li>
+                ■ <strong>StoryBook 디자인 시스템</strong>
+              </li>
+            </ul>
           </StContent>
         </StContents>
       </div>
