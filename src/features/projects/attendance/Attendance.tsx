@@ -59,7 +59,7 @@ const Attendance = () => {
             <li>
               <strong>기술 스택</strong>
               <p>
-                {['HTML', 'Styled-Components', 'Javascript', 'React']?.map(
+                {['React', 'Javascript', 'Styled-Components', 'HTML']?.map(
                   (item, i) => {
                     return <StTag key={i}>{`${item}`}</StTag>;
                   }

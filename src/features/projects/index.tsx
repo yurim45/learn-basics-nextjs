@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout } from '@components/index';
 import Slider from '@components/Slider';
 import Attendance from './attendance/Attendance';
+import Portfolio from './portfolio/Portfolio';
 
 const Projects = () => {
   return (
@@ -14,7 +15,7 @@ const Projects = () => {
         id="projects"
       >
         <Slider>
-          <Attendance />
+          <Portfolio />
           <Attendance />
         </Slider>
       </Layout>
