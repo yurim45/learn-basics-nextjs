@@ -20,7 +20,14 @@ const Portfolio = () => {
             포트폴리오 용도로 제작한 웹사이트. Vercel을 이용하여 정적 웹사이트의
             Lean한 배포도 경험을 했던 프로젝트
           </StContentDesc>
-          <StReadMore type="button" onClick={() => window.open('')}>
+          <StReadMore
+            type="button"
+            onClick={() =>
+              window.open(
+                'https://brainy-talk-263.notion.site/Nextjs-89fc4c0016f245b1a0c18420cab61314'
+              )
+            }
+          >
             자세히 보기
           </StReadMore>
           <ul>
