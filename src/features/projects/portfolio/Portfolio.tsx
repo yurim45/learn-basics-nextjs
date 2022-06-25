@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, EffectCreative } from 'swiper';
+import { Autoplay, Pagination, EffectCreative } from 'swiper';
 import { img1, img2, img3, img4, img5 } from './images/index';
 import { tagText } from '@shared/styles/variables';
 
@@ -77,6 +77,10 @@ const Portfolio = () => {
           slidesPerView={'auto'} //초기값 설정 모바일값이 먼저!!
           spaceBetween={10}
           centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           grabCursor={true}
           effect={'creative'}
           creativeEffect={{
@@ -91,7 +95,7 @@ const Portfolio = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination, EffectCreative]}
+          modules={[Autoplay, Pagination, EffectCreative]}
           className="mySwiper"
         >
           {[img1, img2, img3, img4, img5]?.map((img, i) => {
