@@ -5,26 +5,27 @@ import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2, img3, img4, img5 } from './images/index';
+import { img1, img2 } from './images/index';
 import { tagText } from '@shared/styles/variables';
 
-const Portfolio = () => {
+const EasyWorkApp = () => {
   return (
     <PjLayout
-      title="포트폴리오 웹사이트"
-      subTitle="2022-06-04 ~ 06-20 / FE: 1명"
+      title="Easy-Work App: 사내용 프로그램"
+      subTitle="2022.06.28 ~ 계속 구현 중 / FE: 1명"
     >
       <StContent>
         <StLeftContent>
           <StContentDesc>
-            포트폴리오 용도로 제작한 웹사이트. <StTag>Vercel</StTag>을 이용하여
-            정적 웹사이트의 Lean한 배포도 경험을 했던 프로젝트
+            <StTag>Vuejs</StTag> 를 배우면서 연습겸 사내용 프로그램을 제작한
+            프로젝트. <br />
+            일주일 정도 공부하며 <StTag>netlify</StTag>를 이용하여 배포 완료.
           </StContentDesc>
           <StReadMore
             type="button"
             onClick={() =>
               window.open(
-                'https://brainy-talk-263.notion.site/Nextjs-89fc4c0016f245b1a0c18420cab61314'
+                'https://www.notion.so/aprilworld/Vuejs-Easy-Work-App-f1eb7f0469184d24803cef76e6d1c410'
               )
             }
           >
@@ -34,8 +35,11 @@ const Portfolio = () => {
             <li>
               <strong>주요 기능</strong>
               <p>
-                ✔︎ 간단한 자기소개, GitHub 및 기술블로그 소개, 기술 스택,
-                프로젝트 경험, 업무 경력
+                ✔︎ 사용자 페이지 <br />
+                ㅤ● 포인트 사용 내역 확인 및 기록, 포인트 보내 <br />
+                ㅤ● 휴가 등록 및 조회, 관리 등
+                <br />
+                ✔︎ 관리자 페이지 <br />
               </p>
             </li>
 
@@ -43,23 +47,23 @@ const Portfolio = () => {
               <strong>URL</strong>
               <p>
                 <a
-                  href={`https://april.world`}
+                  href={`https://easywork.today/`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  april.world
+                  easywork.today
                 </a>
               </p>
             </li>
             <li>
               <strong>Deployment</strong>
-              <p>Vercel</p>
+              <p>netlify</p>
             </li>
             <li>
               <strong>GitHub</strong>
               <p>
                 <a
-                  href={`https://github.com/yurim45/practice`}
+                  href={`https://github.com/yurim45/easy-work-app`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -71,11 +75,9 @@ const Portfolio = () => {
             <li>
               <strong>기술 스택</strong>
               <p>
-                {['Nextjs', 'React', 'Typescript', 'Styled-Components']?.map(
-                  (item, i) => {
-                    return <StTag key={i}>{`${item}`}</StTag>;
-                  }
-                )}
+                {['Vuejs', 'Javascript', 'Sass/Scss']?.map((item, i) => {
+                  return <StTag key={i}>{`${item}`}</StTag>;
+                })}
               </p>
             </li>
           </ul>
@@ -105,14 +107,14 @@ const Portfolio = () => {
           modules={[Autoplay, Pagination, EffectCreative]}
           className="mySwiper"
         >
-          {[img1, img2, img3, img4, img5]?.map((img, i) => {
+          {[img1, img2]?.map((img, i) => {
             return (
               <SwiperSlide key={i}>
                 <Image
                   alt="project preview"
                   src={img}
-                  width={530}
-                  height={470}
+                  width={270}
+                  height={500}
                 />
               </SwiperSlide>
             );
@@ -123,14 +125,14 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default EasyWorkApp;
 
 const StContent = styled.div`
   margin-top: 50px;
   ${flex({ justify: 'between', align: 'start' })};
 
   .mySwiper {
-    width: 550px;
+    width: 300px;
   }
 
   @media ${({ theme }) => theme.mobile} {

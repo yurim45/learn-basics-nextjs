@@ -17,8 +17,8 @@ const Attendance = () => {
       <StContent>
         <StLeftContent>
           <StContentDesc>
-            근태 등록, 근무제 선택 및 신청, 연차 등 휴가 관리 등의 근태관리
-            프로그램 개발 프로젝트
+            근태 등록, 근무제 선택 및 신청, 연차 등 휴가 관리 등의
+            <br /> 근태관리 프로그램 개발 프로젝트
           </StContentDesc>
           <StReadMore
             type="button"
