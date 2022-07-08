@@ -5,7 +5,7 @@ import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2 } from './images/index';
+import { img1, img2, img3 } from './images/index';
 import { tagText } from '@shared/styles/variables';
 
 const EasyWorkApp = () => {
@@ -40,6 +40,8 @@ const EasyWorkApp = () => {
                 ㅤ● 휴가 등록 및 조회, 관리 등
                 <br />
                 ✔︎ 관리자 페이지 <br />
+                ㅤ● 포인트 현황 <br />
+                ㅤ● 포인트 발급 등
               </p>
             </li>
 
@@ -107,7 +109,7 @@ const EasyWorkApp = () => {
           modules={[Autoplay, Pagination, EffectCreative]}
           className="mySwiper"
         >
-          {[img1, img2]?.map((img, i) => {
+          {[img1, img2, img3]?.map((img, i) => {
             return (
               <SwiperSlide key={i}>
                 <Image
