@@ -17,9 +17,9 @@ const EasyWorkApp = () => {
       <StContent>
         <StLeftContent>
           <StContentDesc>
-            <StTag>Vuejs</StTag> 를 배우면서 연습겸 사내용 프로그램을 제작한
-            프로젝트. <br />
-            일주일 정도 공부하며 <StTag>netlify</StTag>를 이용하여 배포 완료.
+            <StTag>Vuejs</StTag> 를 배우면서 <StTag>PWA</StTag>를 적용한 사내용
+            프로그램을 제작한 프로젝트. <br />
+            <StTag>netlify</StTag>를 이용하여 배포 완료.
           </StContentDesc>
           <StReadMore
             type="button"
