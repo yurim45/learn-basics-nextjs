@@ -5,21 +5,20 @@ import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2, img3 } from './images/index';
+import { img1, img2, img3, img4 } from './images/index';
 import { tagText } from '@shared/styles/variables';
 
 const EasyWorkApp = () => {
   return (
     <PjLayout
       title="Easy-Work App: 사내용 프로그램"
-      subTitle="2022.06.28 ~ 계속 구현 중 / FE: 1명"
+      subTitle="2022.08.09 ~ 10.11, 약 2개월간 | 총 3명 (UX/UI디자이너 1명, Frontend 1명, Backend 1명)"
     >
       <StContent>
         <StLeftContent>
           <StContentDesc>
             <StTag>Vuejs</StTag> 를 배우면서 <StTag>PWA</StTag>를 적용한 사내용
             프로그램을 제작한 프로젝트. <br />
-            <StTag>netlify</StTag>를 이용하여 배포 완료.
           </StContentDesc>
           <StReadMore
             type="button"
@@ -50,7 +49,7 @@ const EasyWorkApp = () => {
               <strong>URL</strong>
               <p>
                 <a
-                  href={`https://easywork.today/`}
+                  href={`https://atnpeasywork.link/`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -59,8 +58,16 @@ const EasyWorkApp = () => {
               </p>
             </li>
             <li>
-              <strong>Deployment</strong>
-              <p>netlify</p>
+              <strong>회고</strong>
+              <p>
+                <a
+                  href={`https://velog.io/@april_5/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%A5%BC-%EC%95%9E%EB%91%90%EA%B3%A0`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  회고록
+                </a>
+              </p>
             </li>
             <li>
               <strong>GitHub</strong>
@@ -70,7 +77,7 @@ const EasyWorkApp = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  github.com/yurim45/practice
+                  github.com/yurim45/easy-work-app
                 </a>
               </p>
             </li>
@@ -78,9 +85,11 @@ const EasyWorkApp = () => {
             <li>
               <strong>기술 스택</strong>
               <p>
-                {['Vuejs', 'Javascript', 'Sass/Scss']?.map((item, i) => {
-                  return <StTag key={i}>{`${item}`}</StTag>;
-                })}
+                {['vuejs', 'JS', 'apollo', 'graphql', 'sass']?.map(
+                  (item, i) => {
+                    return <StTag key={i}>{`${item}`}</StTag>;
+                  }
+                )}
               </p>
             </li>
           </ul>
@@ -110,7 +119,7 @@ const EasyWorkApp = () => {
           modules={[Autoplay, Pagination, EffectCreative]}
           className="mySwiper"
         >
-          {[img1, img2, img3]?.map((img, i) => {
+          {[img1, img2, img3, img4]?.map((img, i) => {
             return (
               <SwiperSlide key={i}>
                 <Image
