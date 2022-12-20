@@ -14,7 +14,7 @@ const Atnp = () => {
         </StRole>
         <StContents>
           <StContent>
-            <strong>✔️ 기간</strong>: 2022. 1.24 ~ 현재
+            <strong>✔️ 기간</strong>: 2022. 1.24 ~ 11.19
           </StContent>
           <StContent>
             <strong>✔️ Skills </strong>:
@@ -34,10 +34,7 @@ const Atnp = () => {
             <strong>✔️ 담당 역할</strong>
             <ul>
               <li>
-                ■ <strong>MVP 개발</strong>
-              </li>
-              <li>
-                ■ <strong>StoryBook 디자인 시스템</strong>
+                ■ <strong>MVP 개발(사용자용)</strong>
               </li>
             </ul>
           </StContent>
