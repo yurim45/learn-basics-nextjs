@@ -6,7 +6,11 @@ import { tagText } from '@shared/styles/variables';
 
 const Atnp = () => {
   return (
-    <CareerLayout logo={atnp} company="At&P Partners" period="JAN 2022 ~ 현재">
+    <CareerLayout
+      logo={atnp}
+      company="At&P Partners"
+      period="JAN 2022 ~ DEC 2022"
+    >
       <div>
         <StRole>
           연말정산을 보다 효율적으로 운용할 수 있는 다양한 기능을 제공하는
@@ -14,7 +18,7 @@ const Atnp = () => {
         </StRole>
         <StContents>
           <StContent>
-            <strong>✔️ 기간</strong>: 2022. 1.24 ~ 11.19
+            <strong>✔️ 기간</strong>: 2022. 1.24 ~ 12.19
           </StContent>
           <StContent>
             <strong>✔️ Skills </strong>:
