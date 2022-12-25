@@ -24,7 +24,7 @@ const Attendance = () => {
             type="button"
             onClick={() =>
               window.open(
-                'https://brainy-talk-263.notion.site/React-Internship_-Project-b92f7d90024d4b20883e6dacf9e8f151'
+                'https://aprilworld.notion.site/React-Internship_-Project-de31dddabe1745be863a06734c036c0c'
               )
             }
           >

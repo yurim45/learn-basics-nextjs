@@ -24,7 +24,7 @@ const Portfolio = () => {
             type="button"
             onClick={() =>
               window.open(
-                'https://brainy-talk-263.notion.site/Nextjs-89fc4c0016f245b1a0c18420cab61314'
+                'https://aprilworld.notion.site/Nextjs-a0f61a06702542999db503406625b9a9'
               )
             }
           >
