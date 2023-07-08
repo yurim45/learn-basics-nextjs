@@ -11,20 +11,13 @@ const VersionControl = () => {
       <h3>Version Control</h3>
       <ul>
         <li>
-          <Image
-            alt="Git-Logo"
-            src={logoGit}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="Git-Logo" src={logoGit} objectFit="contain" />
         </li>
         <li>
           <Image
             alt="GitHub-Logo"
             src={logoGithub}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -32,8 +25,7 @@ const VersionControl = () => {
           <Image
             alt="GitLab-Logo"
             src={logoGitlab}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -58,8 +50,9 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
+    padding: 10px;
     width: 150px;
-    height: 100px;
+    max-height: 150px;
     ${flex({})};
   }
 `;

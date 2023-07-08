@@ -14,8 +14,7 @@ const Deployment = () => {
           <Image
             alt="Vercel-Logo"
             src={logoVercel}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -23,8 +22,7 @@ const Deployment = () => {
           <Image
             alt="NCP-Logo"
             src={logoNCP}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -49,8 +47,9 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
+    padding: 10px;
     width: 150px;
-    height: 100px;
+    max-height: 150px;
     ${flex({})};
   }
 `;

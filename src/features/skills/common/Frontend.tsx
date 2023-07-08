@@ -25,8 +25,7 @@ const Frontend = () => {
           <Image
             alt="HTML-Logo"
             src={logoHtml}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -34,8 +33,7 @@ const Frontend = () => {
           <Image
             alt="CSS-Logo"
             src={logoCss}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -43,8 +41,7 @@ const Frontend = () => {
           <Image
             alt="Styled-components-Logo"
             src={logoSC}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -52,8 +49,7 @@ const Frontend = () => {
           <Image
             alt="JS-Logo"
             src={logoJs}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -61,8 +57,7 @@ const Frontend = () => {
           <Image
             alt="TS-Logo"
             src={logoTS}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -70,8 +65,7 @@ const Frontend = () => {
           <Image
             alt="React-Logo"
             src={logoReact}
-            width="100%"
-            height="100%"
+            layout="responsive"
             objectFit="contain"
           />
         </li>
@@ -108,8 +102,9 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
+    padding: 10px;
     width: 150px;
-    height: 100px;
+    max-height: 150px;
     ${flex({})};
   }
 `;
