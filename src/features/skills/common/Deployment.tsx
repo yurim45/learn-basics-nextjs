@@ -11,22 +11,10 @@ const Deployment = () => {
       <h3>Deployment</h3>
       <ul>
         <li>
-          <Image
-            alt="Vercel-Logo"
-            src={logoVercel}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="Vercel-Logo" src={logoVercel} />
         </li>
         <li>
-          <Image
-            alt="NCP-Logo"
-            src={logoNCP}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="NCP-Logo" src={logoNCP} />
         </li>
       </ul>
     </StContainer>
@@ -49,8 +37,12 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
-    width: 150px;
-    height: 100px;
+    padding: 10px;
     ${flex({})};
+
+    img {
+      width: 80px;
+      width: 80px;
+    }
   }
 `;

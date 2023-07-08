@@ -17,7 +17,7 @@ const Archive = () => {
       <StAlign>
         <StContainer>
           <StTitle>
-            <Image alt="" src={github} width={50} height={50} />
+            <Image alt="github-logo" src={github} />
             <strong>GitHub</strong>
           </StTitle>
           <StContent>
@@ -36,7 +36,7 @@ const Archive = () => {
         </StContainer>
         <StContainer>
           <StTitle>
-            <Image alt="" src={velog} width={50} height={50} />
+            <Image alt="velog-logo" src={velog} />
             <strong>Velog</strong>
           </StTitle>
           <StContent>
@@ -87,6 +87,11 @@ const StTitle = styled.div`
 
   strong {
     margin: 0 10px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
   }
 `;
 

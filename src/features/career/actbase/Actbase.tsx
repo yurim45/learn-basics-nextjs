@@ -54,7 +54,7 @@ const Actbase = () => {
             )
           }
         >
-          <Image alt="logo" src={appsotre} width={50} height={50} />{' '}
+          <Image alt="app store logo" src={appsotre} />
           <span>App Store Link</span>
         </StButton>
       </div>
@@ -95,6 +95,7 @@ const StContent = styled.li`
 const StTag = styled.span`
   ${tagText()};
 `;
+
 const StButton = styled.button`
   ${flex({})};
   padding: 15px 30px;
@@ -106,5 +107,10 @@ const StButton = styled.button`
     margin-left: 30px;
     color: var(--text-777);
     text-decoration: underline;
+  }
+
+  img {
+    width: 80px;
+    width: 80px;
   }
 `;
