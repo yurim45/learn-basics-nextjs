@@ -1,11 +1,12 @@
 import React from 'react';
 import { GridLayout } from '@components/index';
 import {
-  Frontend,
+  FrontendBasic,
   Communication,
   MobileApp,
   Deployment,
   VersionControl,
+  Frontend,
 } from './common/index';
 
 const Skills = () => {
@@ -17,6 +18,7 @@ const Skills = () => {
       id="skills"
     >
       <Frontend />
+      <FrontendBasic />
       <Communication />
       <Deployment />
       <MobileApp />

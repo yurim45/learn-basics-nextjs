@@ -18,36 +18,29 @@ import {
   logoZeplin,
 } from '@images/skills/index';
 
-const Framework = () => {
+const FrontendBasic = () => {
   return (
     <StContainer className="frontend">
       <h3>Frontend</h3>
       <ul>
         <li>
-          <Image alt="Nextjs-Logo" src={logoNextjs} />
+          <Image alt="HTML-Logo" src={logoHtml} />
         </li>
         <li>
-          <Image alt="React-Logo" src={logoReact} />
-        </li>
-
-        <li>
-          <Image alt="Recoil-Logo" src={logoRecoil} />
+          <Image alt="CSS-Logo" src={logoCss} />
         </li>
         <li>
-          <Image alt="React-Query-Logo" src={logoRQ} />
+          <Image alt="JS-Logo" src={logoJs} />
         </li>
         <li>
-          <Image alt="Styled-components-Logo" src={logoSC} />
-        </li>
-        <li>
-          <Image alt="Storybook-Logo" src={logoSB} />
+          <Image alt="TS-Logo" src={logoTS} />
         </li>
       </ul>
     </StContainer>
   );
 };
 
-export default Framework;
+export default FrontendBasic;
 
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
