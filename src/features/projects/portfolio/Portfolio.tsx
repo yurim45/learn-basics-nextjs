@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
@@ -42,13 +43,13 @@ const Portfolio = () => {
             <li>
               <strong>URL</strong>
               <p>
-                <a
+                <Link
                   href={`https://april.world`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   april.world
-                </a>
+                </Link>
               </p>
             </li>
             <li>
@@ -58,13 +59,13 @@ const Portfolio = () => {
             <li>
               <strong>GitHub</strong>
               <p>
-                <a
+                <Link
                   href={`https://github.com/yurim45/practice`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   github.com/yurim45/practice
-                </a>
+                </Link>
               </p>
             </li>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
 import { formSet } from '@shared/styles/variables';
@@ -21,13 +22,13 @@ const Archive = () => {
             <strong>GitHub</strong>
           </StTitle>
           <StContent>
-            <a
+            <Link
               href="https://github.com/yurim45"
               target="_blank"
               rel="noreferrer"
             >
               <p>github.com/yurim45</p>
-            </a>
+            </Link>
             <ul>
               <li>프로젝트의 소스 코드가 있습니다.</li>
               <li>코딩 연습을 위해 작업한 코드가 있습니다.</li>
@@ -40,13 +41,13 @@ const Archive = () => {
             <strong>Velog</strong>
           </StTitle>
           <StContent>
-            <a
+            <Link
               href="https://velog.io/@april_5"
               target="_blank"
               rel="noreferrer"
             >
               <p>velog.io/@april_5</p>
-            </a>
+            </Link>
             <ul>
               <li>공부한 것을 정리할 목적의 블로그입니다.</li>
               <li>개발하며 겪은 이야기를 공유합니다.</li>
