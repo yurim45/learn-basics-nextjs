@@ -16,22 +16,16 @@ const Communication = () => {
       <h3>Communication</h3>
       <ul>
         <li>
-          <Image alt="Notion-Logo" src={logoNotion} width={150} height={50} />
+          <Image alt="Notion-Logo" src={logoNotion} />
         </li>
         <li>
-          <Image alt="Figma-Logo" src={logoFigma} width={150} height={70} />
+          <Image alt="Figma-Logo" src={logoFigma} />
         </li>
         <li>
-          <Image
-            alt="Jeplin-Logo"
-            src={logoZeplin}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="Jeplin-Logo" src={logoZeplin} />
         </li>
         <li>
-          <Image alt="Monday-Logo" src={logoMonday} width={150} height={110} />
+          <Image alt="Monday-Logo" src={logoMonday} />
         </li>
       </ul>
     </StContainer>
@@ -54,8 +48,12 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
-    width: 150px;
-    height: 100px;
+    padding: 10px;
     ${flex({})};
+
+    img {
+      width: 80px;
+      width: 80px;
+    }
   }
 `;

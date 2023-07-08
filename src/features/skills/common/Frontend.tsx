@@ -22,70 +22,34 @@ const Frontend = () => {
       <h3>Frontend</h3>
       <ul>
         <li>
-          <Image
-            alt="HTML-Logo"
-            src={logoHtml}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="HTML-Logo" src={logoHtml} />
         </li>
         <li>
-          <Image
-            alt="CSS-Logo"
-            src={logoCss}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="CSS-Logo" src={logoCss} />
         </li>
         <li>
-          <Image
-            alt="Styled-components-Logo"
-            src={logoSC}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="Styled-components-Logo" src={logoSC} />
         </li>
         <li>
-          <Image
-            alt="JS-Logo"
-            src={logoJs}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="JS-Logo" src={logoJs} />
         </li>
         <li>
-          <Image
-            alt="TS-Logo"
-            src={logoTS}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="TS-Logo" src={logoTS} />
         </li>
         <li>
-          <Image
-            alt="React-Logo"
-            src={logoReact}
-            width="100%"
-            height="100%"
-            objectFit="contain"
-          />
+          <Image alt="React-Logo" src={logoReact} />
         </li>
         <li>
-          <Image alt="Storybook-Logo" src={logoSB} width={140} height={120} />
+          <Image alt="Storybook-Logo" src={logoSB} />
         </li>
         <li>
-          <Image alt="Recoil-Logo" src={logoRecoil} width={150} height={60} />
+          <Image alt="Recoil-Logo" src={logoRecoil} />
         </li>
         <li>
-          <Image alt="React-Query-Logo" src={logoRQ} width={150} height={90} />
+          <Image alt="React-Query-Logo" src={logoRQ} />
         </li>
         <li>
-          <Image alt="Nextjs-Logo" src={logoNextjs} width={150} height={100} />
+          <Image alt="Nextjs-Logo" src={logoNextjs} />
         </li>
       </ul>
     </StContainer>
@@ -108,8 +72,12 @@ const StContainer = styled.div`
 
   li {
     margin: 10px 0;
-    width: 150px;
-    height: 100px;
+    padding: 10px;
     ${flex({})};
+
+    img {
+      width: 80px;
+      width: 80px;
+    }
   }
 `;

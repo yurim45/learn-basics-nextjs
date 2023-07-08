@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+// https://nextjs.org/docs/pages/building-your-application/upgrading/version-13
+
 const nextConfig = {
   compiler: {
     styledComponents: true,

@@ -13,7 +13,7 @@ const CareerLayout = ({ logo, company, period, children }: PjLayoutProps) => {
   return (
     <StContainer>
       <StLogo>
-        <Image alt="logo" src={logo} width={120} height={120} />
+        <Image alt="logo" src={logo} />
       </StLogo>
       <StContent>
         <StCompany>{company}</StCompany>
@@ -40,6 +40,11 @@ const StLogo = styled.div`
   ${flex({})};
   width: 50%;
   padding: 30px;
+
+  img {
+    width: 120px;
+    width: 120px;
+  }
 `;
 
 const StContent = styled.div`
