@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
@@ -43,37 +44,37 @@ const EasyWorkApp = () => {
             <li>
               <strong>URL</strong>
               <p>
-                <a
+                <Link
                   href={`https://atnpeasywork.link/`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   easywork.today
-                </a>
+                </Link>
               </p>
             </li>
             <li>
               <strong>회고</strong>
               <p>
-                <a
+                <Link
                   href={`https://velog.io/@april_5/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%A5%BC-%EC%95%9E%EB%91%90%EA%B3%A0`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   회고록
-                </a>
+                </Link>
               </p>
             </li>
             <li>
               <strong>GitHub</strong>
               <p>
-                <a
+                <Link
                   href={`https://github.com/yurim45/easy-work-app`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   github.com/yurim45/easy-work-app
-                </a>
+                </Link>
               </p>
             </li>
 

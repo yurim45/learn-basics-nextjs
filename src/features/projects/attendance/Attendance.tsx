@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import flex from '@shared/styles/flex';
 import PjLayout from '../common/PjLayout';
@@ -47,13 +48,13 @@ const Attendance = () => {
             <li>
               <strong>GitHub</strong>
               <p>
-                <a
+                <Link
                   href={`https://github.com/yurim45/b2tech-intern-20-front`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   github.com/yurim45/b2tech-intern-20-front
-                </a>
+                </Link>
               </p>
             </li>
             <li>
