@@ -11,12 +11,7 @@ const MobileApp = () => {
       <h3>Mobile App</h3>
       <ul>
         <li>
-          <Image
-            alt="React-Native-Logo"
-            src={logoRN}
-            layout="responsive"
-            objectFit="contain"
-          />
+          <Image alt="React-Native-Logo" src={logoRN} />
         </li>
       </ul>
     </StContainer>
@@ -40,8 +35,11 @@ const StContainer = styled.div`
   li {
     margin: 10px 0;
     padding: 10px;
-    width: 150px;
-    max-height: 150px;
     ${flex({})};
+
+    img {
+      width: 80px;
+      width: 80px;
+    }
   }
 `;
