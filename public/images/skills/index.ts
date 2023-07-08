@@ -18,6 +18,8 @@ import logoSC from './logo-sc.png';
 import logoTS from './logo-ts.png';
 import logoVercel from './logo-vercel.png';
 import logoZeplin from './logo-zeplin.png';
+import logoApollo from './logo-graphql-apollo.png';
+import logoGraphql from './logo-graphql.png';
 
 export {
   logoCss,
@@ -40,4 +42,6 @@ export {
   logoTS,
   logoVercel,
   logoZeplin,
+  logoApollo,
+  logoGraphql,
 };
