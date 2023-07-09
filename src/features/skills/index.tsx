@@ -20,9 +20,9 @@ const Skills = () => {
       <Frontend />
       <FrontendBasic />
       <Communication />
-      <Deployment />
-      <MobileApp />
       <VersionControl />
+      <MobileApp />
+      <Deployment />
     </GridLayout>
   );
 };

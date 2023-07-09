@@ -4,18 +4,14 @@ import styled from 'styled-components';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import {
-  logoCss,
-  logoHtml,
-  logoJs,
   logoNextjs,
   logoRQ,
   logoReact,
   logoRecoil,
   logoSB,
   logoSC,
-  logoTS,
-  logoVercel,
-  logoZeplin,
+  logoApollo,
+  logoGraphql,
 } from '@images/skills/index';
 
 const Framework = () => {
@@ -29,7 +25,12 @@ const Framework = () => {
         <li>
           <Image alt="React-Logo" src={logoReact} />
         </li>
-
+        <li>
+          <Image alt="Apollo-Graphql-Logo" src={logoApollo} />
+        </li>
+        <li>
+          <Image alt="Graphql-Logo" src={logoGraphql} />
+        </li>
         <li>
           <Image alt="Recoil-Logo" src={logoRecoil} />
         </li>

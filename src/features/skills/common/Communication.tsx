@@ -5,7 +5,7 @@ import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import {
   logoFigma,
-  logoMonday,
+  logoJira,
   logoNotion,
   logoZeplin,
 } from '@images/skills/index';
@@ -25,7 +25,7 @@ const Communication = () => {
           <Image alt="Jeplin-Logo" src={logoZeplin} />
         </li>
         <li>
-          <Image alt="Monday-Logo" src={logoMonday} />
+          <Image alt="Jira-Logo" src={logoJira} />
         </li>
       </ul>
     </StContainer>

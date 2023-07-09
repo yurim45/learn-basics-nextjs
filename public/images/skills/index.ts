@@ -5,7 +5,6 @@ import logoGithub from './logo-github.png';
 import logoGitlab from './logo-gitlab.png';
 import logoHtml from './logo-html.png';
 import logoJs from './logo-js.png';
-import logoMonday from './logo-monday.jpeg';
 import logoNCP from './logo-ncp.jpeg';
 import logoNextjs from './logo-nextjs.png';
 import logoNotion from './logo-notion.png';
@@ -20,6 +19,7 @@ import logoVercel from './logo-vercel.png';
 import logoZeplin from './logo-zeplin.png';
 import logoApollo from './logo-graphql-apollo.png';
 import logoGraphql from './logo-graphql.png';
+import logoJira from './logo-jira.png';
 
 export {
   logoCss,
@@ -29,7 +29,6 @@ export {
   logoGitlab,
   logoHtml,
   logoJs,
-  logoMonday,
   logoNCP,
   logoNextjs,
   logoNotion,
@@ -44,4 +43,5 @@ export {
   logoZeplin,
   logoApollo,
   logoGraphql,
+  logoJira,
 };

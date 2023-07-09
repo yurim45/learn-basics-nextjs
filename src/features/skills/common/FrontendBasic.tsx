@@ -3,24 +3,11 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
-import {
-  logoCss,
-  logoHtml,
-  logoJs,
-  logoNextjs,
-  logoRQ,
-  logoReact,
-  logoRecoil,
-  logoSB,
-  logoSC,
-  logoTS,
-  logoVercel,
-  logoZeplin,
-} from '@images/skills/index';
+import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index';
 
 const FrontendBasic = () => {
   return (
-    <StContainer className="frontend">
+    <StContainer>
       <h3>Frontend</h3>
       <ul>
         <li>
