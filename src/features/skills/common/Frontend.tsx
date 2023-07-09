@@ -4,43 +4,32 @@ import styled from 'styled-components';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import {
-  logoCss,
-  logoHtml,
-  logoJs,
   logoNextjs,
   logoRQ,
   logoReact,
   logoRecoil,
   logoSB,
   logoSC,
-  logoTS,
+  logoApollo,
+  logoGraphql,
 } from '@images/skills/index';
 
-const Frontend = () => {
+const Framework = () => {
   return (
     <StContainer className="frontend">
       <h3>Frontend</h3>
       <ul>
         <li>
-          <Image alt="HTML-Logo" src={logoHtml} />
-        </li>
-        <li>
-          <Image alt="CSS-Logo" src={logoCss} />
-        </li>
-        <li>
-          <Image alt="Styled-components-Logo" src={logoSC} />
-        </li>
-        <li>
-          <Image alt="JS-Logo" src={logoJs} />
-        </li>
-        <li>
-          <Image alt="TS-Logo" src={logoTS} />
+          <Image alt="Nextjs-Logo" src={logoNextjs} />
         </li>
         <li>
           <Image alt="React-Logo" src={logoReact} />
         </li>
         <li>
-          <Image alt="Storybook-Logo" src={logoSB} />
+          <Image alt="Apollo-Graphql-Logo" src={logoApollo} />
+        </li>
+        <li>
+          <Image alt="Graphql-Logo" src={logoGraphql} />
         </li>
         <li>
           <Image alt="Recoil-Logo" src={logoRecoil} />
@@ -49,14 +38,17 @@ const Frontend = () => {
           <Image alt="React-Query-Logo" src={logoRQ} />
         </li>
         <li>
-          <Image alt="Nextjs-Logo" src={logoNextjs} />
+          <Image alt="Styled-components-Logo" src={logoSC} />
+        </li>
+        <li>
+          <Image alt="Storybook-Logo" src={logoSB} />
         </li>
       </ul>
     </StContainer>
   );
 };
 
-export default Frontend;
+export default Framework;
 
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};

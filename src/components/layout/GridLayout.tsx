@@ -62,11 +62,10 @@ const StLine = styled.div<{ lineColor: string }>`
 const StContent = styled.div`
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-auto-flow: column;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
 
   .frontend {
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
   }
 
   @media ${({ theme }) => theme.mobile} {

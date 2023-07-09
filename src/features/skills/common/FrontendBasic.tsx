@@ -3,36 +3,31 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { formSet } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
-import {
-  logoFigma,
-  logoJira,
-  logoNotion,
-  logoZeplin,
-} from '@images/skills/index';
+import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index';
 
-const Communication = () => {
+const FrontendBasic = () => {
   return (
     <StContainer>
-      <h3>Communication</h3>
+      <h3>Frontend</h3>
       <ul>
         <li>
-          <Image alt="Notion-Logo" src={logoNotion} />
+          <Image alt="HTML-Logo" src={logoHtml} />
         </li>
         <li>
-          <Image alt="Figma-Logo" src={logoFigma} />
+          <Image alt="CSS-Logo" src={logoCss} />
         </li>
         <li>
-          <Image alt="Jeplin-Logo" src={logoZeplin} />
+          <Image alt="JS-Logo" src={logoJs} />
         </li>
         <li>
-          <Image alt="Jira-Logo" src={logoJira} />
+          <Image alt="TS-Logo" src={logoTS} />
         </li>
       </ul>
     </StContainer>
   );
 };
 
-export default Communication;
+export default FrontendBasic;
 
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
