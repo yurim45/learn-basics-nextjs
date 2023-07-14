@@ -13,8 +13,8 @@ const Atnp = () => {
     >
       <div>
         <StRole>
-          연말정산을 보다 효율적으로 운용할 수 있는 다양한 기능을 제공하는
-          프로그램의 차세대 MVP 개발
+          연말정산을 보다 효율적으로 운용할 수 있는 다양한 기능의 차세대
+          프로그램 MVP 개발
         </StRole>
         <StContents>
           <StContent>
