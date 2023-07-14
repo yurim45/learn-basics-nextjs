@@ -1,5 +1,6 @@
 // _document.tsx
 import React from 'react';
+import Script from 'next/script';
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -66,6 +67,23 @@ export default class MyDocument extends Document {
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
           />
           <link rel="icon" href="/favicon.ico" />
+          {/* <!-- Google tag (gtag.js) --> */}
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-XTG2GZ26JK"
+          ></Script>
+          <Script
+            id="google-analytics"
+            dangerouslySetInnerHTML={{
+              __html: `
+          window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XTG2GZ26JK');
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
