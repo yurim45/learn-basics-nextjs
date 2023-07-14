@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Layout } from '@components/index';
 import april from '@images/april.png';
+import yurim from '@images/yurim.png';
 import flex from '@shared/styles/flex';
 
 const Introduce = () => {
@@ -10,7 +11,7 @@ const Introduce = () => {
     <Layout pageTitle="About Me" id="aboutMe">
       <StContent>
         <StImg>
-          <Image alt="me" src={april} width={300} height={300} />
+          <Image alt="me" src={yurim} width={300} height={300} />
         </StImg>
         <StText>
           <strong>김유림</strong>
