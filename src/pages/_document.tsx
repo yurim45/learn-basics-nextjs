@@ -74,6 +74,10 @@ export default class MyDocument extends Document {
             property="og:description"
             content="프론트엔드 개발자 김유림의 포트폴리오입니다."
           />
+          <meta
+            name="google-site-verification"
+            content="TQkPIaAFbSpBZW8VW8OhUHdEhd6lELoX2_zzKmUiGWU"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
             rel="stylesheet"
