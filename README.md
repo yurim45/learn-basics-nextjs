@@ -10,15 +10,23 @@
 
 ✔️ **Skills** : `Nextjs`, `React`, `Typescript`, `Styled-Components`
 
-✔️  배포 
+✔️ 배포
 
-[김유림 포트폴리오 April's Portfolio](https://www.april5.world/)
+[김유림 포트폴리오 April's Portfolio](https://www.april5.dev)
 
 ✔️ 담당 역할
 
 - 기획 및 디자인
 - FE 개발
 - 배포
-    - `vercel`을 통한 배포
-    - 도메인 연결
+  - `vercel`을 통한 배포
+  - 도메인 연결
 
+---
+
+## 업데이트 내용
+
+### 2023
+
+- 07.08 nextjs 13 마이그레이션 시작..!!🔥🔥
+- 07.15 GA 적용 및 구글 콘솔 연동 테스트
