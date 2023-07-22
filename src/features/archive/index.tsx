@@ -64,10 +64,6 @@ const StContainer = styled.div`
   ${formSet()};
   margin: 40px;
   box-shadow: 1.95px 1.95px 2.6px rgb(137 134 134 / 15%);
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: 30px;
-  }
 `;
 
 const StAlign = styled.div`

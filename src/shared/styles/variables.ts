@@ -39,6 +39,18 @@ export const pjTitle = () => css`
   }
 `;
 
+export const skillTitle = () => css`
+  margin-bottom: 20px;
+  color: var(--text-yellow);
+  font-size: 28px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 20px;
+  }
+`;
+
 export const pjDesc = () => css`
   margin: 20px;
   color: var(--text-777);

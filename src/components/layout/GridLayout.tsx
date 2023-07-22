@@ -70,7 +70,7 @@ const StContent = styled.div`
 
   @media ${({ theme }) => theme.mobile} {
     margin: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
     grid-auto-flow: dense;
   }
 `;

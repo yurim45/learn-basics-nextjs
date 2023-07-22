@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { formSet } from '@shared/styles/variables';
+import { formSet, skillTitle } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import { logoGit, logoGithub, logoGitlab } from '@images/skills/index';
 
@@ -29,11 +29,7 @@ const StContainer = styled.div`
   ${formSet()};
 
   h3 {
-    margin-bottom: 20px;
-    color: var(--text-yellow);
-    font-size: 28px;
-    font-weight: 600;
-    white-space: nowrap;
+    ${skillTitle()};
   }
 
   li {
@@ -44,6 +40,15 @@ const StContainer = styled.div`
     img {
       width: 80px;
       width: 80px;
+    }
+  }
+
+  @media ${({ theme }) => theme.mobile} {
+    li {
+      img {
+        width: 60px;
+        width: 60px;
+      }
     }
   }
 `;
