@@ -12,7 +12,7 @@ export const formSet = () => css`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    padding: 20px;
+    padding: 15px;
   }
 `;
 
@@ -36,6 +36,18 @@ export const pjTitle = () => css`
 
   @media ${({ theme }) => theme.mobile} {
     font-size: 28px;
+  }
+`;
+
+export const skillTitle = () => css`
+  margin-bottom: 20px;
+  color: var(--text-yellow);
+  font-size: 28px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 20px;
   }
 `;
 

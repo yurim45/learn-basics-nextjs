@@ -9,8 +9,6 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
 const FooterWrap = styled.footer`
   padding: 50px 0;
   color: var(--white);
@@ -22,3 +20,5 @@ const FooterWrap = styled.footer`
     text-align: center;
   }
 `;
+
+export default Footer;

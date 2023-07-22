@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { formSet } from '@shared/styles/variables';
+import { formSet, skillTitle } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import {
   logoFigma,
@@ -32,18 +32,12 @@ const Communication = () => {
   );
 };
 
-export default Communication;
-
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
   ${formSet()};
 
   h3 {
-    margin-bottom: 20px;
-    color: var(--text-yellow);
-    font-size: 28px;
-    font-weight: 600;
-    white-space: nowrap;
+    ${skillTitle()};
   }
 
   li {
@@ -56,4 +50,15 @@ const StContainer = styled.div`
       width: 80px;
     }
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    li {
+      img {
+        width: 60px;
+        width: 60px;
+      }
+    }
+  }
 `;
+
+export default Communication;

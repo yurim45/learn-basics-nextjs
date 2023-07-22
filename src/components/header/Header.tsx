@@ -41,8 +41,6 @@ const Header = () => {
   );
 };
 
-export default Header;
-
 const StHeader = styled.header<{ hasScroll: boolean }>`
   position: fixed;
   width: 100vw;
@@ -83,3 +81,5 @@ const Logo = styled.div`
     font-size: 20px;
   }
 `;
+
+export default Header;

@@ -12,8 +12,6 @@ const DropBarMenu = () => {
   );
 };
 
-export default DropBarMenu;
-
 const StDrop = styled.ul`
   position: fixed;
   top: 60px;
@@ -30,3 +28,5 @@ const StDrop = styled.ul`
     cursor: pointer;
   }
 `;
+
+export default DropBarMenu;

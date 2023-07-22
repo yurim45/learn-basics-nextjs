@@ -13,8 +13,6 @@ const Gnb = () => {
   );
 };
 
-export default Gnb;
-
 const StGnb = styled.nav`
   color: var(--text-555);
   font-size: 18px;
@@ -33,3 +31,5 @@ const StGnb = styled.nav`
     cursor: pointer;
   }
 `;
+
+export default Gnb;

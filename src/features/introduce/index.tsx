@@ -27,8 +27,6 @@ const Introduce = () => {
   );
 };
 
-export default Introduce;
-
 const StContent = styled.div`
   ${flex({})};
   padding: 20px 0;
@@ -87,8 +85,14 @@ const StImg = styled.div`
   img {
     border-radius: 50%;
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    width: 70%;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
-const StMail = styled.span`
-  width: 100px;
-`;
+export default Introduce;

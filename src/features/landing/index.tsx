@@ -106,6 +106,7 @@ const StText = styled.div`
   button {
     position: absolute;
     bottom: 50px;
+    left: calc(50% - 25px);
     width: 50px;
     height: 50px;
     background: rgba(255, 255, 255, 0.4);
@@ -113,6 +114,10 @@ const StText = styled.div`
     color: rgba(255, 255, 255, 0.8);
     font-size: 20px;
     animation: blink-effect 2s infinite ease-in-out;
+
+    @media ${({ theme }) => theme.mobile} {
+      left: calc(50% - 25px);
+    }
   }
 
   @keyframes blink-effect {

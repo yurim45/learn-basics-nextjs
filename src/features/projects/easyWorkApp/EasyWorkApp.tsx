@@ -133,8 +133,6 @@ const EasyWorkApp = () => {
   );
 };
 
-export default EasyWorkApp;
-
 const StContent = styled.div`
   margin-top: 50px;
   ${flex({ justify: 'between', align: 'start' })};
@@ -144,10 +142,11 @@ const StContent = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    display: block;
     margin-top: 20px;
-    overflow: scroll;
-    word-break: break-all;
+
+    .mySwiper {
+      display: none;
+    }
   }
 `;
 
@@ -184,6 +183,10 @@ const StLeftContent = styled.div`
     @media ${({ theme }) => theme.mobile} {
       width: 80vw;
       font-size: 14px;
+
+      p {
+        font-size: 14px;
+      }
     }
   }
 `;
@@ -209,3 +212,5 @@ const StReadMore = styled.button`
 const StTag = styled.span`
   ${tagText()};
 `;
+
+export default EasyWorkApp;

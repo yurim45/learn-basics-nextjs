@@ -7,7 +7,7 @@ import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCreative } from 'swiper';
 import { img1, img2, img3, img4 } from './images/index';
-import { tagText } from '@shared/styles/variables';
+import { Tag } from '@features/career/common';
 
 const Attendance = () => {
   return (
@@ -62,7 +62,7 @@ const Attendance = () => {
               <p>
                 {['React', 'Javascript', 'Styled-Components', 'HTML']?.map(
                   (item, i) => {
-                    return <StTag key={i}>{`${item}`}</StTag>;
+                    return <Tag key={i}>{`${item}`}</Tag>;
                   }
                 )}
               </p>
@@ -112,8 +112,6 @@ const Attendance = () => {
   );
 };
 
-export default Attendance;
-
 const StContent = styled.div`
   margin-top: 50px;
   ${flex({ justify: 'between', align: 'start' })};
@@ -123,10 +121,11 @@ const StContent = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    display: block;
     margin-top: 20px;
-    overflow: scroll;
-    word-break: break-all;
+
+    .mySwiper {
+      display: none;
+    }
   }
 `;
 
@@ -159,9 +158,14 @@ const StLeftContent = styled.div`
   p {
     padding: 5px;
     font-size: 16px;
+  }
 
-    @media ${({ theme }) => theme.mobile} {
-      width: 80vw;
+  @media ${({ theme }) => theme.mobile} {
+    width: 100%;
+    padding-right: 0;
+    font-size: 14px;
+
+    p {
       font-size: 14px;
     }
   }
@@ -185,6 +189,4 @@ const StReadMore = styled.button`
   border-radius: 10px;
 `;
 
-const StTag = styled.span`
-  ${tagText()};
-`;
+export default Attendance;

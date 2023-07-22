@@ -12,10 +12,16 @@ const GotoTop = () => {
   );
 };
 
-export default GotoTop;
-
 const StTopButton = styled.button`
   position: fixed;
   bottom: 50px;
   right: 60px;
+
+  @media ${({ theme }) => theme.mobile} {
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+  }
 `;
+
+export default GotoTop;

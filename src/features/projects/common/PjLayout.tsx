@@ -17,8 +17,6 @@ const PjLayout = ({ title, subTitle, children }: PjLayoutProps) => {
   );
 };
 
-export default PjLayout;
-
 const StContainer = styled.div`
   ${formSet()};
   margin: 0 40px;
@@ -30,7 +28,9 @@ const StContainer = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    width: 80vw;
+    width: 90vw;
+    height: 100%;
+    margin: 0 20px;
   }
 `;
 
@@ -41,3 +41,5 @@ const StTitle = styled.h2`
 const StDesc = styled.p`
   ${pjDesc()};
 `;
+
+export default PjLayout;

@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { formSet } from '@shared/styles/variables';
+import { formSet, skillTitle } from '@shared/styles/variables';
 import flex from '@shared/styles/flex';
 import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index';
 
 const FrontendBasic = () => {
   return (
     <StContainer>
-      <h3>Frontend</h3>
+      <h3>Basic</h3>
       <ul>
         <li>
           <Image alt="HTML-Logo" src={logoHtml} />
@@ -27,18 +27,12 @@ const FrontendBasic = () => {
   );
 };
 
-export default FrontendBasic;
-
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
   ${formSet()};
 
   h3 {
-    margin-bottom: 20px;
-    color: var(--text-yellow);
-    font-size: 28px;
-    font-weight: 600;
-    white-space: nowrap;
+    ${skillTitle()};
   }
 
   li {
@@ -51,4 +45,15 @@ const StContainer = styled.div`
       width: 80px;
     }
   }
+
+  @media ${({ theme }) => theme.mobile} {
+    li {
+      img {
+        width: 60px;
+        width: 60px;
+      }
+    }
+  }
 `;
+
+export default FrontendBasic;

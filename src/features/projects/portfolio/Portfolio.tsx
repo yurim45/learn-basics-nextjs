@@ -7,7 +7,7 @@ import PjLayout from '../common/PjLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCreative } from 'swiper';
 import { img1, img2, img3, img4, img5 } from './images/index';
-import { tagText } from '@shared/styles/variables';
+import { Tag } from '@features/career/common';
 
 const Portfolio = () => {
   return (
@@ -18,8 +18,8 @@ const Portfolio = () => {
       <StContent>
         <StLeftContent>
           <StContentDesc>
-            포트폴리오 용도로 제작한 웹사이트. <StTag>Vercel</StTag>을 이용하여
-            정적 웹사이트의 Lean한 배포도 경험을 했던 프로젝트
+            포트폴리오 용도로 제작한 웹사이트. <Tag>Vercel</Tag>을 이용하여 정적
+            웹사이트의 Lean한 배포도 경험을 했던 프로젝트
           </StContentDesc>
           <StReadMore
             type="button"
@@ -44,11 +44,11 @@ const Portfolio = () => {
               <strong>URL</strong>
               <p>
                 <Link
-                  href={`https://april.world`}
+                  href={`https://april.dev`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  april.world
+                  april.dev
                 </Link>
               </p>
             </li>
@@ -72,9 +72,9 @@ const Portfolio = () => {
             <li>
               <strong>기술 스택</strong>
               <p>
-                {['Nextjs', 'React', 'Typescript', 'Styled-Components']?.map(
+                {['Nextjs 13', 'React', 'Typescript', 'Styled-Components']?.map(
                   (item, i) => {
-                    return <StTag key={i}>{`${item}`}</StTag>;
+                    return <Tag key={i}>{`${item}`}</Tag>;
                   }
                 )}
               </p>
@@ -124,8 +124,6 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
-
 const StContent = styled.div`
   margin-top: 50px;
   ${flex({ justify: 'between', align: 'start' })};
@@ -135,10 +133,11 @@ const StContent = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    display: block;
     margin-top: 20px;
-    overflow: scroll;
-    word-break: break-all;
+
+    .mySwiper {
+      display: none;
+    }
   }
 `;
 
@@ -175,6 +174,10 @@ const StLeftContent = styled.div`
     @media ${({ theme }) => theme.mobile} {
       width: 80vw;
       font-size: 14px;
+
+      p {
+        font-size: 14px;
+      }
     }
   }
 `;
@@ -197,6 +200,4 @@ const StReadMore = styled.button`
   border-radius: 10px;
 `;
 
-const StTag = styled.span`
-  ${tagText()};
-`;
+export default Portfolio;
