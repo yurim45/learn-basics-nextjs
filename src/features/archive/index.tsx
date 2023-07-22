@@ -60,8 +60,6 @@ const Archive = () => {
   );
 };
 
-export default Archive;
-
 const StContainer = styled.div`
   ${formSet()};
   margin: 40px;
@@ -119,3 +117,5 @@ const StContent = styled.div`
     }
   }
 `;
+
+export default Archive;

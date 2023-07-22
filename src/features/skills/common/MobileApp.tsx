@@ -18,8 +18,6 @@ const MobileApp = () => {
   );
 };
 
-export default MobileApp;
-
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
   ${formSet()};
@@ -43,3 +41,5 @@ const StContainer = styled.div`
     }
   }
 `;
+
+export default MobileApp;

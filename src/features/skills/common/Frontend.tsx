@@ -48,8 +48,6 @@ const Framework = () => {
   );
 };
 
-export default Framework;
-
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
   ${formSet()};
@@ -73,3 +71,5 @@ const StContainer = styled.div`
     }
   }
 `;
+
+export default Framework;

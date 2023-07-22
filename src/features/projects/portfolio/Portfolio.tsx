@@ -124,8 +124,6 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
-
 const StContent = styled.div`
   margin-top: 50px;
   ${flex({ justify: 'between', align: 'start' })};
@@ -200,3 +198,5 @@ const StReadMore = styled.button`
 const StTag = styled.span`
   ${tagText()};
 `;
+
+export default Portfolio;

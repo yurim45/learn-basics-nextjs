@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { thingsflow } from '@images/career/index';
-import CareerLayout from '../common/CareerLayout';
+import { CareerLayout, Role, Tag } from '../common';
 import { styled } from '@shared/styles/theme';
 import { tagText } from '@shared/styles/variables';
 
@@ -13,7 +13,7 @@ const Thingsflow = () => {
       period="JAN 2023 ~ 현재"
     >
       <div>
-        <StRole>
+        <Role>
           자사 서비스{' '}
           <Link
             href={'https://storyplay.com/'}
@@ -23,7 +23,7 @@ const Thingsflow = () => {
             스토리플레이
           </Link>{' '}
           웹 기능 개발 및 유지 보수
-        </StRole>
+        </Role>
         <StContents>
           <StContent>
             <strong>✔️ 기간</strong>: 2023. 1.2 ~ 현재
@@ -38,7 +38,7 @@ const Thingsflow = () => {
               'Redux-toolkit',
               '@emotion/styled',
             ].map((item, i) => (
-              <StTag key={i}>{item}</StTag>
+              <Tag key={i}>{item}</Tag>
             ))}
           </StContent>
           <StContent>
@@ -82,19 +82,14 @@ const Thingsflow = () => {
   );
 };
 
-export default Thingsflow;
-
-const StRole = styled.p`
-  margin-bottom: 20px;
-  color: var(--text-333);
-  font-size: 18px;
-  line-height: 1.5;
-`;
-
 const StContents = styled.ul`
   margin: 20px 0;
   color: var(--text-333);
   font-size: 18px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 16px;
+  }
 `;
 
 const StContent = styled.li`
@@ -112,6 +107,4 @@ const StContent = styled.li`
   }
 `;
 
-const StTag = styled.button`
-  ${tagText()};
-`;
+export default Thingsflow;

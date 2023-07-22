@@ -17,8 +17,6 @@ const PjLayout = ({ title, subTitle, children }: PjLayoutProps) => {
   );
 };
 
-export default PjLayout;
-
 const StContainer = styled.div`
   ${formSet()};
   margin: 0 40px;
@@ -41,3 +39,5 @@ const StTitle = styled.h2`
 const StDesc = styled.p`
   ${pjDesc()};
 `;
+
+export default PjLayout;

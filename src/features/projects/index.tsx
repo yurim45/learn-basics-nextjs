@@ -7,21 +7,19 @@ import EasyWorkApp from './easyWorkApp/EasyWorkApp';
 
 const Projects = () => {
   return (
-    <>
-      <Layout
-        pageTitle="Projects"
-        color="white"
-        lineColor="compo-blue"
-        bgColor="bg-black"
-        id="projects"
-      >
-        <Slider>
-          <EasyWorkApp />
-          <Portfolio />
-          <Attendance />
-        </Slider>
-      </Layout>
-    </>
+    <Layout
+      pageTitle="Projects"
+      color="white"
+      lineColor="compo-blue"
+      bgColor="bg-black"
+      id="projects"
+    >
+      <Slider>
+        <EasyWorkApp />
+        <Portfolio />
+        <Attendance />
+      </Slider>
+    </Layout>
   );
 };
 

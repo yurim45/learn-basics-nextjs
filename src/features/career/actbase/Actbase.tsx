@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { actbase, ICOOQQA, appsotre } from '@images/career/index';
-import CareerLayout from '../common/CareerLayout';
+import { CareerLayout, Role, Tag } from '../common';
 import { styled } from '@shared/styles/theme';
 import flex from '@shared/styles/flex';
 import { tagText } from '@shared/styles/variables';
@@ -10,9 +10,9 @@ const Actbase = () => {
   return (
     <CareerLayout logo={actbase} company="actbase" period="JUL 2021 ~ JAN 2022">
       <div>
-        <StRole>
+        <Role>
           유아 재능 발견 플랫폼 서비스를 제공하는 아이쿠카 APP의 유지 보수 담당
-        </StRole>
+        </Role>
         <Image alt="logo" src={ICOOQQA} width={800} height={690} />
         <StContents>
           <StContent>
@@ -21,7 +21,7 @@ const Actbase = () => {
           <StContent>
             <strong>✔️ Skills </strong>:{' '}
             {['React-native', 'Javascript', 'CSS3'].map((item, i) => (
-              <StTag key={i}>{item}</StTag>
+              <Tag key={i}>{item}</Tag>
             ))}
           </StContent>
           <StContent>
@@ -62,19 +62,14 @@ const Actbase = () => {
   );
 };
 
-export default Actbase;
-
-const StRole = styled.p`
-  margin-bottom: 20px;
-  color: var(--text-333);
-  font-size: 18px;
-  line-height: 1.5;
-`;
-
 const StContents = styled.ul`
   margin: 20px 0;
   color: var(--text-333);
   font-size: 18px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 16px;
+  }
 `;
 
 const StContent = styled.li`
@@ -90,10 +85,6 @@ const StContent = styled.li`
     margin: 5px 0;
     padding-left: 20px;
   }
-`;
-
-const StTag = styled.span`
-  ${tagText()};
 `;
 
 const StButton = styled.button`
@@ -114,3 +105,5 @@ const StButton = styled.button`
     width: 80px;
   }
 `;
+
+export default Actbase;

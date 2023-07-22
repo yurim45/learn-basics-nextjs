@@ -24,8 +24,6 @@ const CareerLayout = ({ logo, company, period, children }: PjLayoutProps) => {
   );
 };
 
-export default CareerLayout;
-
 const StContainer = styled.div`
   ${flex({ justify: 'between', direction: 'row', align: 'start' })};
   width: 100%;
@@ -57,10 +55,20 @@ const StCompany = styled.h3`
   font-family: 'Black Han Sans', sans-serif;
   color: var(--text-green);
   font-size: 36px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 32px;
+  }
 `;
 
 const StEmploymentPeriod = styled.p`
   margin: 10px 0;
   color: var(--text-777);
   font-size: 16px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 14px;
+  }
 `;
+
+export default CareerLayout;

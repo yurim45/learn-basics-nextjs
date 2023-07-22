@@ -41,8 +41,6 @@ const TabMenu = () => {
   );
 };
 
-export default TabMenu;
-
 const Index = styled.header`
   border-radius: 10% 10% 0 0;
   /* background:  rgba(255, 255, 255, 0.8); */
@@ -51,12 +49,12 @@ const Index = styled.header`
   .logo {
     display: flexbox;
     align-items: center;
+  }
 
-    img {
-      width: 40px;
-      height: 40px;
-      margin: 10px 10px 10px 30px;
-    }
+  img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 30px;
 
     span {
       font-size: 22px;
@@ -65,13 +63,13 @@ const Index = styled.header`
 
   ul {
     padding: 5px;
+  }
 
-    li {
-      padding: 20px;
+  li {
+    padding: 20px;
 
-      span {
-        padding: 0 5px;
-      }
+    span {
+      padding: 0 5px;
     }
   }
 
@@ -83,3 +81,5 @@ const Index = styled.header`
     }
   }
 `;
+
+export default TabMenu;

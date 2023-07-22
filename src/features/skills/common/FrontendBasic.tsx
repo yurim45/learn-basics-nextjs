@@ -8,7 +8,7 @@ import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index';
 const FrontendBasic = () => {
   return (
     <StContainer>
-      <h3>Frontend</h3>
+      <h3>Basic</h3>
       <ul>
         <li>
           <Image alt="HTML-Logo" src={logoHtml} />
@@ -26,8 +26,6 @@ const FrontendBasic = () => {
     </StContainer>
   );
 };
-
-export default FrontendBasic;
 
 const StContainer = styled.div`
   ${flex({ justify: 'start', direction: 'col' })};
@@ -52,3 +50,5 @@ const StContainer = styled.div`
     }
   }
 `;
+
+export default FrontendBasic;

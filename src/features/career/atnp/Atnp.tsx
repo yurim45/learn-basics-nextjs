@@ -1,8 +1,7 @@
 import React from 'react';
 import { atnp } from '@images/career/index';
-import CareerLayout from '../common/CareerLayout';
+import { CareerLayout, Role, Tag } from '../common';
 import { styled } from '@shared/styles/theme';
-import { tagText } from '@shared/styles/variables';
 
 const Atnp = () => {
   return (
@@ -12,10 +11,10 @@ const Atnp = () => {
       period="JAN 2022 ~ DEC 2022"
     >
       <div>
-        <StRole>
+        <Role>
           연말정산을 보다 효율적으로 운용할 수 있는 다양한 기능의 차세대
           프로그램 MVP 개발
-        </StRole>
+        </Role>
         <StContents>
           <StContent>
             <strong>✔️ 기간</strong>: 2022. 1.24 ~ 12.19
@@ -31,7 +30,7 @@ const Atnp = () => {
               'StoryBook',
               'Styled-Components',
             ].map((item, i) => (
-              <StTag key={i}>{item}</StTag>
+              <Tag key={i}>{item}</Tag>
             ))}
           </StContent>
           <StContent>
@@ -48,19 +47,14 @@ const Atnp = () => {
   );
 };
 
-export default Atnp;
-
-const StRole = styled.p`
-  margin-bottom: 20px;
-  color: var(--text-333);
-  font-size: 18px;
-  line-height: 1.5;
-`;
-
 const StContents = styled.ul`
   margin: 20px 0;
   color: var(--text-333);
   font-size: 18px;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 16px;
+  }
 `;
 
 const StContent = styled.li`
@@ -78,6 +72,4 @@ const StContent = styled.li`
   }
 `;
 
-const StTag = styled.button`
-  ${tagText()};
-`;
+export default Atnp;
