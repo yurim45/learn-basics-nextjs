@@ -31,6 +31,7 @@ const StContainer = styled.div`
 
   @media ${({ theme }) => theme.mobile} {
     ${flex({ direction: 'col' })};
+    margin-bottom: 0;
   }
 `;
 

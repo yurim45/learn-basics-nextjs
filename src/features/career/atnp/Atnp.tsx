@@ -63,7 +63,6 @@ const StContent = styled.li`
 
   strong {
     color: var(--text-333);
-    font-weight: 600;
   }
 
   ul {

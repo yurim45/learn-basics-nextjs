@@ -45,7 +45,6 @@ const Actbase = () => {
             </ul>
           </StContent>
         </StContents>
-
         <StButton
           type="button"
           onClick={() =>
@@ -78,7 +77,6 @@ const StContent = styled.li`
 
   strong {
     color: var(--text-333);
-    font-weight: 600;
   }
 
   ul {
@@ -101,8 +99,16 @@ const StButton = styled.button`
   }
 
   img {
-    width: 80px;
-    width: 80px;
+    width: 60px;
+  }
+
+  @media ${({ theme }) => theme.mobile} {
+    margin: auto;
+    font-size: 18px;
+
+    img {
+      width: 50px;
+    }
   }
 `;
 

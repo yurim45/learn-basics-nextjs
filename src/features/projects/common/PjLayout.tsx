@@ -28,7 +28,9 @@ const StContainer = styled.div`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    width: 80vw;
+    width: 90vw;
+    height: 100%;
+    margin: 0 20px;
   }
 `;
 

@@ -12,7 +12,7 @@ export const formSet = () => css`
   }
 
   @media ${({ theme }) => theme.mobile} {
-    padding: 20px;
+    padding: 15px;
   }
 `;
 
