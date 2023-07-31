@@ -14,7 +14,11 @@ const Thingsflow = () => {
       <div>
         <Role>
           자사 서비스{' '}
-          <Link href={'https://storyplay.com'} target="_blank" rel="noreferrer">
+          <Link
+            href={'https://www.storyplay.com'}
+            target="_blank"
+            rel="noreferrer"
+          >
             스토리플레이
           </Link>{' '}
           웹 기능 개발 및 유지 보수
