@@ -4,7 +4,6 @@ import { actbase, ICOOQQA, appsotre } from '@images/career/index';
 import { CareerLayout, Role, Tag } from '../common';
 import { styled } from '@shared/styles/theme';
 import flex from '@shared/styles/flex';
-import { tagText } from '@shared/styles/variables';
 
 const Actbase = () => {
   return (
@@ -27,21 +26,15 @@ const Actbase = () => {
           <StContent>
             <strong>✔️ 담당 역할</strong>: 앱 유지 보수
             <ul>
-              <li>
-                ■ <strong>AppStore 앱 심사 준비 및 승인</strong>{' '}
-              </li>
-              <li>ㅤ- IAP test: storeKit 생성 및 테스트 </li>
-              <li>ㅤ- 앱 심사 준비 및 승인 </li>
-              <li>
-                ■ <strong>UIUX 개선</strong>{' '}
-              </li>
-              <li>ㅤ- class 영역 UIUX 개선 </li>
-              <li>
-                ■ <strong>기타/수정/오류</strong>{' '}
-              </li>
-              <li>ㅤ- FBsdk: ios 설치 및 딥링크 생성 </li>
-              <li>ㅤ- Google Analytics: logPurchase() 구현</li>
-              <li>ㅤ- 그 외 오류 사항 수정 등</li>
+              <li>■ AppStore 앱 심사 준비 및 승인 </li>
+              <li>ㅤ• IAP test: storeKit 생성 및 테스트 </li>
+              <li>ㅤ• 앱 심사 준비 및 승인 </li>
+              <li>■ UIUX 개선 </li>
+              <li>ㅤ• class 영역 UIUX 개선 </li>
+              <li>■ 기타/수정/오류 </li>
+              <li>ㅤ• FBsdk: ios 설치 및 딥링크 생성 </li>
+              <li>ㅤ• Google Analytics: logPurchase() 구현</li>
+              <li>ㅤ• 그 외 오류 사항 수정 등</li>
             </ul>
           </StContent>
         </StContents>

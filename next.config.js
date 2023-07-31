@@ -14,6 +14,15 @@ const nextConfig = {
     });
     return config;
   },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/narro',
+  //       destination: 'https://storyplaycreator.oopy.io/',
+  //       permanent: false,
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

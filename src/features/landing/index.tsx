@@ -28,10 +28,10 @@ const Landing = () => {
           />
         </StRightTop>
         <StRightBottom>
-          <Image alt="flower" src={rightBottom} layout="fill" />
+          <Image alt="flower" src={rightBottom} />
         </StRightBottom>
         <StLeftBottom>
-          <Image alt="flower" src={bottom} layout="fill" priority={true} />
+          <Image alt="flower" src={bottom} priority={true} />
         </StLeftBottom>
       </div>
       <StText>

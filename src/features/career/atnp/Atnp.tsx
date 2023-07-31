@@ -36,9 +36,7 @@ const Atnp = () => {
           <StContent>
             <strong>✔️ 담당 역할</strong>
             <ul>
-              <li>
-                ■ <strong>MVP 개발(사용자용)</strong>
-              </li>
+              <li>■ MVP 개발(사용자용)</li>
             </ul>
           </StContent>
         </StContents>
