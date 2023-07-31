@@ -1,13 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import flex from '@shared/styles/flex';
-import PjLayout from '../common/PjLayout';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2, img3, img4 } from './images/index';
-import { tagText } from '@shared/styles/variables';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
+import flex from '@shared/styles/flex'
+import PjLayout from '../common/PjLayout'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, EffectCreative } from 'swiper'
+import { img1, img2, img3, img4 } from './images/index'
+import { Tag } from '@features/career/common'
 
 const EasyWorkApp = () => {
   return (
@@ -18,7 +18,7 @@ const EasyWorkApp = () => {
       <StContent>
         <StLeftContent>
           <StContentDesc>
-            <StTag>Vuejs</StTag> 를 배우면서 <StTag>PWA</StTag>를 적용한 사내용
+            <Tag>Vuejs</Tag> 를 배우면서 <Tag>PWA</Tag>를 적용한 사내용
             프로그램을 제작한 프로젝트. <br />
           </StContentDesc>
           <StReadMore
@@ -45,7 +45,7 @@ const EasyWorkApp = () => {
               <strong>URL</strong>
               <p>
                 <Link
-                  href={`https://atnpeasywork.link/`}
+                  href={`https://atnpeasywork.link`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -83,7 +83,7 @@ const EasyWorkApp = () => {
               <p>
                 {['vuejs', 'JS', 'apollo', 'graphql', 'sass']?.map(
                   (item, i) => {
-                    return <StTag key={i}>{`${item}`}</StTag>;
+                    return <Tag key={i}>{`${item}`}</Tag>
                   }
                 )}
               </p>
@@ -121,17 +121,16 @@ const EasyWorkApp = () => {
                 <Image
                   alt="project preview"
                   src={img}
-                  width={270}
-                  height={500}
+                  className="w-[270px] h-[500px]"
                 />
               </SwiperSlide>
-            );
+            )
           })}
         </Swiper>
       </StContent>
     </PjLayout>
-  );
-};
+  )
+}
 
 const StContent = styled.div`
   margin-top: 50px;
@@ -148,7 +147,7 @@ const StContent = styled.div`
       display: none;
     }
   }
-`;
+`
 
 const StLeftContent = styled.div`
   width: 450px;
@@ -189,7 +188,7 @@ const StLeftContent = styled.div`
       }
     }
   }
-`;
+`
 
 const StContentDesc = styled.p`
   font-size: 18px;
@@ -197,7 +196,7 @@ const StContentDesc = styled.p`
   @media ${({ theme }) => theme.mobile} {
     font-size: 12px;
   }
-`;
+`
 
 const StReadMore = styled.button`
   width: 120px;
@@ -207,10 +206,6 @@ const StReadMore = styled.button`
   color: var(--white);
   font-size: 14px;
   border-radius: 10px;
-`;
+`
 
-const StTag = styled.span`
-  ${tagText()};
-`;
-
-export default EasyWorkApp;
+export default EasyWorkApp

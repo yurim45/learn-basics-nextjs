@@ -1,16 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import { Layout } from '@components/index';
-import me from '@images/yurim.png';
-import flex from '@shared/styles/flex';
+import React from 'react'
+import Image from 'next/image'
+import styled from 'styled-components'
+import { Layout } from '@components/index'
+import me from '@images/yurim.png'
+import flex from '@shared/styles/flex'
 
 const Introduce = () => {
   return (
     <Layout pageTitle="About Me" id="aboutMe">
       <StContent>
         <StImg>
-          <Image alt="me" src={me} width={300} height={300} />
+          <Image alt="me" src={me} className="w-[300px] h-[300px]" />
         </StImg>
         <StText>
           <strong>김유림</strong>
@@ -24,8 +24,8 @@ const Introduce = () => {
         </StText>
       </StContent>
     </Layout>
-  );
-};
+  )
+}
 
 const StContent = styled.div`
   ${flex({})};
@@ -36,7 +36,7 @@ const StContent = styled.div`
       direction: 'col',
     })};
   }
-`;
+`
 
 const StText = styled.div`
   color: var(--text-333);
@@ -79,7 +79,7 @@ const StText = styled.div`
     font-size: 24px;
     font-weight: 600;
   }
-`;
+`
 
 const StImg = styled.div`
   img {
@@ -93,6 +93,6 @@ const StImg = styled.div`
       margin-bottom: 20px;
     }
   }
-`;
+`
 
-export default Introduce;
+export default Introduce

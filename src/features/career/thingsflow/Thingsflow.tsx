@@ -1,9 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { thingsflow } from '@images/career/index';
-import { CareerLayout, Role, Tag } from '../common';
-import { styled } from '@shared/styles/theme';
-import { tagText } from '@shared/styles/variables';
+import React from 'react'
+import Link from 'next/link'
+import { thingsflow } from '@images/career/index'
+import { CareerLayout, Role, Tag } from '../common'
+import { styled } from '@shared/styles/theme'
 
 const Thingsflow = () => {
   return (
@@ -15,11 +14,7 @@ const Thingsflow = () => {
       <div>
         <Role>
           자사 서비스{' '}
-          <Link
-            href={'https://storyplay.com/'}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href={'https://storyplay.com'} target="_blank" rel="noreferrer">
             스토리플레이
           </Link>{' '}
           웹 기능 개발 및 유지 보수
@@ -81,8 +76,8 @@ const Thingsflow = () => {
         </StContents>
       </div>
     </CareerLayout>
-  );
-};
+  )
+}
 
 const StContents = styled.ul`
   margin: 20px 0;
@@ -92,7 +87,7 @@ const StContents = styled.ul`
   @media ${({ theme }) => theme.mobile} {
     font-size: 16px;
   }
-`;
+`
 
 const StContent = styled.li`
   color: var(--text-555);
@@ -106,6 +101,6 @@ const StContent = styled.li`
     margin: 5px 0;
     padding-left: 20px;
   }
-`;
+`
 
-export default Thingsflow;
+export default Thingsflow

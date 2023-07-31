@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Script from 'next/script';
+import '@shared/styles/globals.css';
 
 export const metadata = {
   title: `April's Portfolio`,

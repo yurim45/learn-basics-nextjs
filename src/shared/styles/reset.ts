@@ -4,6 +4,10 @@ import reset from 'styled-reset';
 const GlobalStyles = createGlobalStyle`
   ${reset};
 
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities; 
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -74,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
     --compo-secondary: #F7F9F8;
     --compo-line: #e5e5e5;
     --compo-dim:#d5d5d5;
-    --compo-lightgray:##F5F5F5;
+    --compo-lightgray:#F5F5F5;
     --compo-red :#F85151; 
     --compo-blue : #0085FF;
     --compo-green : #00C092;

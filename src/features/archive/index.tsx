@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { Layout } from '@components/index';
-import { formSet } from '@shared/styles/variables';
-import flex from '@shared/styles/flex';
-import { github, velog } from '@images/archive/index';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
+import { Layout } from '@components/index'
+import { formSet } from '@shared/styles/variables'
+import flex from '@shared/styles/flex'
+import { github, velog } from '@images/archive/index'
 
 const Archive = () => {
   return (
@@ -57,14 +57,14 @@ const Archive = () => {
         </StContainer>
       </StAlign>
     </Layout>
-  );
-};
+  )
+}
 
 const StContainer = styled.div`
   ${formSet()};
   margin: 40px;
   box-shadow: 1.95px 1.95px 2.6px rgb(137 134 134 / 15%);
-`;
+`
 
 const StAlign = styled.div`
   ${flex({ align: 'start' })};
@@ -72,7 +72,7 @@ const StAlign = styled.div`
   @media ${({ theme }) => theme.mobile} {
     flex-direction: column;
   }
-`;
+`
 
 const StTitle = styled.div`
   ${flex({})};
@@ -88,7 +88,7 @@ const StTitle = styled.div`
     width: 50px;
     height: 50px;
   }
-`;
+`
 
 const StContent = styled.div`
   margin: 20px 0 10px;
@@ -112,6 +112,6 @@ const StContent = styled.div`
       padding: 5px 0;
     }
   }
-`;
+`
 
-export default Archive;
+export default Archive

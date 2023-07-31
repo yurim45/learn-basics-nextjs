@@ -1,13 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import flex from '@shared/styles/flex';
-import PjLayout from '../common/PjLayout';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2, img3, img4, img5 } from './images/index';
-import { Tag } from '@features/career/common';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
+import flex from '@shared/styles/flex'
+import PjLayout from '../common/PjLayout'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, EffectCreative } from 'swiper'
+import { img1, img2, img3, img4, img5 } from './images/index'
+import { Tag } from '@features/career/common'
 
 const Portfolio = () => {
   return (
@@ -74,7 +74,7 @@ const Portfolio = () => {
               <p>
                 {['Nextjs 13', 'React', 'Typescript', 'Styled-Components']?.map(
                   (item, i) => {
-                    return <Tag key={i}>{`${item}`}</Tag>;
+                    return <Tag key={i}>{`${item}`}</Tag>
                   }
                 )}
               </p>
@@ -112,17 +112,16 @@ const Portfolio = () => {
                 <Image
                   alt="project preview"
                   src={img}
-                  width={530}
-                  height={470}
+                  className="w-[530px] h-[470px]"
                 />
               </SwiperSlide>
-            );
+            )
           })}
         </Swiper>
       </StContent>
     </PjLayout>
-  );
-};
+  )
+}
 
 const StContent = styled.div`
   margin-top: 50px;
@@ -139,7 +138,7 @@ const StContent = styled.div`
       display: none;
     }
   }
-`;
+`
 
 const StLeftContent = styled.div`
   width: 450px;
@@ -180,7 +179,7 @@ const StLeftContent = styled.div`
       }
     }
   }
-`;
+`
 
 const StContentDesc = styled.p`
   font-size: 18px;
@@ -188,7 +187,7 @@ const StContentDesc = styled.p`
   @media ${({ theme }) => theme.mobile} {
     font-size: 12px;
   }
-`;
+`
 
 const StReadMore = styled.button`
   width: 120px;
@@ -198,6 +197,6 @@ const StReadMore = styled.button`
   color: var(--white);
   font-size: 14px;
   border-radius: 10px;
-`;
+`
 
-export default Portfolio;
+export default Portfolio
