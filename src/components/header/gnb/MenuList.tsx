@@ -1,26 +1,21 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React from 'react'
+import { Link } from 'react-scroll'
 
 const MenuList = () => {
   return (
-    <>
-      <Link to="aboutMe" smooth={true}>
-        <li>About Me</li>
-      </Link>
-      <Link to="archive" smooth={true}>
-        <li>Archive</li>
-      </Link>
-      <Link to="skills" smooth={true}>
-        <li>Skills</li>
-      </Link>
-      <Link to="projects" smooth={true}>
-        <li>Projects</li>
-      </Link>
-      <Link to="career" smooth={true}>
-        <li>Career</li>
-      </Link>
-    </>
-  );
-};
+    <ul className="flex justify-between items-center text-text-555 text-[18px] font-semibold list-none max-[640px]:flex-col max-[640px]:bg-common-white">
+      {['About Me', 'Archive', 'Skills', 'Projects', 'Career'].map((menu) => (
+        <li
+          key={menu}
+          className="my-0 mx-[20px] cursor-pointer max-[640px]:p-[16px]"
+        >
+          <Link to="aboutMe" smooth={true}>
+            {menu}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
-export default MenuList;
+export default MenuList

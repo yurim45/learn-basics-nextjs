@@ -1,21 +1,20 @@
-'use client';
+'use client'
 // app/page.tsx 이전 버전의 _app.tsx 역할
 // app/layout.tsx  공통레이아웃을 잡을 수 있으며, _document.ts의 역할
 
-import React from 'react';
-import type { NextPage } from 'next';
-import { Footer, Header } from '@components/index';
-import Landing from '@features/landing';
-import Introduce from '@features/introduce';
-import Archive from '@features/archive';
-import Skills from '@features/skills';
-import Projects from '@features/projects';
-import Career from '@features/career';
+import React from 'react'
+import type { NextPage } from 'next'
+import { Footer, Header } from '@components/index'
+import Landing from '@features/landing'
+import Introduce from '@features/introduce'
+import Archive from '@features/archive'
+import Skills from '@features/skills'
+import Projects from '@features/projects'
+import Career from '@features/career'
 
 const Home: NextPage = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <Header />
       <Landing />
       <Introduce />
@@ -25,7 +24,7 @@ const Home: NextPage = () => {
       <Career />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
