@@ -31,7 +31,7 @@ const Header = () => {
       >
         <div className="max-w-[1140px] flex justify-between items-center my-0 mx-auto px-[0] max-[640px]:px-[20px]">
           <div className="text-text-333 text-[24px] font-semibold max-[640px]:text-[20px]">
-            {"April's world"}
+            {`April's world`}
           </div>
           <Gnb />
           <button
