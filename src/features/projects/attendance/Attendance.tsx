@@ -61,6 +61,7 @@ const Attendance = () => {
                   href={`https://github.com/yurim45/b2tech-intern-20-front`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   github.com/yurim45/b2tech-intern-20-front
                 </Link>

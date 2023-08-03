@@ -53,6 +53,7 @@ const Portfolio = () => {
                   href={`https://april.dev`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   april.dev
                 </Link>
@@ -75,6 +76,7 @@ const Portfolio = () => {
                   href={`https://github.com/yurim45/practice`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   github.com/yurim45/practice
                 </Link>

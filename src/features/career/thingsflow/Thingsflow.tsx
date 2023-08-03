@@ -26,7 +26,7 @@ const Thingsflow = () => {
         <iframe
           src="https://storyplay.com"
           width={600}
-          height={550}
+          height={450}
           className="max-[640px]:w-[100%] max-[640px]:h-[350px]"
         />
         <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
