@@ -2,6 +2,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 module.exports = {
+  mode: 'jit', // calc 사용
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -53,20 +54,56 @@ module.exports = {
           dim: '#d5d5d5',
         },
       },
-      keyframes: (props) => {
-        const { theme } = props
-        return {
-          buttonHover: {
-            '0%': {
-              backgroundColor: theme('colors.tp.blue300'),
-              boxShadow: theme('boxShadow.none'),
-            },
-            '100%': {
-              backgroundColor: theme('colors.tp.blue400'),
-              boxShadow: theme('boxShadow.lg'),
-            },
-          },
-        }
+      animation: {
+        trackingInExpand:
+          'trackingInExpand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both',
+        blinkEffect: 'blinkEffect 2s infinite ease-in-out',
+        vibrateLeft: 'vibrateLeft 2s linear infinite normal both',
+        vibrateRight: 'vibrateRight 2s linear infinite normal both',
+        vibrateBottom: 'vibrateBottom 2s linear infinite normal both',
+        vibrateLeftBottom: 'vibrateLeftBottom 2s linear infinite normal both',
+      },
+      keyframes: {
+        trackingInExpand: {
+          '0%': { letterSpacing: `-0.5em`, opacity: 0 },
+          '40%': { opacity: 0.6 },
+          '100%': { opacity: 1 },
+        },
+        blinkEffect: {
+          '50%': { opacity: 0 },
+        },
+        vibrateLeft: {
+          '0%': { transform: `translate(0)` },
+          '20%': { transform: `translate(-2px, 2px)` },
+          '40%': { transform: `translate(-2px, -2px)` },
+          '60%': { transform: `translate(2px, 2px)` },
+          '80%': { transform: `translate(2px, -2px)` },
+          '100%': { transform: `translate(0)` },
+        },
+        vibrateRight: {
+          '0%': { transform: `translate(0)` },
+          '20%': { transform: `translate(2px, -2px)` },
+          '40%': { transform: `translate(2px, 2px)` },
+          '60%': { transform: `translate(-2px, -2px)` },
+          '80%': { transform: `translate(-2px, 2px)` },
+          '100%': { transform: `translate(0)` },
+        },
+        vibrateBottom: {
+          '0%': { transform: `translate(0)` },
+          '20%': { transform: `translate(2px, 2px)` },
+          '40%': { transform: `translate(-2px, 2px)` },
+          '60%': { transform: `translate(-2px, -2px)` },
+          '80%': { transform: `translate(2px, -2px)` },
+          '100%': { transform: `translate(0)` },
+        },
+        vibrateLeftBottom: {
+          '0%': { transform: `translate(0)` },
+          '20%': { transform: `translate(2px, -2px)` },
+          '40%': { transform: `translate(2px, 2px)` },
+          '60%': { transform: `translate(-2px, -2px)` },
+          '80%': { transform: `translate(-2px, 2px)` },
+          '100%': { transform: `translate(0)` },
+        },
       },
       fontFamily: {
         black_han: [
