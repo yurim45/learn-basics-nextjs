@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const formSet = () => css`
   padding: 40px;
@@ -14,10 +14,13 @@ export const formSet = () => css`
   @media ${({ theme }) => theme.mobile} {
     padding: 15px;
   }
-`;
+`
+
+export const SECTION_TITLE = `text-text-333 font-blackHan text-[60px] font-bold text-center max-[640px]:text-[48px]`
 
 export const sectionTitle = () => css`
   color: var(--text-333);
+  font-family: 'Black Han Sans', sans-serif;
   font-size: 60px;
   font-weight: 700;
   text-align: center;
@@ -25,7 +28,7 @@ export const sectionTitle = () => css`
   @media ${({ theme }) => theme.mobile} {
     font-size: 48px;
   }
-`;
+`
 
 export const pjTitle = () => css`
   color: var(--text-333);
@@ -37,7 +40,7 @@ export const pjTitle = () => css`
   @media ${({ theme }) => theme.mobile} {
     font-size: 28px;
   }
-`;
+`
 
 export const skillTitle = () => css`
   margin-bottom: 20px;
@@ -49,7 +52,7 @@ export const skillTitle = () => css`
   @media ${({ theme }) => theme.mobile} {
     font-size: 20px;
   }
-`;
+`
 
 export const pjDesc = () => css`
   margin: 20px;
@@ -62,12 +65,12 @@ export const pjDesc = () => css`
     margin: 10px 0;
     font-size: 12px;
   }
-`;
+`
 
 export const pointText = () => css`
   color: var(--text-blue);
   text-decoration: underline;
-`;
+`
 
 export const tagText = () => css`
   margin: 0 5px;
@@ -77,4 +80,4 @@ export const tagText = () => css`
   font-size: 14px;
   font-weight: 500;
   border-radius: 6px;
-`;
+`

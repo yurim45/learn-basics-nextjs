@@ -106,11 +106,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        black_han: [
-          'Black Han Sans',
-          'sans-serif',
-          ...defaultTheme.fontFamily.sans,
-        ],
+        blackHan: ['Black Han Sans', ...defaultTheme.fontFamily.sans],
         roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
         appleSDGothicNeo: ['AppleSDGothicNeo', ...defaultTheme.fontFamily.sans],
       },

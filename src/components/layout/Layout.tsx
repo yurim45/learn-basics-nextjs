@@ -1,65 +1,37 @@
-import React, { ReactNode } from 'react';
-import { styled } from '@shared/styles/theme';
-import { sectionTitle } from '@shared/styles/variables';
+import React, { ReactNode } from 'react'
+import { SECTION_TITLE } from '@shared/styles/variables'
 
 type LayoutProps = {
-  pageTitle: string;
-  children: ReactNode;
-  color?: string;
-  bgColor?: string;
-  lineColor?: string;
-  id?: string;
-};
+  pageTitle: string
+  children: ReactNode
+  color?: string
+  bgColor?: string
+  lineColor?: string
+  id?: string
+}
 
 const Layout = ({
   pageTitle,
   children,
-  bgColor = 'white',
+  bgColor = 'common-white',
   color = 'text-333',
-  lineColor = 'blue',
+  lineColor = 'common-blue',
   id,
 }: LayoutProps) => {
   return (
-    <StSction bgColor={bgColor} id={id}>
-      <Inner>
-        <StTitle color={color}>{pageTitle}</StTitle>
-        <StLine lineColor={lineColor} />
-        <StContent>{children}</StContent>
-      </Inner>
-    </StSction>
-  );
-};
+    <section
+      className={`w-[100vw] py-[150px] bg-${bgColor} overflow-hidden max-[640px]:py-[100px]`}
+      id={id}
+    >
+      <div className="max-w-[1140px] m-auto">
+        <h2 className={`${SECTION_TITLE} text-${color}`}>{pageTitle}</h2>
+        <div
+          className={`w-[50px] my-[50px] mx-auto border-b-[2px] border-solid border-${lineColor}`}
+        />
+        <div className="py-[20px]">{children}</div>
+      </div>
+    </section>
+  )
+}
 
-export default Layout;
-
-const StSction = styled.section<{ bgColor: string }>`
-  width: 100vw;
-  padding: 150px 0;
-  background: ${({ bgColor }) => `var(--${bgColor})`};
-  overflow: hidden;
-
-  @media ${({ theme }) => theme.mobile} {
-    padding: 100px 0;
-  }
-`;
-
-const Inner = styled.div`
-  max-width: 1140px;
-  margin: auto;
-`;
-
-const StTitle = styled.h2<{ color: string }>`
-  ${sectionTitle()};
-  color: ${({ color }) => `var(--${color})`};
-  font-family: 'Black Han Sans', sans-serif;
-`;
-
-const StLine = styled.div<{ lineColor: string }>`
-  width: 50px;
-  margin: 50px auto;
-  border-bottom: 2px solid ${({ lineColor }) => `var(--${lineColor})`};
-`;
-
-const StContent = styled.div`
-  padding: 20px 0;
-`;
+export default Layout

@@ -1,98 +1,41 @@
 import React from 'react'
 import Image from 'next/image'
-import styled from 'styled-components'
 import { Layout } from '@components/index'
 import me from '@images/yurim.png'
-import flex from '@shared/styles/flex'
+import { flexLayout } from '@shared/styles/flex'
 
 const Introduce = () => {
   return (
     <Layout pageTitle="About Me" id="aboutMe">
-      <StContent>
-        <StImg>
-          <Image alt="me" src={me} className="w-[300px] h-[300px]" />
-        </StImg>
-        <StText>
-          <strong>김유림</strong>
-          <span>Frontend Developer</span>
-          <p>
+      <div
+        className={`${flexLayout(
+          {}
+        )} py-[20px] max-[640px]:flex-col max-[640px]:gap-[20px]`}
+      >
+        <Image
+          alt="me"
+          src={me}
+          className="w-[300px] h-[300px] rounded-full max-[640px]:w-[250px] max-[640px]:h-[250px]"
+        />
+        <div className="text-text-333 pl-[150px] max-[640px]:p-0 max-[640px]:text-center">
+          <strong className="text-[32px] font-extrabold text-center tracking-[10px]">
+            김유림
+          </strong>
+          <span className="text-text-777 text-[18px] max-[640px]:block max-[640px]:text-[16px]">
+            Frontend Developer
+          </span>
+          <p className="my-[20px] text-[18px] leading-[1.2] max-[640px]:text-[16px]">
             함께 일 하고 싶은 개발자, <br />
             사용자 관점에서 개발하는 프론트엔드 개발자
           </p>
-          <h3>Contact.</h3>
-          <p>Email. icho0405@gmail.com</p>
-        </StText>
-      </StContent>
+          <h3 className="text-[24px] font-bold">Contact.</h3>
+          <p className="my-[20px] text-[18px] leading-[1.2] max-[640px]:text-[14px]">
+            Email. icho0405@gmail.com
+          </p>
+        </div>
+      </div>
     </Layout>
   )
 }
-
-const StContent = styled.div`
-  ${flex({})};
-  padding: 20px 0;
-
-  @media ${({ theme }) => theme.mobile} {
-    ${flex({
-      direction: 'col',
-    })};
-  }
-`
-
-const StText = styled.div`
-  color: var(--text-333);
-  padding-left: 200px;
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: 20px 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  strong {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 10px;
-  }
-
-  span {
-    color: var(--text-777);
-    font-size: 18px;
-
-    @media ${({ theme }) => theme.mobile} {
-      display: block;
-      font-size: 16px;
-    }
-  }
-
-  p {
-    margin: 20px 0;
-    font-size: 18px;
-    line-height: 1.2;
-
-    @media ${({ theme }) => theme.mobile} {
-      font-size: 14px;
-    }
-  }
-
-  h3 {
-    margin: 50px 0 0;
-    font-size: 24px;
-    font-weight: 600;
-  }
-`
-
-const StImg = styled.div`
-  img {
-    border-radius: 50%;
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    width: 70%;
-
-    img {
-      margin-bottom: 20px;
-    }
-  }
-`
 
 export default Introduce
