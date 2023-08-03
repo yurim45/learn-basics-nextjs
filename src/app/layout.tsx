@@ -31,6 +31,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         }}
       />
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XTG2GZ26JK"
+        />
         <meta
           name="google-site-verification"
           content="TQkPIaAFbSpBZW8VW8OhUHdEhd6lELoX2_zzKmUiGWU"
