@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
+import { flexLayout } from '@shared/styles/flex'
 import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index'
 
 const Landing = () => {
@@ -39,7 +40,11 @@ const Landing = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center m-auto w-[90vw] h-[100vh] text-center text-white">
+      <div
+        className={`${flexLayout({
+          direction: 'col',
+        })} m-auto w-[90vw] h-[100vh] text-center text-white`}
+      >
         <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-100 max-[640px]:text-[48px]">
           Imagination becomes reality
         </h1>

@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 
+export const FORM_SET = `py-[30px] bg-common-white rounded-[12px] max-[640px]:p-[15px] shadow-lg shadow-black/20 transition duration-200 ease-out hover:translate-y-[-20px] max-[640px]:p-[15px]`
 export const formSet = () => css`
   padding: 40px;
   background-color: var(--white);

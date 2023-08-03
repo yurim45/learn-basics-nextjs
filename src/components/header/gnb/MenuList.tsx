@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import { flexLayout } from '@shared/styles/flex'
 
 const MenuList = () => {
   return (
-    <ul className="flex justify-between items-center text-text-555 text-[18px] font-semibold list-none max-[640px]:flex-col max-[640px]:bg-common-white">
+    <ul
+      className={`${flexLayout({
+        justify: 'between',
+      })} text-text-555 text-[18px] font-semibold list-none max-[640px]:flex-col max-[640px]:bg-common-white`}
+    >
       {['About Me', 'Archive', 'Skills', 'Projects', 'Career'].map((menu) => (
         <li
           key={menu}
