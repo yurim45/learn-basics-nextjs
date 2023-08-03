@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index'
 import { Link } from 'react-scroll'
+import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index'
 
 const Landing = () => {
   return (

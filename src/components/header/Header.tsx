@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import Gnb from './gnb/Gnb'
 import DropBarMenu from './dropBarMenu/DropBarMenu'
