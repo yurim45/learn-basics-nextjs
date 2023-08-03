@@ -10,9 +10,9 @@ const Archive = () => {
   return (
     <Layout
       pageTitle="Archive"
-      lineColor="common-white"
-      bgColor="compo-lilac"
+      lineColor="border-common-white"
       id="archive"
+      bgColor="bg-compo-lilac"
     >
       <div className={`${flexLayout({ align: 'start' })} max-[640px]:flex-col`}>
         <div className={`${FORM_SET} m-[40px]`}>

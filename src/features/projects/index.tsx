@@ -10,8 +10,7 @@ const Projects = () => {
     <Layout
       pageTitle="Projects"
       color="common-white"
-      lineColor="compo-blue"
-      bgColor="common-black"
+      bgColor="bg-common-black"
       id="projects"
     >
       <Slider>

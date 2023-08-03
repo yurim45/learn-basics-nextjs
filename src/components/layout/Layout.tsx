@@ -13,20 +13,20 @@ type LayoutProps = {
 const Layout = ({
   pageTitle,
   children,
-  bgColor = 'common-white',
+  bgColor = 'bg-common-white',
   color = 'text-333',
-  lineColor = 'common-blue',
+  lineColor = 'border-common-blue',
   id,
 }: LayoutProps) => {
   return (
     <section
-      className={`w-[100vw] py-[150px] bg-${bgColor} overflow-hidden max-[640px]:py-[100px]`}
+      className={`w-[100vw] py-[150px] ${bgColor} overflow-hidden max-[640px]:py-[100px]`}
       id={id}
     >
       <div className="max-w-[1140px] m-auto">
         <h2 className={`${SECTION_TITLE} text-${color}`}>{pageTitle}</h2>
         <div
-          className={`w-[50px] my-[50px] mx-auto border-b-[2px] border-solid border-${lineColor}`}
+          className={`w-[50px] my-[50px] mx-auto border-b-[2px] border-solid ${lineColor}`}
         />
         <div className="py-[20px]">{children}</div>
       </div>
