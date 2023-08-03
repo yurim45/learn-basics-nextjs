@@ -45,7 +45,34 @@ export const skillTitle = () => css`
   }
 `
 
+<<<<<<< HEAD
 export const PG_DESC = `m-[10px] text-text-777 text-[16px] tracking-[-0.2px] text-center max-[640px]:mx-[0] max-[640px]:text-[12px]`
+=======
+export const skillTitle = () => css`
+  margin-bottom: 20px;
+  color: var(--text-yellow);
+  font-size: 28px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media ${({ theme }) => theme.mobile} {
+    font-size: 20px;
+  }
+`;
+
+export const pjDesc = () => css`
+  margin: 20px;
+  color: var(--text-777);
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  text-align: center;
+
+  @media ${({ theme }) => theme.mobile} {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+`;
+>>>>>>> main
 
 export const pointText = () => css`
   color: var(--text-blue);
