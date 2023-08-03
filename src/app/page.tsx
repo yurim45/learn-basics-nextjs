@@ -1,4 +1,3 @@
-'use client'
 // app/page.tsx 이전 버전의 _app.tsx 역할
 // app/layout.tsx  공통레이아웃을 잡을 수 있으며, _document.ts의 역할
 
