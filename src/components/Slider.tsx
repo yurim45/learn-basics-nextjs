@@ -1,15 +1,15 @@
-import React, { ReactNode } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { ReactNode } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { Autoplay, Pagination, Navigation } from 'swiper'
 
 type SliderProps = {
-  children: ReactNode[];
-};
+  children: ReactNode[]
+}
 
 const Slider = ({ children }: SliderProps) => {
   return (
@@ -43,11 +43,11 @@ const Slider = ({ children }: SliderProps) => {
         className="mySwiper"
       >
         {children?.map((item, i) => {
-          return <SwiperSlide key={i}>{item}</SwiperSlide>;
+          return <SwiperSlide key={i}>{item}</SwiperSlide>
         })}
       </Swiper>
     </>
-  );
-};
+  )
+}
 
-export default Slider;
+export default Slider

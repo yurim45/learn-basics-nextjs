@@ -1,13 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import styled from 'styled-components'
-import flex from '@shared/styles/flex'
-import PjLayout from '../common/PjLayout'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, EffectCreative } from 'swiper'
-import { img1, img2, img3, img4 } from './images/index'
+import { flexLayout } from '@shared/styles/flex'
 import { Tag } from '@features/career/common'
+import PjLayout from '../common/PjLayout'
+import { img1, img2, img3, img4 } from './images/index'
 
 const Attendance = () => {
   return (
@@ -15,26 +14,34 @@ const Attendance = () => {
       title="근태관리 프로그램"
       subTitle="2021-06-07 ~ 07-01 / FE: 2명, BE: 1명"
     >
-      <StContent>
-        <StLeftContent>
-          <StContentDesc>
+      <div
+        className={`${flexLayout({
+          justify: 'between',
+          align: 'start',
+        })} mt-[50px] max-[640px]:mt-[20px]`}
+      >
+        <div className="w-[450px] pr-[20px] text-text-333 text-[18px] leading-[1.5]">
+          <p className="text=[18px] max-[640px]:text-[12px]">
             근태 등록, 근무제 선택 및 신청, 연차 등 휴가 관리 등의
             <br /> 근태관리 프로그램 개발 프로젝트
-          </StContentDesc>
-          <StReadMore
+          </p>
+          <button
             type="button"
             onClick={() =>
               window.open(
                 'https://aprilworld.notion.site/React-Internship_-Project-de31dddabe1745be863a06734c036c0c'
               )
             }
+            className="w-[120px] h-[40px] my-[10px] bg-compo-blue text-common-white text-[14px] rounded-[10px]"
           >
             자세히 보기
-          </StReadMore>
-          <ul>
-            <li>
-              <strong>주요 기능</strong>
-              <p>
+          </button>
+          <ul className="mt-[20px] border-t-[1px] border-solid border-text-blue">
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                주요 기능
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 ✔︎ 사용자페이지, 마이페이지, 관리자페이지로 구성.
                 <br />
                 ✔︎ 각 권한별 페이지 진입 및 관리 가능. <br />
@@ -45,9 +52,11 @@ const Attendance = () => {
                 ㅤ● 출•퇴근 기록 조회 및 검색 기능
               </p>
             </li>
-            <li>
-              <strong>GitHub</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                GitHub
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 <Link
                   href={`https://github.com/yurim45/b2tech-intern-20-front`}
                   target="_blank"
@@ -57,9 +66,11 @@ const Attendance = () => {
                 </Link>
               </p>
             </li>
-            <li>
-              <strong>기술 스택</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                기술 스택
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 {['React', 'Javascript', 'Styled-Components', 'HTML']?.map(
                   (item, i) => {
                     return <Tag key={i}>{`${item}`}</Tag>
@@ -68,7 +79,7 @@ const Attendance = () => {
               </p>
             </li>
           </ul>
-        </StLeftContent>
+        </div>
         <Swiper
           slidesPerView={'auto'} //초기값 설정 모바일값이 먼저!!
           spaceBetween={10}
@@ -92,7 +103,7 @@ const Attendance = () => {
             clickable: true,
           }}
           modules={[Autoplay, Pagination, EffectCreative]}
-          className="mySwiper"
+          className="w-[550px] max-[640px]:hidden"
         >
           {[img1, img2, img3, img4]?.map((img, i) => {
             return (
@@ -100,92 +111,15 @@ const Attendance = () => {
                 <Image
                   alt="project preview"
                   src={img}
-                  className="w-[535px] h-[350px]"
+                  className="w-[100%] h-[100%]"
                 />
               </SwiperSlide>
             )
           })}
         </Swiper>
-      </StContent>
+      </div>
     </PjLayout>
   )
 }
-
-const StContent = styled.div`
-  margin-top: 50px;
-  ${flex({ justify: 'between', align: 'start' })};
-
-  .mySwiper {
-    width: 550px;
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    margin-top: 20px;
-
-    .mySwiper {
-      display: none;
-    }
-  }
-`
-
-const StLeftContent = styled.div`
-  width: 450px;
-  padding-right: 20px;
-  color: var(--text-333);
-  font-size: 18px;
-  line-height: 1.5;
-
-  ul {
-    margin-top: 20px;
-    border-top: 1px solid var(--text-blue);
-  }
-
-  li:first-child {
-    margin-top: 20px;
-  }
-
-  li {
-    margin: 10px 0;
-  }
-
-  strong {
-    display: inline-block;
-    width: 100px;
-    font-weight: 600;
-  }
-
-  p {
-    padding: 5px;
-    font-size: 16px;
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    width: 100%;
-    padding-right: 0;
-    font-size: 14px;
-
-    p {
-      font-size: 14px;
-    }
-  }
-`
-
-const StContentDesc = styled.p`
-  font-size: 18px;
-
-  @media ${({ theme }) => theme.mobile} {
-    font-size: 12px;
-  }
-`
-
-const StReadMore = styled.button`
-  width: 120px;
-  height: 40px;
-  margin: 10px 0;
-  background: var(--compo-blue);
-  color: var(--white);
-  font-size: 14px;
-  border-radius: 10px;
-`
 
 export default Attendance

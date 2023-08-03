@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const FORM_SET = `py-[30px] bg-common-white rounded-[12px] max-[640px]:p-[15px] shadow-lg shadow-black/20 transition duration-200 ease-out hover:translate-y-[-20px] max-[640px]:p-[15px]`
+export const FORM_SET = `p-[30px] bg-common-white rounded-[12px] max-[640px]:p-[15px] shadow-lg shadow-black/20 transition duration-200 ease-out hover:translate-y-[-20px] max-[640px]:p-[15px]`
 export const formSet = () => css`
   padding: 40px;
   background-color: var(--white);
@@ -17,7 +17,7 @@ export const formSet = () => css`
   }
 `
 
-export const SECTION_TITLE = `text-text-333 font-blackHan text-[60px] font-bold text-center max-[640px]:text-[48px]`
+export const SECTION_TITLE = `font-blackHan text-[60px] font-bold text-center max-[640px]:text-[48px]`
 
 export const sectionTitle = () => css`
   color: var(--text-333);
@@ -31,17 +31,7 @@ export const sectionTitle = () => css`
   }
 `
 
-export const pjTitle = () => css`
-  color: var(--text-333);
-  font-size: 42px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  text-align: center;
-
-  @media ${({ theme }) => theme.mobile} {
-    font-size: 28px;
-  }
-`
+export const PG_TITLE = `text-text-333 text-[42px] font-[600] tracking-[-0.2px] text-center max-[640px]:text-[20px]`
 
 export const skillTitle = () => css`
   margin-bottom: 20px;
@@ -55,18 +45,7 @@ export const skillTitle = () => css`
   }
 `
 
-export const pjDesc = () => css`
-  margin: 20px;
-  color: var(--text-777);
-  font-size: 16px;
-  letter-spacing: -0.2px;
-  text-align: center;
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: 10px 0;
-    font-size: 12px;
-  }
-`
+export const PG_DESC = `m-[10px] text-text-777 text-[16px] tracking-[-0.2px] text-center max-[640px]:mx-[0] max-[640px]:text-[12px]`
 
 export const pointText = () => css`
   color: var(--text-blue);
