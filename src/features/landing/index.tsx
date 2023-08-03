@@ -1,13 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import flex from '@shared/styles/flex';
-import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index';
-import { Link } from 'react-scroll';
+import React from 'react'
+import Image from 'next/image'
+import styled from 'styled-components'
+import flex from '@shared/styles/flex'
+import { leftTop, bottom, rightBottom, rightTop } from '@images/landing/index'
+import { Link } from 'react-scroll'
 
 const Landing = () => {
   return (
-    <Main>
+    <main className="w-[100vw] h-[100vh] my-0 mx-auto bg-compo-primary text-text-555">
       <div>
         <StLeft>
           <Image
@@ -16,6 +16,7 @@ const Landing = () => {
             width={939}
             height={872}
             priority={true}
+            className="drop-shadow-xl"
           />
         </StLeft>
         <StRightTop>
@@ -25,39 +26,35 @@ const Landing = () => {
             width={805}
             height={322}
             priority={true}
+            className="drop-shadow-xl"
           />
         </StRightTop>
         <StRightBottom>
-          <Image alt="flower" src={rightBottom} />
+          <Image alt="flower" src={rightBottom} className="drop-shadow-xl" />
         </StRightBottom>
         <StLeftBottom>
-          <Image alt="flower" src={bottom} priority={true} />
+          <Image
+            alt="flower"
+            src={bottom}
+            priority={true}
+            className="drop-shadow-xl"
+          />
         </StLeftBottom>
       </div>
-      <StText>
-        <h1>Imagination becomes reality</h1>
+      <StText className="flex flex-col justify-center m-auto w-[90vw] h-[100vh] text-center text-white">
+        <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-[black_han] z-100">
+          Imagination becomes reality
+        </h1>
         <strong>{"April's world"}</strong>
         <Link to="aboutMe" smooth={true}>
           <button>▼</button>
         </Link>
       </StText>
-    </Main>
-  );
-};
+    </main>
+  )
+}
 
-export default Landing;
-
-const Main = styled.section`
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  color: var(--text-555);
-  background: var(--compo-primary);
-
-  img {
-    filter: drop-shadow(-5px 10px 2px rgba(0, 0, 0, 0.5));
-  }
-`;
+export default Landing
 
 const StText = styled.div`
   ${flex({
@@ -125,7 +122,7 @@ const StText = styled.div`
       opacity: 0;
     }
   }
-`;
+`
 
 const StLeft = styled.div`
   position: absolute;
@@ -157,7 +154,7 @@ const StLeft = styled.div`
   @media ${({ theme }) => theme.mobile} {
     animation: none;
   }
-`;
+`
 
 const StRightTop = styled.div`
   position: absolute;
@@ -192,7 +189,7 @@ const StRightTop = styled.div`
     right: 0;
     animation: none;
   }
-`;
+`
 
 const StRightBottom = styled.div`
   position: absolute;
@@ -231,7 +228,7 @@ const StRightBottom = styled.div`
     height: 200px;
     animation: none;
   }
-`;
+`
 
 const StLeftBottom = styled.div`
   position: absolute;
@@ -270,4 +267,4 @@ const StLeftBottom = styled.div`
     height: 20vh;
     animation: none;
   }
-`;
+`

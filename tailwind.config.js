@@ -12,9 +12,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        buttonHover: 'buttonHover 0.3s ease forwards',
-      },
       colors: {
         transparent: 'transparent',
         common: {
@@ -72,6 +69,11 @@ module.exports = {
         }
       },
       fontFamily: {
+        black_han: [
+          'Black Han Sans',
+          'sans-serif',
+          ...defaultTheme.fontFamily.sans,
+        ],
         roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
         appleSDGothicNeo: ['AppleSDGothicNeo', ...defaultTheme.fontFamily.sans],
       },
