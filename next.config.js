@@ -3,6 +3,7 @@
 // https://nextjs.org/docs/pages/building-your-application/upgrading/version-13
 
 const nextConfig = {
+  appDir: true,
   compiler: {
     styledComponents: true,
   },
@@ -11,9 +12,19 @@ const nextConfig = {
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
-    });
-    return config;
+    })
+    return config
   },
-};
 
-module.exports = nextConfig;
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/narro',
+  //       destination: 'https://storyplaycreator.oopy.io/',
+  //       permanent: false,
+  //     },
+  //   ];
+  // },
+}
+
+module.exports = nextConfig

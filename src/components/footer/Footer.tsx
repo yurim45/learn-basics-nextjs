@@ -1,24 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
 
 const Footer = () => {
   return (
-    <FooterWrap>
-      <p>Copyright ⓒ 2023. Yr.Kim All rights reserved.</p>
-    </FooterWrap>
-  );
-};
+    <footer className="py-[50px] text-common-white bg-compo-primary">
+      <p className="text-[18px] racking-tight text-center">
+        Copyright ⓒ 2023. Yr.Kim All rights reserved.
+      </p>
+    </footer>
+  )
+}
 
-const FooterWrap = styled.footer`
-  padding: 50px 0;
-  color: var(--white);
-  background: var(--compo-primary);
-
-  p {
-    font-size: 18px;
-    letter-spacing: -0.4px;
-    text-align: center;
-  }
-`;
-
-export default Footer;
+export default Footer

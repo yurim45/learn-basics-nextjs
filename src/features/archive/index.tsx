@@ -1,117 +1,76 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { Layout } from '@components/index';
-import { formSet } from '@shared/styles/variables';
-import flex from '@shared/styles/flex';
-import { github, velog } from '@images/archive/index';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Layout } from '@components/index'
+import { FORM_SET } from '@shared/styles/variables'
+import { flexLayout } from '@shared/styles/flex'
+import { github, velog } from '@images/archive/index'
 
 const Archive = () => {
   return (
     <Layout
       pageTitle="Archive"
-      lineColor="white"
+      lineColor="common-white"
       bgColor="compo-lilac"
       id="archive"
     >
-      <StAlign>
-        <StContainer>
-          <StTitle>
-            <Image alt="github-logo" src={github} />
+      <div className={`${flexLayout({ align: 'start' })} max-[640px]:flex-col`}>
+        <div className={`${FORM_SET} m-[40px]`}>
+          <div
+            className={`${flexLayout({
+              direction: 'col',
+            })} text-[24px] font-[800] tracking-[-0.5px] max-[640px]:mt-[20px]`}
+          >
+            <Image alt="github-logo" src={github} width={50} />
             <strong>GitHub</strong>
-          </StTitle>
-          <StContent>
+          </div>
+          <div className="my-[20px] mb-[10px]">
             <Link
               href="https://github.com/yurim45"
               target="_blank"
               rel="noreferrer"
+              className="text-center text-[16px] text-text-blue tracking-[-0.5px]"
             >
               <p>github.com/yurim45</p>
             </Link>
-            <ul>
-              <li>프로젝트의 소스 코드가 있습니다.</li>
-              <li>코딩 연습을 위해 작업한 코드가 있습니다.</li>
+            <ul className="m-[20px] pl-[20px] text-text-555 text-[16px] tracking-[-0.5px] list-[square] max-[640px]:text-[14px]">
+              <li className="py-[5px]">프로젝트의 소스 코드가 있습니다.</li>
+              <li className="py-[5px]">
+                코딩 연습을 위해 작업한 코드가 있습니다.
+              </li>
             </ul>
-          </StContent>
-        </StContainer>
-        <StContainer>
-          <StTitle>
-            <Image alt="velog-logo" src={velog} />
+          </div>
+        </div>
+        <div className={`${FORM_SET} m-[40px]`}>
+          <div
+            className={`${flexLayout({
+              direction: 'col',
+            })} text-[24px] font-[800] tracking-[-0.5px] max-[640px]:mt-[20px]`}
+          >
+            <Image alt="velog-logo" src={velog} width={50} />
             <strong>Velog</strong>
-          </StTitle>
-          <StContent>
+          </div>
+          <div className="my-[20px] mb-[10px]">
             <Link
               href="https://velog.io/@april_5"
               target="_blank"
               rel="noreferrer"
+              className="text-center text-[16px] text-text-blue tracking-[-0.5px]"
             >
               <p>velog.io/@april_5</p>
             </Link>
-            <ul>
-              <li>공부한 것을 정리할 목적의 블로그입니다.</li>
-              <li>개발하며 겪은 이야기를 공유합니다.</li>
-              <li>지식 공유를 위해 작성하기도 합니다.</li>
+            <ul className="m-[20px] pl-[20px] text-text-555 text-[16px] tracking-[-0.5px] list-[square] max-[640px]:text-[14px]">
+              <li className="py-[5px]">
+                공부한 것을 정리할 목적의 블로그입니다.
+              </li>
+              <li className="py-[5px]">개발하며 겪은 이야기를 공유합니다.</li>
+              <li className="py-[5px]">지식 공유를 위해 작성하기도 합니다.</li>
             </ul>
-          </StContent>
-        </StContainer>
-      </StAlign>
+          </div>
+        </div>
+      </div>
     </Layout>
-  );
-};
+  )
+}
 
-const StContainer = styled.div`
-  ${formSet()};
-  margin: 40px;
-  box-shadow: 1.95px 1.95px 2.6px rgb(137 134 134 / 15%);
-`;
-
-const StAlign = styled.div`
-  ${flex({ align: 'start' })};
-
-  @media ${({ theme }) => theme.mobile} {
-    flex-direction: column;
-  }
-`;
-
-const StTitle = styled.div`
-  ${flex({})};
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-
-  strong {
-    margin: 0 10px;
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
-  }
-`;
-
-const StContent = styled.div`
-  margin: 20px 0 10px;
-
-  a {
-    color: var(--text-blue);
-    font-size: 16px;
-    letter-spacing: -0.5px;
-    text-align: center;
-  }
-
-  ul {
-    margin: 20px 0;
-    padding-left: 20px;
-    list-style-type: square;
-    color: var(--text-555);
-    font-size: 16px;
-    letter-spacing: -0.5px;
-
-    li {
-      padding: 5px 0;
-    }
-  }
-`;
-
-export default Archive;
+export default Archive

@@ -1,13 +1,8 @@
-import React, { ReactNode } from 'react';
-import { tagText } from '@shared/styles/variables';
-import styled from 'styled-components';
+import React, { ReactNode } from 'react'
+import { TAG_TEXT } from '@shared/styles/variables'
 
 const Tag = ({ children }: { children: ReactNode }) => {
-  return <StTag>{children}</StTag>;
-};
+  return <button className={TAG_TEXT}>{children}</button>
+}
 
-const StTag = styled.button`
-  ${tagText()};
-`;
-
-export default Tag;
+export default Tag

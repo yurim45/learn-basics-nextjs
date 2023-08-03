@@ -1,5 +1,6 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
+export const FORM_SET = `p-[30px] bg-common-white rounded-[12px] max-[640px]:p-[15px] shadow-lg shadow-black/20 transition duration-200 ease-out hover:translate-y-[-20px] max-[640px]:p-[15px]`
 export const formSet = () => css`
   padding: 40px;
   background-color: var(--white);
@@ -14,10 +15,13 @@ export const formSet = () => css`
   @media ${({ theme }) => theme.mobile} {
     padding: 15px;
   }
-`;
+`
+
+export const SECTION_TITLE = `font-blackHan text-[60px] font-bold text-center max-[640px]:text-[48px]`
 
 export const sectionTitle = () => css`
   color: var(--text-333);
+  font-family: 'Black Han Sans', sans-serif;
   font-size: 60px;
   font-weight: 700;
   text-align: center;
@@ -25,19 +29,9 @@ export const sectionTitle = () => css`
   @media ${({ theme }) => theme.mobile} {
     font-size: 48px;
   }
-`;
+`
 
-export const pjTitle = () => css`
-  color: var(--text-333);
-  font-size: 42px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  text-align: center;
-
-  @media ${({ theme }) => theme.mobile} {
-    font-size: 28px;
-  }
-`;
+export const PG_TITLE = `text-text-333 text-[42px] font-[600] tracking-[-0.2px] text-center max-[640px]:text-[20px]`
 
 export const skillTitle = () => css`
   margin-bottom: 20px;
@@ -49,32 +43,13 @@ export const skillTitle = () => css`
   @media ${({ theme }) => theme.mobile} {
     font-size: 20px;
   }
-`;
+`
 
-export const pjDesc = () => css`
-  margin: 20px;
-  color: var(--text-777);
-  font-size: 16px;
-  letter-spacing: -0.2px;
-  text-align: center;
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: 10px 0;
-    font-size: 12px;
-  }
-`;
+export const PG_DESC = `m-[10px] text-text-777 text-[16px] tracking-[-0.2px] text-center max-[640px]:mx-[0] max-[640px]:text-[12px]`
 
 export const pointText = () => css`
   color: var(--text-blue);
   text-decoration: underline;
-`;
+`
 
-export const tagText = () => css`
-  margin: 0 5px;
-  padding: 5px 10px;
-  background: var(--gray);
-  color: var(--text-blue);
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-`;
+export const TAG_TEXT = `mx-[5px] px-[10px] bg-common-gray text-text-blue text-[14px] font-[500] rounded-[6px]`

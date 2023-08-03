@@ -1,10 +1,18 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 type FlexArgsType = {
-  justify?: 'center' | 'start' | 'end' | 'between' | 'even' | 'around';
-  align?: 'center' | 'end' | 'start';
-  direction?: 'col' | 'row';
-};
+  justify?: 'center' | 'start' | 'end' | 'between' | 'around'
+  align?: 'center' | 'end' | 'start'
+  direction?: 'col' | 'row'
+}
+
+export const flexLayout = ({
+  justify = 'center',
+  align = 'center',
+  direction = 'row',
+}: FlexArgsType) => {
+  return `flex justify-${justify} items-${align} flex-${direction}`
+}
 
 const flex = ({
   justify = 'center',
@@ -22,28 +30,28 @@ const flex = ({
   justify-content: ${() => {
     switch (justify) {
       case 'between':
-        return 'space-between';
+        return 'space-between'
       case 'end':
-        return 'end';
+        return 'end'
       case 'start':
-        return 'start';
+        return 'start'
       default:
-        return 'center';
+        return 'center'
     }
   }};
 
   align-items: ${() => {
     switch (align) {
       case 'start':
-        return 'start';
+        return 'start'
       case 'end':
-        return 'end';
+        return 'end'
       case 'center':
-        return 'center';
+        return 'center'
       default:
-        return 'center';
+        return 'center'
     }
   }};
-`;
+`
 
-export default flex;
+export default flex

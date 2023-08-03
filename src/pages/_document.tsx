@@ -78,6 +78,8 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="TQkPIaAFbSpBZW8VW8OhUHdEhd6lELoX2_zzKmUiGWU"
           />
+          <meta name="subject" content="포트폴리오" />
+          <meta name="keywords" content="프론트엔드, 개발자, 웹개발자" />
           <link
             href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
             rel="stylesheet"

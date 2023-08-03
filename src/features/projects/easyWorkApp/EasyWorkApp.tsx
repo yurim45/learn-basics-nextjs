@@ -1,13 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import flex from '@shared/styles/flex';
-import PjLayout from '../common/PjLayout';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectCreative } from 'swiper';
-import { img1, img2, img3, img4 } from './images/index';
-import { tagText } from '@shared/styles/variables';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, EffectCreative } from 'swiper'
+import { flexLayout } from '@shared/styles/flex'
+import { Tag } from '@features/career/common'
+import PjLayout from '../common/PjLayout'
+import { img1, img2, img3, img4 } from './images/index'
 
 const EasyWorkApp = () => {
   return (
@@ -15,81 +14,96 @@ const EasyWorkApp = () => {
       title="Easy-Work App: 사내용 프로그램"
       subTitle="2022.08.09 ~ 10.11, 약 2개월간 | 총 3명 (UX/UI디자이너 1명, Frontend 1명, Backend 1명)"
     >
-      <StContent>
-        <StLeftContent>
-          <StContentDesc>
-            <StTag>Vuejs</StTag> 를 배우면서 <StTag>PWA</StTag>를 적용한 사내용
+      <div
+        className={`${flexLayout({
+          justify: 'between',
+          align: 'start',
+        })} mt-[50px] max-[640px]:mt-[20px]`}
+      >
+        <div className="w-[450px] pr-[20px] text-text-333 text-[18px] leading-[1.5]">
+          <p className="text=[18px] max-[640px]:text-[12px]">
+            <Tag>Vuejs</Tag> 를 배우면서 <Tag>PWA</Tag>를 적용한 사내용
             프로그램을 제작한 프로젝트. <br />
-          </StContentDesc>
-          <StReadMore
+          </p>
+          <button
             type="button"
             onClick={() =>
               window.open(
                 'https://www.notion.so/aprilworld/Vuejs-Easy-Work-App-f1eb7f0469184d24803cef76e6d1c410'
               )
             }
+            className="w-[120px] h-[40px] my-[10px] bg-compo-blue text-common-white text-[14px] rounded-[10px]"
           >
             자세히 보기
-          </StReadMore>
-          <ul>
-            <li>
-              <strong>주요 기능</strong>
-              <p>
+          </button>
+          <ul className="mt-[20px] border-t-[1px] border-solid border-text-blue">
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                주요 기능
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 ✔︎ 권한별 페이지 구성(사용자, 관리자) <br />
                 ✔︎ 복지 포인트 기능 <br />
                 ✔︎ 휴가 등록 및 조회, 관리 등 ✔︎ 구매 요청 및 승인, 알림 등
               </p>
             </li>
-
-            <li>
-              <strong>URL</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">URL</strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 <Link
-                  href={`https://atnpeasywork.link/`}
+                  href={`https://atnpeasywork.link`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   easywork.today
                 </Link>
               </p>
             </li>
-            <li>
-              <strong>회고</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                회고
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 <Link
                   href={`https://velog.io/@april_5/%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%A5%BC-%EC%95%9E%EB%91%90%EA%B3%A0`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   회고록
                 </Link>
               </p>
             </li>
-            <li>
-              <strong>GitHub</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                GitHub
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 <Link
                   href={`https://github.com/yurim45/easy-work-app`}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-text-blue"
                 >
                   github.com/yurim45/easy-work-app
                 </Link>
               </p>
             </li>
-
-            <li>
-              <strong>기술 스택</strong>
-              <p>
+            <li className="my-[10px]">
+              <strong className="inline-block w-[100px] font-[600]">
+                기술 스택
+              </strong>
+              <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 {['vuejs', 'JS', 'apollo', 'graphql', 'sass']?.map(
                   (item, i) => {
-                    return <StTag key={i}>{`${item}`}</StTag>;
+                    return <Tag key={i}>{`${item}`}</Tag>
                   }
                 )}
               </p>
             </li>
           </ul>
-        </StLeftContent>
+        </div>
         <Swiper
           slidesPerView={'auto'} //초기값 설정 모바일값이 먼저!!
           spaceBetween={10}
@@ -113,104 +127,19 @@ const EasyWorkApp = () => {
             clickable: true,
           }}
           modules={[Autoplay, Pagination, EffectCreative]}
-          className="mySwiper"
+          className="w-[300px] max-[640px]:hidden"
         >
           {[img1, img2, img3, img4]?.map((img, i) => {
             return (
               <SwiperSlide key={i}>
-                <Image
-                  alt="project preview"
-                  src={img}
-                  width={270}
-                  height={500}
-                />
+                <Image alt="project preview" src={img} className="w-[90%]" />
               </SwiperSlide>
-            );
+            )
           })}
         </Swiper>
-      </StContent>
+      </div>
     </PjLayout>
-  );
-};
+  )
+}
 
-const StContent = styled.div`
-  margin-top: 50px;
-  ${flex({ justify: 'between', align: 'start' })};
-
-  .mySwiper {
-    width: 300px;
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    margin-top: 20px;
-
-    .mySwiper {
-      display: none;
-    }
-  }
-`;
-
-const StLeftContent = styled.div`
-  width: 450px;
-  padding-right: 20px;
-  color: var(--text-333);
-  font-size: 18px;
-  line-height: 1.5;
-
-  ul {
-    margin-top: 20px;
-    border-top: 1px solid var(--text-blue);
-  }
-
-  li:first-child {
-    margin-top: 20px;
-  }
-
-  li {
-    margin: 10px 0;
-  }
-
-  strong {
-    display: inline-block;
-    width: 100px;
-    font-weight: 600;
-  }
-
-  p {
-    padding: 5px;
-    font-size: 16px;
-
-    @media ${({ theme }) => theme.mobile} {
-      width: 80vw;
-      font-size: 14px;
-
-      p {
-        font-size: 14px;
-      }
-    }
-  }
-`;
-
-const StContentDesc = styled.p`
-  font-size: 18px;
-
-  @media ${({ theme }) => theme.mobile} {
-    font-size: 12px;
-  }
-`;
-
-const StReadMore = styled.button`
-  width: 120px;
-  height: 40px;
-  margin: 10px 0;
-  background: var(--compo-blue);
-  color: var(--white);
-  font-size: 14px;
-  border-radius: 10px;
-`;
-
-const StTag = styled.span`
-  ${tagText()};
-`;
-
-export default EasyWorkApp;
+export default EasyWorkApp
