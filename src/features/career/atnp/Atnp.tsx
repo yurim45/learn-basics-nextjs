@@ -1,7 +1,6 @@
 import React from 'react'
 import { atnp } from '@images/career/index'
 import { CareerLayout, Role, Tag } from '../common'
-import { styled } from '@shared/styles/theme'
 
 const Atnp = () => {
   return (
