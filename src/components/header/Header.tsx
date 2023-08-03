@@ -29,7 +29,7 @@ const Header = () => {
       <header
         className={`fixed w-[100vw] py-[16px] px-[] bg-common-white ${
           hasScroll ? `opacity-100` : `opacity-0`
-        } shadow-lg shadow-black/15 z-200`}
+        } shadow-lg shadow-black/15 z-[10]`}
       >
         <div className="max-w-[1140px] flex justify-between items-center my-0 mx-auto px-[0] max-[640px]:px-[20px]">
           <div className="text-text-333 text-[24px] font-semibold max-[640px]:text-[20px]">

@@ -1,8 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import { formSet, skillTitle } from '@shared/styles/variables';
-import flex from '@shared/styles/flex';
+import React from 'react'
+import Image from 'next/image'
+import { SKILL_TITLE } from '@shared/styles/variables'
+import { flexLayout } from '@shared/styles/flex'
 import {
   logoNextjs,
   logoRQ,
@@ -12,69 +11,47 @@ import {
   logoSC,
   logoApollo,
   logoGraphql,
-} from '@images/skills/index';
+} from '@images/skills/index'
 
 const Framework = () => {
   return (
-    <StContainer className="frontend">
-      <h3>Frontend</h3>
-      <ul>
-        <li>
-          <Image alt="Nextjs-Logo" src={logoNextjs} />
+    <div
+      className={`${flexLayout({
+        align: 'start',
+        direction: 'col',
+      })} gap-[10px]`}
+    >
+      <h3 className={`${SKILL_TITLE}`}>Frontend</h3>
+      <ul
+        className={`${flexLayout({ justify: 'start' })} flex-wrap gap-[20px]`}
+      >
+        <li className="p-[10px]">
+          <Image alt="Nextjs-Logo" src={logoNextjs} width={60} />
         </li>
         <li>
-          <Image alt="React-Logo" src={logoReact} />
+          <Image alt="React-Logo" src={logoReact} width={60} />
         </li>
         <li>
-          <Image alt="Apollo-Graphql-Logo" src={logoApollo} />
+          <Image alt="Apollo-Graphql-Logo" src={logoApollo} width={60} />
         </li>
         <li>
-          <Image alt="Graphql-Logo" src={logoGraphql} />
+          <Image alt="Graphql-Logo" src={logoGraphql} width={60} />
         </li>
         <li>
-          <Image alt="Recoil-Logo" src={logoRecoil} />
+          <Image alt="Recoil-Logo" src={logoRecoil} width={60} />
         </li>
         <li>
-          <Image alt="React-Query-Logo" src={logoRQ} />
+          <Image alt="React-Query-Logo" src={logoRQ} width={60} />
         </li>
         <li>
-          <Image alt="Styled-components-Logo" src={logoSC} />
+          <Image alt="Styled-components-Logo" src={logoSC} width={60} />
         </li>
         <li>
-          <Image alt="Storybook-Logo" src={logoSB} />
+          <Image alt="Storybook-Logo" src={logoSB} width={60} />
         </li>
       </ul>
-    </StContainer>
-  );
-};
+    </div>
+  )
+}
 
-const StContainer = styled.div`
-  ${flex({ justify: 'start', direction: 'col' })};
-  ${formSet()};
-
-  h3 {
-    ${skillTitle()};
-  }
-
-  li {
-    margin: 10px 0;
-    padding: 10px;
-    ${flex({})};
-
-    img {
-      width: 80px;
-      width: 80px;
-    }
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    li {
-      img {
-        width: 60px;
-        width: 60px;
-      }
-    }
-  }
-`;
-
-export default Framework;
+export default Framework

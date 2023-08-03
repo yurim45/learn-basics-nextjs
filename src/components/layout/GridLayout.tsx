@@ -1,15 +1,15 @@
-import React, { ReactNode } from 'react';
-import { styled } from '@shared/styles/theme';
-import { sectionTitle } from '@shared/styles/variables';
+import React, { ReactNode } from 'react'
+import { styled } from '@shared/styles/theme'
+// import { sectionTitle } from '@shared/styles/variables'
 
 type GridLayoutProps = {
-  pageTitle: string;
-  children: ReactNode;
-  color?: string;
-  bgColor?: string;
-  lineColor?: string;
-  id?: string;
-};
+  pageTitle: string
+  children: ReactNode
+  color?: string
+  bgColor?: string
+  lineColor?: string
+  id?: string
+}
 
 const GridLayout = ({
   pageTitle,
@@ -27,10 +27,10 @@ const GridLayout = ({
         <StContent>{children}</StContent>
       </Inner>
     </StSction>
-  );
-};
+  )
+}
 
-export default GridLayout;
+export default GridLayout
 
 const StSction = styled.section<{ bgColor: string }>`
   width: 100vw;
@@ -40,24 +40,23 @@ const StSction = styled.section<{ bgColor: string }>`
   @media ${({ theme }) => theme.mobile} {
     padding: 100px 0;
   }
-`;
+`
 
 const Inner = styled.div<{ color: string }>`
   max-width: 1140px;
   margin: auto;
 
   h2 {
-    ${sectionTitle()};
     color: ${({ color }) => `var(--${color})`};
     font-family: 'Black Han Sans', sans-serif;
   }
-`;
+`
 
 const StLine = styled.div<{ lineColor: string }>`
   width: 50px;
   margin: 50px auto;
   border-bottom: 2px solid ${({ lineColor }) => `var(--${lineColor})`};
-`;
+`
 
 const StContent = styled.div`
   display: grid;
@@ -73,4 +72,4 @@ const StContent = styled.div`
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     grid-auto-flow: dense;
   }
-`;
+`

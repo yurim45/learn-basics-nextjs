@@ -42,7 +42,7 @@ const Landing = () => {
       <div
         className={`flex justify-center flex-col m-auto w-[90vw] h-[100vh] text-center text-white`}
       >
-        <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-100 max-[640px]:text-[48px]">
+        <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-[10] max-[640px]:text-[48px]">
           Imagination becomes reality
         </h1>
         <strong className="text-[24px]">{"April's world"}</strong>
