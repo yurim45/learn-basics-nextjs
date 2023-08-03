@@ -1,53 +1,32 @@
-import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import { formSet, skillTitle } from '@shared/styles/variables';
-import flex from '@shared/styles/flex';
-import { logoVercel, logoNCP } from '@images/skills/index';
+import React from 'react'
+import Image from 'next/image'
+import { SKILL_TITLE } from '@shared/styles/variables'
+import { flexLayout } from '@shared/styles/flex'
+import { logoVercel, logoNCP } from '@images/skills/index'
 
 const Deployment = () => {
   return (
-    <StContainer>
-      <h3>Deployment</h3>
-      <ul>
+    <div
+      className={`${flexLayout({
+        align: 'start',
+        direction: 'col',
+      })} gap-[10px]`}
+    >
+      <h3 className={`${SKILL_TITLE}`}>Deployment</h3>
+      <ul
+        className={`${flexLayout({
+          justify: 'start',
+        })} flex-wrap gap-[20px]`}
+      >
         <li>
-          <Image alt="Vercel-Logo" src={logoVercel} />
+          <Image alt="Vercel-Logo" src={logoVercel} width={60} />
         </li>
         <li>
-          <Image alt="NCP-Logo" src={logoNCP} />
+          <Image alt="NCP-Logo" src={logoNCP} width={60} />
         </li>
       </ul>
-    </StContainer>
-  );
-};
+    </div>
+  )
+}
 
-const StContainer = styled.div`
-  ${flex({ justify: 'start', direction: 'col' })};
-  ${formSet()};
-
-  h3 {
-    ${skillTitle()};
-  }
-
-  li {
-    margin: 10px 0;
-    padding: 10px;
-    ${flex({})};
-
-    img {
-      width: 80px;
-      width: 80px;
-    }
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    li {
-      img {
-        width: 60px;
-        width: 60px;
-      }
-    }
-  }
-`;
-
-export default Deployment;
+export default Deployment

@@ -2,9 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import { SKILL_TITLE } from '@shared/styles/variables'
 import { flexLayout } from '@shared/styles/flex'
-import { logoGit, logoGithub, logoGitlab } from '@images/skills/index'
+import {
+  logoFigma,
+  logoJira,
+  logoNotion,
+  logoZeplin,
+} from '@images/skills/index'
 
-const VersionControl = () => {
+const Communication = () => {
   return (
     <div
       className={`${flexLayout({
@@ -12,24 +17,27 @@ const VersionControl = () => {
         direction: 'col',
       })} gap-[10px]`}
     >
-      <h3 className={`${SKILL_TITLE}`}>VCS</h3>
+      <h3 className={`${SKILL_TITLE}`}>Tools</h3>
       <ul
         className={`${flexLayout({
           justify: 'start',
         })} flex-wrap gap-[20px]`}
       >
         <li>
-          <Image alt="Git-Logo" src={logoGit} width={60} />
+          <Image alt="Notion-Logo" src={logoNotion} width={60} />
         </li>
         <li>
-          <Image alt="GitHub-Logo" src={logoGithub} width={60} />
+          <Image alt="Figma-Logo" src={logoFigma} width={60} />
         </li>
         <li>
-          <Image alt="GitLab-Logo" src={logoGitlab} width={60} />
+          <Image alt="Jeplin-Logo" src={logoZeplin} width={60} />
+        </li>
+        <li>
+          <Image alt="Jira-Logo" src={logoJira} width={60} />
         </li>
       </ul>
     </div>
   )
 }
 
-export default VersionControl
+export default Communication

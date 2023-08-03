@@ -1,59 +1,36 @@
-import React from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import { formSet, skillTitle } from '@shared/styles/variables';
-import flex from '@shared/styles/flex';
-import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index';
+import React from 'react'
+import Image from 'next/image'
+import { SKILL_TITLE } from '@shared/styles/variables'
+import { flexLayout } from '@shared/styles/flex'
+import { logoCss, logoHtml, logoJs, logoTS } from '@images/skills/index'
 
 const FrontendBasic = () => {
   return (
-    <StContainer>
-      <h3>Basic</h3>
-      <ul>
+    <div
+      className={`${flexLayout({
+        align: 'start',
+        direction: 'col',
+      })} gap-[10px]`}
+    >
+      <h3 className={`${SKILL_TITLE}`}>Basic</h3>
+      <ul
+        className={`${flexLayout({ justify: 'start' })} flex-wrap gap-[20px]`}
+      >
         <li>
-          <Image alt="HTML-Logo" src={logoHtml} />
+          <Image alt="HTML-Logo" src={logoHtml} width={60} />
         </li>
         <li>
-          <Image alt="CSS-Logo" src={logoCss} />
+          <Image alt="CSS-Logo" src={logoCss} width={60} />
         </li>
         <li>
-          <Image alt="JS-Logo" src={logoJs} />
+          <Image alt="JS-Logo" src={logoJs} width={60} />
         </li>
         <li>
-          <Image alt="TS-Logo" src={logoTS} />
+          <Image alt="TS-Logo" src={logoTS} width={60} />
         </li>
       </ul>
-    </StContainer>
-  );
-};
+    </div>
+  )
+}
 
-const StContainer = styled.div`
-  ${flex({ justify: 'start', direction: 'col' })};
-  ${formSet()};
-
-  h3 {
-    ${skillTitle()};
-  }
-
-  li {
-    margin: 10px 0;
-    padding: 10px;
-    ${flex({})};
-
-    img {
-      width: 80px;
-      width: 80px;
-    }
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    li {
-      img {
-        width: 60px;
-        width: 60px;
-      }
-    }
-  }
-`;
-
-export default FrontendBasic;
+export default FrontendBasic
