@@ -16,7 +16,7 @@ const CareerLayout = ({ logo, company, period, children }: PjLayoutProps) => {
       )} w-[100%] mb-[100px] max-[640px]:flex-col max-[640px]:mb-[0] `}
     >
       <div className={`${flexLayout({})} w-[50%] p-[30px]`}>
-        <Image alt="logo" src={logo} width={120} height={120} />
+        <Image alt="logo" src={logo} className="w-[120px]" />
       </div>
       <div className="w-[100%] p-[30px] border-l-[1px] border-dashed border-compo-green">
         <h3 className="font-blackHan text-text-green text-[36px] max-[640px]:text-[32px]">
