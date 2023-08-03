@@ -1,9 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { flexLayout } from '@shared/styles/flex'
 import { actbase, ICOOQQA, appsotre } from '@images/career/index'
 import { CareerLayout, Role, Tag } from '../common'
-import { styled } from '@shared/styles/theme'
-import flex from '@shared/styles/flex'
 
 const Actbase = () => {
   return (
@@ -12,18 +11,22 @@ const Actbase = () => {
         <Role>
           유아 재능 발견 플랫폼 서비스를 제공하는 아이쿠카 APP의 유지 보수 담당
         </Role>
-        <Image alt="logo" src={ICOOQQA} className="w-[800px] h-[690px]" />
-        <StContents>
-          <StContent>
+        <Image
+          alt="logo"
+          src={ICOOQQA}
+          className="w-[800px] h-[600px] max-[640px]:w-[100%] max-[640px]:h-[300px]"
+        />
+        <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
+          <li className="text-text-555 leading-[1.8]">
             <strong>✔️ 기간</strong>: 2021. 8.26 ~ 12.31{' '}
-          </StContent>
-          <StContent>
+          </li>
+          <li className="text-text-555 leading-[1.8]">
             <strong>✔️ Skills </strong>:{' '}
             {['React-native', 'Javascript', 'CSS3'].map((item, i) => (
               <Tag key={i}>{item}</Tag>
             ))}
-          </StContent>
-          <StContent>
+          </li>
+          <li className="text-text-555 leading-[1.8]">
             <strong>✔️ 담당 역할</strong>: 앱 유지 보수
             <ul>
               <li>■ AppStore 앱 심사 준비 및 승인 </li>
@@ -36,73 +39,27 @@ const Actbase = () => {
               <li>ㅤ• Google Analytics: logPurchase() 구현</li>
               <li>ㅤ• 그 외 오류 사항 수정 등</li>
             </ul>
-          </StContent>
-        </StContents>
-        <StButton
+          </li>
+        </ul>
+        <button
           type="button"
           onClick={() =>
             window.open(
               'https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%EC%BF%A0%EC%B9%B4/id1500709264'
             )
           }
+          className={`${flexLayout(
+            {}
+          )} py-[15px] px-[30px] bg-common-lightGray text-[18px] rounded-[10px]`}
         >
-          <Image alt="app store logo" src={appsotre} />
-          <span>App Store Link</span>
-        </StButton>
+          <Image alt="app store logo" src={appsotre} width={50} />
+          <span className="ml-[24px] text-text-777 underline">
+            App Store Link
+          </span>
+        </button>
       </div>
     </CareerLayout>
   )
 }
-
-const StContents = styled.ul`
-  margin: 20px 0;
-  color: var(--text-333);
-  font-size: 18px;
-
-  @media ${({ theme }) => theme.mobile} {
-    font-size: 16px;
-  }
-`
-
-const StContent = styled.li`
-  color: var(--text-555);
-  line-height: 1.8;
-
-  strong {
-    color: var(--text-333);
-  }
-
-  ul {
-    margin: 5px 0;
-    padding-left: 20px;
-  }
-`
-
-const StButton = styled.button`
-  ${flex({})};
-  padding: 15px 30px;
-  background: var(--lightGray);
-  font-size: 22px;
-  border-radius: 10px;
-
-  span {
-    margin-left: 30px;
-    color: var(--text-777);
-    text-decoration: underline;
-  }
-
-  img {
-    width: 60px;
-  }
-
-  @media ${({ theme }) => theme.mobile} {
-    margin: auto;
-    font-size: 18px;
-
-    img {
-      width: 50px;
-    }
-  }
-`
 
 export default Actbase

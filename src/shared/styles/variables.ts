@@ -73,12 +73,4 @@ export const pointText = () => css`
   text-decoration: underline;
 `
 
-export const tagText = () => css`
-  margin: 0 5px;
-  padding: 5px 10px;
-  background: var(--gray);
-  color: var(--text-blue);
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-`
+export const TAG_TEXT = `mx-[5px] px-[10px] bg-common-gray text-text-blue text-[14px] font-[500] rounded-[6px]`
