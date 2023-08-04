@@ -4,8 +4,8 @@
 
 const nextConfig = {
   appDir: true,
-  compiler: {
-    styledComponents: true,
+  images: {
+    minimumCacheTTL: 60,
   },
   webpack: (config) => {
     config.module.rules.push({

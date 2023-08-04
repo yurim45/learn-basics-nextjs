@@ -15,7 +15,7 @@ const Introduce = () => {
         <Image
           alt="me"
           src={me}
-          className="w-[300px] h-[300px] rounded-full max-[640px]:w-[250px] max-[640px]:h-[250px]"
+          className="w-[300px] rounded-full max-[640px]:w-[250px]"
         />
         <div className="text-text-333 pl-[150px] max-[640px]:p-0 max-[640px]:text-center">
           <strong className="text-[32px] font-extrabold text-center tracking-[10px]">

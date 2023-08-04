@@ -124,11 +124,7 @@ const Portfolio = () => {
           {[img1, img2, img3, img4, img5]?.map((img, i) => {
             return (
               <SwiperSlide key={i}>
-                <Image
-                  alt="project preview"
-                  src={img}
-                  className="w-[100%] h-[100%]"
-                />
+                <Image alt="project preview" src={img} className="h-[100%]" />
               </SwiperSlide>
             )
           })}
