@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Gnb from './gnb/Gnb'
-import DropBarMenu from './dropBarMenu/DropBarMenu'
 import IconHamberger from '@components/icons/IconHamberger'
 import GotoTop from '@components/footer/GotoTop'
+import Gnb from './gnb/Gnb'
+import DropBarMenu from './dropBarMenu/DropBarMenu'
 
 const Header = () => {
   const [hasScroll, setHasScroll] = useState<boolean>(false)
@@ -45,7 +45,7 @@ const Header = () => {
           </button>
         </div>
       </header>
-      {isOpen && hasScroll && <DropBarMenu />}
+      {isOpen && hasScroll && <DropBarMenu onClick={() => setIsOpen(false)} />}
       {hasScroll && <GotoTop />}
     </>
   )
