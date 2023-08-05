@@ -32,3 +32,4 @@
 - 07.15 GA 적용 및 구글 콘솔 연동 테스트
 - 07.22 반응형 디자인 꺠짐 점검
 - 07.31 tailwind 추가하고 app 폴더 사용 시작
+  - [next13으로 마이그레이션 하기!(+ tailwind도 사용해보기)](https://velog.io/@april_5/next13%EC%9C%BC%EB%A1%9C-%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98-%ED%95%98%EA%B8%B0-tailwind%EB%8F%84-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0)
