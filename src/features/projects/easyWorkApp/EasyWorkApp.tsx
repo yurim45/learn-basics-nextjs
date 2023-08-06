@@ -7,6 +7,7 @@ import { flexLayout } from '@shared/styles/flex'
 import { Tag } from '@features/career/common'
 import PjLayout from '../common/PjLayout'
 import { img1, img2, img3, img4 } from './images/index'
+import { URL_EASYWORK } from '../variables'
 
 const EasyWorkApp = () => {
   return (
@@ -27,11 +28,7 @@ const EasyWorkApp = () => {
           </p>
           <button
             type="button"
-            onClick={() =>
-              window.open(
-                'https://www.notion.so/aprilworld/Vuejs-Easy-Work-App-f1eb7f0469184d24803cef76e6d1c410'
-              )
-            }
+            onClick={() => window.open(URL_EASYWORK)}
             className="w-[120px] h-[40px] my-[10px] bg-compo-blue text-common-white text-[14px] rounded-[10px]"
           >
             자세히 보기

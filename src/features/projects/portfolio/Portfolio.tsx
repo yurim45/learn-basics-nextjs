@@ -7,6 +7,7 @@ import { flexLayout } from '@shared/styles/flex'
 import { Tag } from '@features/career/common'
 import PjLayout from '../common/PjLayout'
 import { img1, img2, img3, img4, img5 } from './images/index'
+import { URL_PORTFOLIO } from '../variables'
 
 const Portfolio = () => {
   return (
@@ -27,11 +28,7 @@ const Portfolio = () => {
           </p>
           <button
             type="button"
-            onClick={() =>
-              window.open(
-                'https://aprilworld.notion.site/Nextjs-a0f61a06702542999db503406625b9a9'
-              )
-            }
+            onClick={() => window.open(URL_PORTFOLIO)}
             className="w-[120px] h-[40px] my-[10px] bg-compo-blue text-common-white text-[14px] rounded-[10px]"
           >
             자세히 보기

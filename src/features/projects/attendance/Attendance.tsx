@@ -7,6 +7,7 @@ import { flexLayout } from '@shared/styles/flex'
 import { Tag } from '@features/career/common'
 import PjLayout from '../common/PjLayout'
 import { img1, img2, img3, img4 } from './images/index'
+import { URL_ATTENDANCE } from '../variables'
 
 const Attendance = () => {
   return (
@@ -27,11 +28,7 @@ const Attendance = () => {
           </p>
           <button
             type="button"
-            onClick={() =>
-              window.open(
-                'https://aprilworld.notion.site/React-Internship_-Project-de31dddabe1745be863a06734c036c0c'
-              )
-            }
+            onClick={() => window.open(URL_ATTENDANCE)}
             className="w-[120px] h-[40px] my-[10px] bg-compo-blue text-common-white text-[14px] rounded-[10px]"
           >
             자세히 보기
