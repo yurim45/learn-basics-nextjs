@@ -22,7 +22,7 @@ const Introduce = () => {
             김유림
           </strong>
           <span className="text-text-777 text-[18px] max-[640px]:block max-[640px]:text-[16px]">
-            Frontend Developer
+            웹 개발자(FE)
           </span>
           <p className="my-[20px] text-[18px] leading-[1.2] max-[640px]:text-[16px]">
             함께 일 하고 싶은 개발자, <br />

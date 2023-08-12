@@ -47,7 +47,9 @@ const Landing = () => {
         <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-[10] max-[640px]:text-[48px]">
           Imagination becomes reality
         </h1>
-        <strong className="text-[24px]">{"April's world"}</strong>
+        <strong className="text-[18px] font-[400]">
+          {'웹 개발자 김유림의 포트폴리오입니다!'}
+        </strong>
         <Link to="aboutMe" smooth={true}>
           <button className="absolute bottom-[50px] w-[50px] h-[50px] left-[calc(50%-25px)] bg-common-white/50 rounded-full text-[20px] animate-blinkEffect">
             ▼
