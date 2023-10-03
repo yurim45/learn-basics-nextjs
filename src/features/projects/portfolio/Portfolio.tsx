@@ -22,7 +22,7 @@ const Portfolio = () => {
         })} mt-[50px] max-[640px]:mt-[20px]`}
       >
         <div className="w-[450px] pr-[20px] text-text-333 text-[18px] leading-[1.5]">
-          <p className="text=[18px] max-[640px]:text-[12px]">
+          <p className="text=[18px] max-[640px]:text-[14px]">
             포트폴리오 용도로 제작한 웹사이트. <Tag>Vercel</Tag>을 이용하여 정적
             웹사이트의 Lean한 배포도 경험을 했던 프로젝트
           </p>

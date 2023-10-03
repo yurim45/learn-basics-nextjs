@@ -4,12 +4,12 @@ import Script from 'next/script'
 import '@shared/styles/globals.css'
 
 export const metadata = {
-  title: `개발자 포트폴리오`,
+  title: `웹 개발자 포트폴리오`,
   description: '프론트엔드 개발자 김유림의 포트폴리오입니다.',
   subject: '개발자',
   keywords: ['개발자', '포트폴리오', '웹개발자', '프론트엔드'],
   openGraph: {
-    title: `개발자 포트폴리오`,
+    title: `웹 개발자 포트폴리오`,
     description: '프론트엔드 개발자 김유림의 포트폴리오입니다.',
   },
 }

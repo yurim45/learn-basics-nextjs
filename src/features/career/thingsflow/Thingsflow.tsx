@@ -12,16 +12,25 @@ const Thingsflow = () => {
     >
       <div>
         <Role>
-          자사 서비스{' '}
+          자사 서비스 스토리플레이{' '}
           <Link
             href={'https://www.storyplay.com'}
             target="_blank"
             rel="noreferrer"
             className="text-text-blue"
           >
-            스토리플레이
+            웹
+          </Link>
+          /
+          <Link
+            href={'https://studio.storyplay.com'}
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-blue"
+          >
+            스튜디오
           </Link>{' '}
-          웹 기능 개발 및 유지 보수
+          기능 개발 및 유지 보수
         </Role>
         <iframe
           src="https://storyplay.com"
@@ -49,6 +58,7 @@ const Thingsflow = () => {
           <li className="text-text-555 leading-[1.8]">
             <strong>✔️ 담당 역할</strong>
             <ul className="my-[5px] pl-[20px]">
+              <li>■ 본인인증 웹뷰 API 구현</li>
               <li>
                 ■{' '}
                 <Link

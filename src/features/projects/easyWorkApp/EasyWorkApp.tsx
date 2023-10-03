@@ -22,7 +22,7 @@ const EasyWorkApp = () => {
         })} mt-[50px] max-[640px]:mt-[20px]`}
       >
         <div className="w-[450px] pr-[20px] text-text-333 text-[18px] leading-[1.5]">
-          <p className="text=[18px] max-[640px]:text-[12px]">
+          <p className="text=[18px] max-[640px]:text-[14px]">
             <Tag>Vuejs</Tag> 를 배우면서 <Tag>PWA</Tag>를 적용한 사내용
             프로그램을 제작한 프로젝트. <br />
           </p>
@@ -41,7 +41,8 @@ const EasyWorkApp = () => {
               <p className="p-[5px] text-[16px] max-[640px]:w-[80vw] max-[640px]:text-[14px]">
                 ✔︎ 권한별 페이지 구성(사용자, 관리자) <br />
                 ✔︎ 복지 포인트 기능 <br />
-                ✔︎ 휴가 등록 및 조회, 관리 등 ✔︎ 구매 요청 및 승인, 알림 등
+                ✔︎ 휴가 등록 및 조회, 관리 등 <br />
+                ✔︎ 구매 요청 및 승인, 알림 등
               </p>
             </li>
             <li className="my-[10px]">

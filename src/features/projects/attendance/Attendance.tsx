@@ -22,9 +22,9 @@ const Attendance = () => {
         })} mt-[50px] max-[640px]:mt-[20px]`}
       >
         <div className="w-[450px] pr-[20px] text-text-333 text-[18px] leading-[1.5]">
-          <p className="text=[18px] max-[640px]:text-[12px]">
-            근태 등록, 근무제 선택 및 신청, 연차 등 휴가 관리 등의
-            <br /> 근태관리 프로그램 개발 프로젝트
+          <p className="text=[18px] max-[640px]:text-[14px]">
+            근태 등록, 근무제 선택 및 신청, 연차 등 휴가 관리 등의 근태관리
+            프로그램 개발 프로젝트
           </p>
           <button
             type="button"

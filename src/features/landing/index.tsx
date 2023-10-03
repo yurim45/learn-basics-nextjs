@@ -44,8 +44,10 @@ const Landing = () => {
       <div
         className={`flex justify-center flex-col m-auto w-[90vw] h-[100vh] text-center text-white`}
       >
-        <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-[10] max-[640px]:text-[48px]">
-          Imagination becomes reality
+        <h1 className="mb-[100px] text-[80px] font-extrabold tracking-tight font-blackHan animate-trackingInExpand z-[10] max-[640px]:text-[38px]">
+          It is Impossible to Imageine
+          <br />
+          What is impossible.
         </h1>
         <strong className="text-[18px] font-[400]">
           {'웹 개발자 김유림의 포트폴리오입니다!'}
