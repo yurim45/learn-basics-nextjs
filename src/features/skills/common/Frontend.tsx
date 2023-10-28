@@ -39,7 +39,7 @@ const Framework = () => {
           <Image alt="Vue-Logo" src={logoVue} width={60} />
         </li>
         <li>
-          <Image alt="Angualr-Logo" src={logoAngular} width={60} />
+          <Image alt="Angular-Logo" src={logoAngular} width={60} />
         </li>
         <li>
           <Image alt="Apollo-Graphql-Logo" src={logoApollo} width={60} />

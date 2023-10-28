@@ -21,7 +21,7 @@ import logoApollo from './logo-graphql-apollo.png'
 import logoGraphql from './logo-graphql.png'
 import logoJira from './logo-jira.png'
 import logoVue from './logo-vue.png'
-import logoAngular from './logo-Angular.png'
+import logoAngular from './logo-angular.png'
 import logoTailwind from './logo-tailwind.png'
 import logoRTK from './logo-rtk.png'
 
