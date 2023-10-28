@@ -73,6 +73,17 @@ const Thingsflow = () => {
               <li>
                 ■{' '}
                 <Link
+                  href={`https://velog.io/@april_5/%ED%98%84%EC%97%85%EC%97%90%EC%84%9C-%EA%B2%AA%EC%97%88%EB%8D%98-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95-%EC%9D%B4%EC%95%BC%EA%B8%B0`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-text-blue"
+                >
+                  👆 크로스 브라우징 이야기
+                </Link>
+              </li>
+              <li>
+                ■{' '}
+                <Link
                   href={`https://velog.io/@april_5/%EC%9B%B9%EB%B7%B0-%ED%86%B5%EC%8B%A0-React-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%95%B1-React-React-%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0`}
                   target="_blank"
                   rel="noreferrer"
