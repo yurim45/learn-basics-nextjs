@@ -11,6 +11,10 @@ import {
   logoSC,
   logoApollo,
   logoGraphql,
+  logoVue,
+  logoAngular,
+  logoTailwind,
+  logoRTK,
 } from '@images/skills/index'
 
 const Framework = () => {
@@ -32,16 +36,28 @@ const Framework = () => {
           <Image alt="React-Logo" src={logoReact} width={60} />
         </li>
         <li>
+          <Image alt="Vue-Logo" src={logoVue} width={60} />
+        </li>
+        <li>
+          <Image alt="Angualr-Logo" src={logoAngular} width={60} />
+        </li>
+        <li>
           <Image alt="Apollo-Graphql-Logo" src={logoApollo} width={60} />
         </li>
         <li>
           <Image alt="Graphql-Logo" src={logoGraphql} width={60} />
         </li>
         <li>
+          <Image alt="React-Query-Logo" src={logoRQ} width={60} />
+        </li>
+        <li>
+          <Image alt="RTK-Logo" src={logoRTK} width={60} />
+        </li>
+        <li>
           <Image alt="Recoil-Logo" src={logoRecoil} width={60} />
         </li>
         <li>
-          <Image alt="React-Query-Logo" src={logoRQ} width={60} />
+          <Image alt="Tailwind-Logo" src={logoTailwind} width={60} />
         </li>
         <li>
           <Image alt="Styled-components-Logo" src={logoSC} width={60} />
