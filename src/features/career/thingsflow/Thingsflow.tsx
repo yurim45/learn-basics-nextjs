@@ -10,15 +10,20 @@ const Thingsflow = () => {
       company="Thingsflow"
       period="JAN 2023 ~ 현재"
     >
+      {/* 스플 */}
       <div>
         <Role>
-          자사 서비스 스토리플레이{' '}
+          <strong className="inline-block px-[5px] bg-purple-100 text-[20px] font-[600] leading-[1.5] max-[640px]:text-[18px]">
+            {' '}
+            🟣 스토리플레이 🟣
+          </strong>
           <Link
             href={'https://www.storyplay.com'}
             target="_blank"
             rel="noreferrer"
             className="text-text-blue"
           >
+            {' '}
             웹
           </Link>
           /
@@ -59,6 +64,7 @@ const Thingsflow = () => {
             <strong>✔️ 담당 역할</strong>
             <ul className="my-[5px] pl-[20px]">
               <li>■ 본인인증 웹뷰 API 구현</li>
+              <li>■ 글로벌 작업</li>
               <li>
                 ■{' '}
                 <Link
@@ -104,6 +110,67 @@ const Thingsflow = () => {
                 </Link>
               </li>
               <li>■ Sentry 설정</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        className={`w-4/5 mt-[50px] mb-[20px] ml-0 border-b-[2px] border-dotted max-[640px]:w-full`}
+      />
+      {/* 헬로우봇 */}
+      <div>
+        <Role>
+          <strong className="inline-block px-[5px] bg-yellow-100 text-[20px] font-[600] leading-[1.5] max-[640px]:text-[18px]">
+            🟡 헬로우봇 🟡
+          </strong>
+          <Link
+            href={'https://hellobot.co'}
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-blue"
+          >
+            {' '}
+            웹
+          </Link>
+          /
+          <Link
+            href={'https://hellobotstudio.com/login'}
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-blue"
+          >
+            스튜디오
+          </Link>{' '}
+          기능 개발 및 유지 보수
+        </Role>
+        <iframe
+          src="https://hellobot.co"
+          width={600}
+          height={450}
+          className="max-[640px]:w-[100%] max-[640px]:h-[350px]"
+        />
+        <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ 기간</strong>: 2023. 10.19 ~ 현재
+          </li>
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ Skills </strong>:
+            {[
+              'Angular9',
+              'Typescript',
+              'rxjs',
+              'axios',
+              'scss',
+              'tailwind',
+            ].map((item, i) => (
+              <Tag key={i}>{item}</Tag>
+            ))}
+          </li>
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ 담당 역할</strong>
+            <ul className="my-[5px] pl-[20px]">
+              <li>■ AI 이미지 생성기 개발</li>
+              <li>■ 관계도 기능 개발</li>
             </ul>
           </li>
         </ul>
