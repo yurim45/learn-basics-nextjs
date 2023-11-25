@@ -73,7 +73,7 @@ const Thingsflow = () => {
                   rel="noreferrer"
                   className="text-text-blue"
                 >
-                  👆 토스페이먼츠 연동
+                  👆 토스페이먼츠 연동(국내/외)
                 </Link>
               </li>
               <li>
@@ -169,7 +169,32 @@ const Thingsflow = () => {
           <li className="text-text-555 leading-[1.8]">
             <strong>✔️ 담당 역할</strong>
             <ul className="my-[5px] pl-[20px]">
-              <li>■ AI 이미지 생성기 개발</li>
+              <li>
+                ■ AI 이미지 생성기 개발{' '}
+                <Link
+                  href={`https://hellomy.ai/`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-text-blue"
+                >
+                  https://hellomy.ai/
+                </Link>
+              </li>
+              <ul className="ml-[15px]">
+                <li>
+                  ㄴ{' '}
+                  <Link
+                    href={`https://velog.io/@april_5/Nextjs14-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0feat.next-international`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-text-blue"
+                  >
+                    👆 Nextjs14 다국어 지원
+                  </Link>
+                </li>
+                <li>ㄴ 토스페이먼츠 연동(국내/외)</li>
+              </ul>
+
               <li>■ 관계도 기능 개발</li>
             </ul>
           </li>
