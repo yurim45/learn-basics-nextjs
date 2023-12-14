@@ -1,3 +1,5 @@
 User-agent: *
+Disallow:
 
-Sitemap: https://https://www.april5.world/sitemap.xml
+Sitemap: https://www.april5.world/sitemap.xml
+Sitemap: https://www.april5.dev/sitemap.xml
