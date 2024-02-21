@@ -2,7 +2,7 @@ name: Test PR
 on:
   pull_request:
     branches:
-      - feature/github-workflow
+      - main
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: Check
         run: |
           yarn ci
           yarn lint
