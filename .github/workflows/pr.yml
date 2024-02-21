@@ -19,7 +19,7 @@ jobs:
 
       - name: Check
         run: |
-          yarn ci
+          yarn
           yarn lint
         env:
           CI: true
