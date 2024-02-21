@@ -2,7 +2,7 @@ name: Test PR
 on:
   pull_request:
     branches:
-      - feature/test-workflow
+      - feature/github-workflow
 
 jobs:
   build:
