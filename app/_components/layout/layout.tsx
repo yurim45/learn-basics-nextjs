@@ -1,14 +1,16 @@
 import React, { ReactNode } from 'react'
 import { SECTION_TITLE } from 'app/_shared/styles/variables'
 
-type LayoutProps = {
-  pageTitle: string
-  children: ReactNode
-  color?: string
-  bgColor?: string
-  lineColor?: string
-  id?: string
-}
+type LayoutProps =
+  | {
+      pageTitle: string
+      children: ReactNode
+      color?: string
+      bgColor?: string
+      lineColor?: string
+      id?: string
+    }
+  | any // TODO: any 타입 제거
 
 const Layout = ({
   pageTitle,
