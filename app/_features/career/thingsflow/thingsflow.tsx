@@ -10,6 +10,97 @@ const Thingsflow = () => {
       company="Thingsflow"
       period="JAN 2023 ~ 현재"
     >
+      {/* 헬로우봇 */}
+      <div>
+        <Role>
+          <strong className="inline-block px-[5px] bg-yellow-100 text-[20px] font-[600] leading-[1.5] max-[640px]:text-[18px]">
+            🟡 헬로우봇 🟡
+          </strong>
+          <Link
+            href={'https://hellobot.co'}
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-blue"
+          >
+            {' '}
+            웹
+          </Link>
+          /
+          <Link
+            href={'https://hellobotstudio.com/login'}
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-blue"
+          >
+            스튜디오
+          </Link>{' '}
+          기능 개발 및 유지 보수
+        </Role>
+        <iframe
+          src="https://hellobot.co"
+          width={600}
+          height={450}
+          className="max-[640px]:w-[100%] max-[640px]:h-[350px]"
+        />
+        <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ 기간</strong>: 2023. 10.19 ~ 현재
+          </li>
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ Skills </strong>:
+            {[
+              'Nextjs14',
+              'Angular13',
+              'Typescript',
+              'rxjs',
+              'RestAPI',
+              'scss',
+              'tailwind',
+            ].map((item, i) => (
+              <Tag key={i}>{item}</Tag>
+            ))}
+          </li>
+          <li className="text-text-555 leading-[1.8]">
+            <strong>✔️ 담당 역할</strong>
+            <ul className="my-[5px] pl-[20px]">
+              <li>
+                ■ AI 반려동물 프로필{' '}
+                <Link
+                  href={`https://hellomy.ai/`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-text-blue"
+                >
+                  https://hellomy.ai/
+                </Link>
+              </li>
+              <ul className="ml-[15px]">
+                <li>
+                  ㄴ{' '}
+                  <Link
+                    href={`https://velog.io/@april_5/Nextjs14-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0feat.next-international`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-text-blue"
+                  >
+                    👆 Nextjs14 다국어 지원
+                  </Link>
+                </li>
+                <li>ㄴ 토스페이먼츠 연동(국내/외)</li>
+              </ul>
+
+              <li>■ AI 궁합도 기능 개발</li>
+              <li>■ 구독결제 개발</li>
+              <li>■ angular9 → angular13 version update</li>
+              <li>■ 마이크로 프론트엔드 적용</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        className={`w-4/5 mt-[50px] mb-[20px] ml-0 border-b-[2px] border-dotted max-[640px]:w-full`}
+      />
       {/* 스플 */}
       <div>
         <Role>
@@ -45,7 +136,7 @@ const Thingsflow = () => {
         />
         <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
           <li className="text-text-555 leading-[1.8]">
-            <strong>✔️ 기간</strong>: 2023. 1.2 ~ 현재
+            <strong>✔️ 기간</strong>: 2023.1.2 ~ 2023.12.31
           </li>
           <li className="text-text-555 leading-[1.8]">
             <strong>✔️ Skills </strong>:
@@ -110,92 +201,6 @@ const Thingsflow = () => {
                 </Link>
               </li>
               <li>■ Sentry 설정</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div
-        className={`w-4/5 mt-[50px] mb-[20px] ml-0 border-b-[2px] border-dotted max-[640px]:w-full`}
-      />
-      {/* 헬로우봇 */}
-      <div>
-        <Role>
-          <strong className="inline-block px-[5px] bg-yellow-100 text-[20px] font-[600] leading-[1.5] max-[640px]:text-[18px]">
-            🟡 헬로우봇 🟡
-          </strong>
-          <Link
-            href={'https://hellobot.co'}
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-blue"
-          >
-            {' '}
-            웹
-          </Link>
-          /
-          <Link
-            href={'https://hellobotstudio.com/login'}
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-blue"
-          >
-            스튜디오
-          </Link>{' '}
-          기능 개발 및 유지 보수
-        </Role>
-        <iframe
-          src="https://hellobot.co"
-          width={600}
-          height={450}
-          className="max-[640px]:w-[100%] max-[640px]:h-[350px]"
-        />
-        <ul className="my-[20px] text-[18px] max-[640px]:text-[16px]">
-          <li className="text-text-555 leading-[1.8]">
-            <strong>✔️ 기간</strong>: 2023. 10.19 ~ 현재
-          </li>
-          <li className="text-text-555 leading-[1.8]">
-            <strong>✔️ Skills </strong>:
-            {[
-              'Angular9',
-              'Typescript',
-              'rxjs',
-              'axios',
-              'scss',
-              'tailwind',
-            ].map((item, i) => (
-              <Tag key={i}>{item}</Tag>
-            ))}
-          </li>
-          <li className="text-text-555 leading-[1.8]">
-            <strong>✔️ 담당 역할</strong>
-            <ul className="my-[5px] pl-[20px]">
-              <li>
-                ■ AI 이미지 생성기 개발{' '}
-                <Link
-                  href={`https://hellomy.ai/`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-text-blue"
-                >
-                  https://hellomy.ai/
-                </Link>
-              </li>
-              <ul className="ml-[15px]">
-                <li>
-                  ㄴ{' '}
-                  <Link
-                    href={`https://velog.io/@april_5/Nextjs14-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0feat.next-international`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-text-blue"
-                  >
-                    👆 Nextjs14 다국어 지원
-                  </Link>
-                </li>
-                <li>ㄴ 토스페이먼츠 연동(국내/외)</li>
-              </ul>
-
-              <li>■ 관계도 기능 개발</li>
             </ul>
           </li>
         </ul>
